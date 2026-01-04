@@ -14,7 +14,7 @@ namespace MotorPartsInventoryManagement.Forms
    
     public partial class StockStaffForm : Form
     {
-        private damageForm _damageForm;
+        private DamageStaffForm _damageForm;
         private stockinstaffForm _stockinstaffForm;
         private inventorystaffForm _inventorystaffForm;
         public stockadjuForm _stockadjuForm;
