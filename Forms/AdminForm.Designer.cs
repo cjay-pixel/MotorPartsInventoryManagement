@@ -44,6 +44,7 @@
             this.btnStock = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.logoBox = new System.Windows.Forms.PictureBox();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlShadowLeft.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -144,6 +145,7 @@
             this.panel3.Controls.Add(this.btnSales);
             this.panel3.Controls.Add(this.btnStock);
             this.panel3.Controls.Add(this.btnInventory);
+            this.panel3.Controls.Add(this.btnDashboard);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 316);
             this.panel3.Name = "panel3";
@@ -159,7 +161,7 @@
             this.btnUser.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.Image = global::MotorPartsInventoryManagement.Properties.Resources.user;
             this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.Location = new System.Drawing.Point(0, 390);
+            this.btnUser.Location = new System.Drawing.Point(0, 458);
             this.btnUser.Name = "btnUser";
             this.btnUser.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnUser.Size = new System.Drawing.Size(388, 68);
@@ -177,7 +179,7 @@
             this.btnReport.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.Image = global::MotorPartsInventoryManagement.Properties.Resources.report;
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(0, 322);
+            this.btnReport.Location = new System.Drawing.Point(0, 390);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(388, 68);
@@ -195,7 +197,7 @@
             this.btnSupplier.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplier.Image = global::MotorPartsInventoryManagement.Properties.Resources.supplier;
             this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupplier.Location = new System.Drawing.Point(0, 254);
+            this.btnSupplier.Location = new System.Drawing.Point(0, 322);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnSupplier.Size = new System.Drawing.Size(388, 68);
@@ -213,7 +215,7 @@
             this.btnSales.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSales.Image = global::MotorPartsInventoryManagement.Properties.Resources.sales;
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(0, 186);
+            this.btnSales.Location = new System.Drawing.Point(0, 254);
             this.btnSales.Name = "btnSales";
             this.btnSales.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnSales.Size = new System.Drawing.Size(388, 68);
@@ -231,7 +233,7 @@
             this.btnStock.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStock.Image = global::MotorPartsInventoryManagement.Properties.Resources.packaging;
             this.btnStock.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.Location = new System.Drawing.Point(0, 118);
+            this.btnStock.Location = new System.Drawing.Point(0, 186);
             this.btnStock.Name = "btnStock";
             this.btnStock.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnStock.Size = new System.Drawing.Size(388, 68);
@@ -249,7 +251,7 @@
             this.btnInventory.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 50);
+            this.btnInventory.Location = new System.Drawing.Point(0, 118);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnInventory.Size = new System.Drawing.Size(388, 68);
@@ -271,6 +273,24 @@
             this.logoBox.Size = new System.Drawing.Size(388, 252);
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Image = global::MotorPartsInventoryManagement.Properties.Resources.home_24;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 50);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(388, 68);
+            this.btnDashboard.TabIndex = 7;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 
@@ -312,5 +332,6 @@
         private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnDashboard;
     }
 }
