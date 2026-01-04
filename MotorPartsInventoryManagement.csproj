@@ -131,6 +131,12 @@
     <Compile Include="Forms\inventorystaffForm.Designer.cs">
       <DependentUpon>inventorystaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\stockadjuForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\stockadjuForm.Designer.cs">
+      <DependentUpon>stockadjuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\stockinstaffForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\inventorystaffForm.resx">
       <DependentUpon>inventorystaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stockadjuForm.resx">
+      <DependentUpon>stockadjuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\stockinstaffForm.resx">
       <DependentUpon>stockinstaffForm.cs</DependentUpon>
