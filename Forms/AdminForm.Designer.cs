@@ -46,12 +46,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.adminDashboardForm1 = new MotorPartsInventoryManagement.Forms.AdminDashboardForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlShadowLeft
@@ -295,11 +297,21 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.adminDashboardForm1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(398, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(807, 742);
             this.panel4.TabIndex = 1;
+            // 
+            // adminDashboardForm1
+            // 
+            this.adminDashboardForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminDashboardForm1.Location = new System.Drawing.Point(0, 0);
+            this.adminDashboardForm1.Name = "adminDashboardForm1";
+            this.adminDashboardForm1.Padding = new System.Windows.Forms.Padding(20);
+            this.adminDashboardForm1.Size = new System.Drawing.Size(807, 742);
+            this.adminDashboardForm1.TabIndex = 0;
             // 
             // AdminForm
             // 
@@ -321,6 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -344,5 +357,6 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel4;
+        private AdminDashboardForm adminDashboardForm1;
     }
 }
