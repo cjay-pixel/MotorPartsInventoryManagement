@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.inventorystaffForm1 = new MotorPartsInventoryManagement.Forms.inventorystaffForm();
+            this.inventorystaffForm1 = new MotorPartsInventoryManagement.Forms.InventoryStaffForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -290,6 +290,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFillR;
         private System.Windows.Forms.Panel panel4;
-        private inventorystaffForm inventorystaffForm1;
+        private InventoryStaffForm inventorystaffForm1;
     }
 }

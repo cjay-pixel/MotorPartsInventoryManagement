@@ -1,6 +1,6 @@
 ﻿namespace MotorPartsInventoryManagement.Forms
 {
-    partial class stockadjuForm
+    partial class StockAdjuForm
     {
         /// <summary> 
         /// Required designer variable.
