@@ -49,8 +49,13 @@ namespace MotorPartsInventoryManagement.Forms
             }
             // Replace current content of the right panel with the user control
             this.panel4.Controls.Clear();
-            this.panel4.Controls.Add(_inventorystaffForm);
-            _inventorystaffForm.BringToFront();
+            this.panel4.Controls.Add(_stockinstaffForm);
+            _stockinstaffForm.BringToFront();
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
