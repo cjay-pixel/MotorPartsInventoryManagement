@@ -12,13 +12,13 @@ using System.Windows.Forms;
 namespace MotorPartsInventoryManagement.Forms
 {
    
-    public partial class stockstaffForm : Form
+    public partial class StockStaffForm : Form
     {
         private damageForm _damageForm;
         private stockinstaffForm _stockinstaffForm;
         private inventorystaffForm _inventorystaffForm;
         public stockadjuForm _stockadjuForm;
-        public stockstaffForm()
+        public StockStaffForm()
         {
             InitializeComponent();
         }

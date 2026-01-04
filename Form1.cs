@@ -206,9 +206,9 @@ namespace MotorPartsInventoryManagement
                         //    dashboardForm = new CashierDashboardForm();
                         //    break;
 
-                        //case "StockStaff":
-                        //    dashboardForm = new StockStaffDashboardForm();
-                        //    break;
+                        case "StockStaff":
+                            dashboardForm = new StockStaffForm();
+                            break;
                     }
 
                     if (dashboardForm != null)

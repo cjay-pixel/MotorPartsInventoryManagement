@@ -143,11 +143,11 @@
     <Compile Include="Forms\stockinstaffForm.Designer.cs">
       <DependentUpon>stockinstaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\stockstaffForm.cs">
+    <Compile Include="Forms\StockStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\stockstaffForm.Designer.cs">
-      <DependentUpon>stockstaffForm.cs</DependentUpon>
+    <Compile Include="Forms\StockStaffForm.Designer.cs">
+      <DependentUpon>StockStaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\User.cs" />
