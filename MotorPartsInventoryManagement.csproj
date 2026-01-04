@@ -125,23 +125,23 @@
     <Compile Include="Forms\InventoryForms.Designer.cs">
       <DependentUpon>InventoryForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\inventorystaffForm.cs">
+    <Compile Include="Forms\InventoryStaffForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\inventorystaffForm.Designer.cs">
-      <DependentUpon>inventorystaffForm.cs</DependentUpon>
+    <Compile Include="Forms\InventoryStaffForm.Designer.cs">
+      <DependentUpon>InventoryStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\stockadjuForm.cs">
+    <Compile Include="Forms\StockAdjuForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\stockadjuForm.Designer.cs">
-      <DependentUpon>stockadjuForm.cs</DependentUpon>
+    <Compile Include="Forms\StockAdjuForm.Designer.cs">
+      <DependentUpon>StockAdjuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\stockinstaffForm.cs">
+    <Compile Include="Forms\StockInStaffForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\stockinstaffForm.Designer.cs">
-      <DependentUpon>stockinstaffForm.cs</DependentUpon>
+    <Compile Include="Forms\StockInStaffForm.Designer.cs">
+      <DependentUpon>StockInStaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StockStaffForm.cs">
       <SubType>Form</SubType>

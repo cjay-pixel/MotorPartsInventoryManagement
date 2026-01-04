@@ -15,9 +15,9 @@ namespace MotorPartsInventoryManagement.Forms
     public partial class StockStaffForm : Form
     {
         private damageForm _damageForm;
-        private stockinstaffForm _stockinstaffForm;
-        private inventorystaffForm _inventorystaffForm;
-        public stockadjuForm _stockadjuForm;
+        private StockInStaffForm _stockinstaffForm;
+        private InventoryStaffForm _inventorystaffForm;
+        public StockAdjuForm _stockadjuForm;
         public StockStaffForm()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace MotorPartsInventoryManagement.Forms
         {
             if (_inventorystaffForm == null || _inventorystaffForm.IsDisposed)
             {
-                _inventorystaffForm = new inventorystaffForm
+                _inventorystaffForm = new InventoryStaffForm
                 {
                     Dock = DockStyle.Fill
                 };
@@ -42,7 +42,7 @@ namespace MotorPartsInventoryManagement.Forms
         {
             if (_stockinstaffForm == null || _stockinstaffForm.IsDisposed)
             {
-                _stockinstaffForm = new stockinstaffForm
+                _stockinstaffForm = new StockInStaffForm
                 {
                     Dock = DockStyle.Fill
                 };

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MotorPartsInventoryManagement.Forms
 {
-    public partial class stockinstaffForm : UserControl
+    public partial class StockInStaffForm : UserControl
     {
-        public stockinstaffForm()
+        public StockInStaffForm()
         {
             InitializeComponent();
         }
