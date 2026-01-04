@@ -113,11 +113,11 @@
     <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\damageForm.cs">
+    <Compile Include="Forms\AdminDashboardForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\damageForm.Designer.cs">
-      <DependentUpon>damageForm.cs</DependentUpon>
+    <Compile Include="Forms\AdminDashboardForm.Designer.cs">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InventoryForms.cs">
       <SubType>UserControl</SubType>
@@ -160,20 +160,11 @@
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\damageForm.resx">
-      <DependentUpon>damageForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\inventorystaffForm.resx">
-      <DependentUpon>inventorystaffForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\stockadjuForm.resx">
-      <DependentUpon>stockadjuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\stockinstaffForm.resx">
-      <DependentUpon>stockinstaffForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\stockstaffForm.resx">
-      <DependentUpon>stockstaffForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\InventoryForms.resx">
+      <DependentUpon>InventoryForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -225,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactional-data.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

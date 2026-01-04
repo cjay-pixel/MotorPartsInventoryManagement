@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace MotorPartsInventoryManagement.Forms
 {
-    public partial class InventoryForms : UserControl
+    public partial class AdminDashboardForm : UserControl
     {
-        public InventoryForms()
+        public AdminDashboardForm()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

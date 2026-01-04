@@ -187,16 +187,6 @@ namespace MotorPartsInventoryManagement
                     // Hide login form
                     this.Hide();
 
-                    // For now, show a simple message box for each role
-                    // You'll replace this with actual dashboard forms later
-                    MessageBox.Show(
-                        $"Logged in as: {user.FullName}\n" +
-                        $"Role: {user.Role}\n\n" +
-                        $"Dashboard form will be created next!",
-                        "Login Success",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-
                     // TODO: Open appropriate dashboard based on role
                     // For now, just show login again
                     this.Show();
