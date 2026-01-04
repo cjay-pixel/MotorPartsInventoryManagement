@@ -42,12 +42,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.inventorystaffForm1 = new MotorPartsInventoryManagement.Forms.inventorystaffForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlShadowLeft
@@ -234,11 +236,19 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.inventorystaffForm1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(398, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(929, 790);
             this.panel4.TabIndex = 2;
+            // 
+            // inventorystaffForm1
+            // 
+            this.inventorystaffForm1.Location = new System.Drawing.Point(0, 0);
+            this.inventorystaffForm1.Name = "inventorystaffForm1";
+            this.inventorystaffForm1.Size = new System.Drawing.Size(929, 790);
+            this.inventorystaffForm1.TabIndex = 0;
             // 
             // stockstaffForm
             // 
@@ -256,6 +266,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -276,5 +287,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFillR;
         private System.Windows.Forms.Panel panel4;
+        private inventorystaffForm inventorystaffForm1;
     }
 }
