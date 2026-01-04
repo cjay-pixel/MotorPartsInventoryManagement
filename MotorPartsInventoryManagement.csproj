@@ -119,6 +119,12 @@
     <Compile Include="Forms\InventoryForms.Designer.cs">
       <DependentUpon>InventoryForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\inventorystaffForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\inventorystaffForm.Designer.cs">
+      <DependentUpon>inventorystaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\stockstaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\inventorystaffForm.resx">
+      <DependentUpon>inventorystaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\stockstaffForm.resx">
       <DependentUpon>stockstaffForm.cs</DependentUpon>
