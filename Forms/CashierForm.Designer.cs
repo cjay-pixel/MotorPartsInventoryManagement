@@ -62,7 +62,7 @@
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnAllItems = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -384,7 +384,7 @@
             this.panel3.Controls.Add(this.btnSupplier);
             this.panel3.Controls.Add(this.btnSales);
             this.panel3.Controls.Add(this.btnStock);
-            this.panel3.Controls.Add(this.btnInventory);
+            this.panel3.Controls.Add(this.btnAllItems);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 316);
             this.panel3.Name = "panel3";
@@ -482,23 +482,23 @@
             this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStock.UseVisualStyleBackColor = true;
             // 
-            // btnInventory
+            // btnAllItems
             // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
-            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 50);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnInventory.Size = new System.Drawing.Size(353, 68);
-            this.btnInventory.TabIndex = 1;
-            this.btnInventory.Text = "All Items";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnAllItems.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllItems.FlatAppearance.BorderSize = 0;
+            this.btnAllItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllItems.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
+            this.btnAllItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllItems.Location = new System.Drawing.Point(0, 50);
+            this.btnAllItems.Name = "btnAllItems";
+            this.btnAllItems.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnAllItems.Size = new System.Drawing.Size(353, 68);
+            this.btnAllItems.TabIndex = 1;
+            this.btnAllItems.Text = "All Items";
+            this.btnAllItems.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAllItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAllItems.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -708,7 +708,7 @@
         private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnInventory;
+        private System.Windows.Forms.Button btnAllItems;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Panel panel2;
