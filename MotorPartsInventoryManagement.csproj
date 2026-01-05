@@ -184,6 +184,12 @@
     <EmbeddedResource Include="Forms\InventoryForms.resx">
       <DependentUpon>InventoryForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stockadjuForm.resx">
+      <DependentUpon>StockAdjuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stockinstaffForm.resx">
+      <DependentUpon>StockInStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
