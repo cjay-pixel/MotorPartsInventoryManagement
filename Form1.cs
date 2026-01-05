@@ -331,5 +331,10 @@ namespace MotorPartsInventoryManagement
                 e.Cancel = true;
             }
         }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

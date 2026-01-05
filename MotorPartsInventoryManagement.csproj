@@ -143,6 +143,12 @@
     <Compile Include="Forms\InventoryStaffForm.Designer.cs">
       <DependentUpon>InventoryStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StockAdjuForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,11 +161,23 @@
     <Compile Include="Forms\StockInStaffForm.Designer.cs">
       <DependentUpon>StockInStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StockOperationForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StockOperationForm.Designer.cs">
+      <DependentUpon>StockOperationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StockStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\StockStaffForm.Designer.cs">
       <DependentUpon>StockStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\User.cs" />
@@ -184,11 +202,20 @@
     <EmbeddedResource Include="Forms\InventoryForms.resx">
       <DependentUpon>InventoryForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\stockadjuForm.resx">
       <DependentUpon>StockAdjuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\stockinstaffForm.resx">
       <DependentUpon>StockInStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockOperationForm.resx">
+      <DependentUpon>StockOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
