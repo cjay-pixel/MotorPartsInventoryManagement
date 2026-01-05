@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.pnlItems = new System.Windows.Forms.Panel();
             this.pnlItemsInventory = new System.Windows.Forms.FlowLayoutPanel();
@@ -37,6 +37,12 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlOrder = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDiscountVal = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDiscountType = new System.Windows.Forms.ComboBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.PnlOrderBottom = new System.Windows.Forms.Panel();
@@ -66,15 +72,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
-            this.cmbDiscountType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDiscountVal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pnlItems.SuspendLayout();
@@ -101,7 +101,7 @@
             this.pnlItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlItems.Location = new System.Drawing.Point(363, 0);
             this.pnlItems.Name = "pnlItems";
-            this.pnlItems.Size = new System.Drawing.Size(425, 765);
+            this.pnlItems.Size = new System.Drawing.Size(420, 765);
             this.pnlItems.TabIndex = 22;
             // 
             // pnlItemsInventory
@@ -110,7 +110,7 @@
             this.pnlItemsInventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlItemsInventory.Location = new System.Drawing.Point(0, 65);
             this.pnlItemsInventory.Name = "pnlItemsInventory";
-            this.pnlItemsInventory.Size = new System.Drawing.Size(425, 700);
+            this.pnlItemsInventory.Size = new System.Drawing.Size(420, 700);
             this.pnlItemsInventory.TabIndex = 1;
             // 
             // PnlItemsSearch
@@ -119,7 +119,7 @@
             this.PnlItemsSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlItemsSearch.Location = new System.Drawing.Point(0, 0);
             this.PnlItemsSearch.Name = "PnlItemsSearch";
-            this.PnlItemsSearch.Size = new System.Drawing.Size(425, 65);
+            this.PnlItemsSearch.Size = new System.Drawing.Size(420, 65);
             this.PnlItemsSearch.TabIndex = 0;
             // 
             // panel4
@@ -149,7 +149,7 @@
             this.pnlOrder.Controls.Add(this.dataGridView1);
             this.pnlOrder.Controls.Add(this.pnlOrderTop);
             this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlOrder.Location = new System.Drawing.Point(788, 0);
+            this.pnlOrder.Location = new System.Drawing.Point(783, 0);
             this.pnlOrder.Name = "pnlOrder";
             this.pnlOrder.Size = new System.Drawing.Size(510, 765);
             this.pnlOrder.TabIndex = 21;
@@ -169,6 +169,65 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(508, 164);
             this.panel5.TabIndex = 3;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(334, 125);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(103, 25);
+            this.lblTotal.TabIndex = 8;
+            this.lblTotal.Text = "PHP 0.00";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(31, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 25);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Total:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Discount Value:";
+            // 
+            // txtDiscountVal
+            // 
+            this.txtDiscountVal.Location = new System.Drawing.Point(327, 87);
+            this.txtDiscountVal.Name = "txtDiscountVal";
+            this.txtDiscountVal.Size = new System.Drawing.Size(120, 22);
+            this.txtDiscountVal.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Discount Type:";
+            // 
+            // cmbDiscountType
+            // 
+            this.cmbDiscountType.FormattingEnabled = true;
+            this.cmbDiscountType.Items.AddRange(new object[] {
+            "None",
+            "Fixed",
+            "Percentage"});
+            this.cmbDiscountType.Location = new System.Drawing.Point(326, 54);
+            this.cmbDiscountType.Name = "cmbDiscountType";
+            this.cmbDiscountType.Size = new System.Drawing.Size(121, 24);
+            this.cmbDiscountType.TabIndex = 2;
             // 
             // lblSubtotal
             // 
@@ -274,14 +333,14 @@
             this.ProdName,
             this.QTY,
             this.Price});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 65);
@@ -526,7 +585,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 252);
@@ -534,22 +593,23 @@
             this.panel2.Size = new System.Drawing.Size(353, 64);
             this.panel2.TabIndex = 1;
             // 
-            // guna2Button1
+            // btnLogout
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.BorderRadius = 9;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(228, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(105, 39);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Logout";
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogout.BorderRadius = 9;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.LightGray;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(228, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(105, 39);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label1
             // 
@@ -571,65 +631,6 @@
             this.pnlFillR.Size = new System.Drawing.Size(10, 765);
             this.pnlFillR.TabIndex = 1;
             // 
-            // cmbDiscountType
-            // 
-            this.cmbDiscountType.FormattingEnabled = true;
-            this.cmbDiscountType.Items.AddRange(new object[] {
-            "None",
-            "Fixed",
-            "Percentage"});
-            this.cmbDiscountType.Location = new System.Drawing.Point(326, 54);
-            this.cmbDiscountType.Name = "cmbDiscountType";
-            this.cmbDiscountType.Size = new System.Drawing.Size(121, 24);
-            this.cmbDiscountType.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Discount Type:";
-            // 
-            // txtDiscountVal
-            // 
-            this.txtDiscountVal.Location = new System.Drawing.Point(327, 87);
-            this.txtDiscountVal.Name = "txtDiscountVal";
-            this.txtDiscountVal.Size = new System.Drawing.Size(120, 22);
-            this.txtDiscountVal.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Discount Value:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 125);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Total:";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(334, 125);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(103, 25);
-            this.lblTotal.TabIndex = 8;
-            this.lblTotal.Text = "PHP 0.00";
-            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -644,7 +645,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 765);
+            this.ClientSize = new System.Drawing.Size(1293, 765);
             this.Controls.Add(this.pnlItems);
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlShadowLeft);
@@ -712,7 +713,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFillR;
         private System.Windows.Forms.Label label3;
