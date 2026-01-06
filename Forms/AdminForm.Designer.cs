@@ -37,6 +37,7 @@
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.adminDashboardForm1 = new MotorPartsInventoryManagement.Forms.AdminDashboardForm();
-            this.btnCategory = new System.Windows.Forms.Button();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -70,7 +70,7 @@
             this.pnlShadowLeft.ShadowDepth = 5;
             this.pnlShadowLeft.ShadowShift = 8;
             this.pnlShadowLeft.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.pnlShadowLeft.Size = new System.Drawing.Size(398, 742);
+            this.pnlShadowLeft.Size = new System.Drawing.Size(398, 897);
             this.pnlShadowLeft.TabIndex = 0;
             // 
             // pnlC
@@ -80,7 +80,7 @@
             this.pnlC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlC.Location = new System.Drawing.Point(0, 0);
             this.pnlC.Name = "pnlC";
-            this.pnlC.Size = new System.Drawing.Size(388, 742);
+            this.pnlC.Size = new System.Drawing.Size(388, 897);
             this.pnlC.TabIndex = 1;
             // 
             // panel3
@@ -97,7 +97,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 316);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(388, 426);
+            this.panel3.Size = new System.Drawing.Size(388, 581);
             this.panel3.TabIndex = 1;
             // 
             // btnUser
@@ -135,6 +135,7 @@
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnSupplier
             // 
@@ -191,6 +192,25 @@
             this.btnStock.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStock.UseVisualStyleBackColor = true;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // btnCategory
+            // 
+            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
+            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory.Location = new System.Drawing.Point(0, 186);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnCategory.Size = new System.Drawing.Size(388, 68);
+            this.btnCategory.TabIndex = 8;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnInventory
             // 
@@ -298,7 +318,7 @@
             this.pnlFillR.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlFillR.Location = new System.Drawing.Point(388, 0);
             this.pnlFillR.Name = "pnlFillR";
-            this.pnlFillR.Size = new System.Drawing.Size(10, 742);
+            this.pnlFillR.Size = new System.Drawing.Size(10, 897);
             this.pnlFillR.TabIndex = 1;
             // 
             // panel4
@@ -307,7 +327,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(398, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(807, 742);
+            this.panel4.Size = new System.Drawing.Size(807, 897);
             this.panel4.TabIndex = 1;
             // 
             // adminDashboardForm1
@@ -316,33 +336,14 @@
             this.adminDashboardForm1.Location = new System.Drawing.Point(0, 0);
             this.adminDashboardForm1.Name = "adminDashboardForm1";
             this.adminDashboardForm1.Padding = new System.Windows.Forms.Padding(20);
-            this.adminDashboardForm1.Size = new System.Drawing.Size(807, 742);
+            this.adminDashboardForm1.Size = new System.Drawing.Size(807, 897);
             this.adminDashboardForm1.TabIndex = 0;
-            // 
-            // btnCategory
-            // 
-            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategory.FlatAppearance.BorderSize = 0;
-            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
-            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategory.Location = new System.Drawing.Point(0, 186);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnCategory.Size = new System.Drawing.Size(388, 68);
-            this.btnCategory.TabIndex = 8;
-            this.btnCategory.Text = "Category";
-            this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCategory.UseVisualStyleBackColor = true;
-            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 742);
+            this.ClientSize = new System.Drawing.Size(1205, 897);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlShadowLeft);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
