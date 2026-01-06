@@ -35,7 +35,7 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnImportImg = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -43,18 +43,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtReorder = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtModelComp = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtQuantityR = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtStock = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbBrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtProductID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPartNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,7 +146,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.guna2PictureBox1);
+            this.panel4.Controls.Add(this.pbProduct);
             this.panel4.Controls.Add(this.btnImportImg);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.btnUpdate);
@@ -154,18 +154,18 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.txtReorder);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.cmCategory);
+            this.panel4.Controls.Add(this.cmbCategory);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtModelComp);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.btnClear);
             this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.txtQuantityR);
-            this.panel4.Controls.Add(this.txtStock);
-            this.panel4.Controls.Add(this.cmbCategory);
+            this.panel4.Controls.Add(this.txtQuantity);
+            this.panel4.Controls.Add(this.txtCost);
+            this.panel4.Controls.Add(this.cmbBrand);
             this.panel4.Controls.Add(this.cmbSupplier);
             this.panel4.Controls.Add(this.txtProductName);
-            this.panel4.Controls.Add(this.txtProductID);
+            this.panel4.Controls.Add(this.txtPartNumber);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
@@ -179,16 +179,16 @@
             this.panel4.Size = new System.Drawing.Size(1579, 288);
             this.panel4.TabIndex = 12;
             // 
-            // guna2PictureBox1
+            // pbProduct
             // 
-            this.guna2PictureBox1.BorderRadius = 9;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(954, 35);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(180, 166);
-            this.guna2PictureBox1.TabIndex = 44;
-            this.guna2PictureBox1.TabStop = false;
+            this.pbProduct.BorderRadius = 9;
+            this.pbProduct.FillColor = System.Drawing.Color.DarkGray;
+            this.pbProduct.ImageRotate = 0F;
+            this.pbProduct.Location = new System.Drawing.Point(954, 35);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(180, 166);
+            this.pbProduct.TabIndex = 44;
+            this.pbProduct.TabStop = false;
             // 
             // btnImportImg
             // 
@@ -315,21 +315,21 @@
             this.label10.Text = "Reorder Level:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // cmCategory
+            // cmbCategory
             // 
-            this.cmCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cmCategory.BorderRadius = 9;
-            this.cmCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.cmCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmCategory.ItemHeight = 30;
-            this.cmCategory.Location = new System.Drawing.Point(620, 32);
-            this.cmCategory.Name = "cmCategory";
-            this.cmCategory.Size = new System.Drawing.Size(218, 36);
-            this.cmCategory.TabIndex = 35;
+            this.cmbCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCategory.BorderRadius = 9;
+            this.cmbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbCategory.ItemHeight = 30;
+            this.cmbCategory.Location = new System.Drawing.Point(620, 32);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(218, 36);
+            this.cmbCategory.TabIndex = 35;
             // 
             // label9
             // 
@@ -413,65 +413,65 @@
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "ADD";
             // 
-            // txtQuantityR
+            // txtQuantity
             // 
-            this.txtQuantityR.Animated = true;
-            this.txtQuantityR.BorderRadius = 9;
-            this.txtQuantityR.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantityR.DefaultText = "";
-            this.txtQuantityR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantityR.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantityR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtQuantityR.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantityR.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Location = new System.Drawing.Point(620, 224);
-            this.txtQuantityR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtQuantityR.Name = "txtQuantityR";
-            this.txtQuantityR.PlaceholderText = "";
-            this.txtQuantityR.SelectedText = "";
-            this.txtQuantityR.Size = new System.Drawing.Size(218, 36);
-            this.txtQuantityR.TabIndex = 29;
+            this.txtQuantity.Animated = true;
+            this.txtQuantity.BorderRadius = 9;
+            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantity.DefaultText = "";
+            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Location = new System.Drawing.Point(620, 224);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.PlaceholderText = "";
+            this.txtQuantity.SelectedText = "";
+            this.txtQuantity.Size = new System.Drawing.Size(218, 36);
+            this.txtQuantity.TabIndex = 29;
             // 
-            // txtStock
+            // txtCost
             // 
-            this.txtStock.Animated = true;
-            this.txtStock.BorderRadius = 9;
-            this.txtStock.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStock.DefaultText = "";
-            this.txtStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtStock.ForeColor = System.Drawing.Color.Black;
-            this.txtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStock.Location = new System.Drawing.Point(621, 119);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.PlaceholderText = "";
-            this.txtStock.SelectedText = "";
-            this.txtStock.Size = new System.Drawing.Size(218, 36);
-            this.txtStock.TabIndex = 28;
+            this.txtCost.Animated = true;
+            this.txtCost.BorderRadius = 9;
+            this.txtCost.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCost.DefaultText = "";
+            this.txtCost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtCost.ForeColor = System.Drawing.Color.Black;
+            this.txtCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCost.Location = new System.Drawing.Point(621, 119);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.PlaceholderText = "";
+            this.txtCost.SelectedText = "";
+            this.txtCost.Size = new System.Drawing.Size(218, 36);
+            this.txtCost.TabIndex = 28;
             // 
-            // cmbCategory
+            // cmbBrand
             // 
-            this.cmbCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cmbCategory.BorderRadius = 9;
-            this.cmbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.cmbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbCategory.ItemHeight = 30;
-            this.cmbCategory.Location = new System.Drawing.Point(163, 175);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(218, 36);
-            this.cmbCategory.TabIndex = 27;
+            this.cmbBrand.BackColor = System.Drawing.Color.Transparent;
+            this.cmbBrand.BorderRadius = 9;
+            this.cmbBrand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBrand.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbBrand.ItemHeight = 30;
+            this.cmbBrand.Location = new System.Drawing.Point(163, 175);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(218, 36);
+            this.cmbBrand.TabIndex = 27;
             // 
             // cmbSupplier
             // 
@@ -511,27 +511,27 @@
             this.txtProductName.Size = new System.Drawing.Size(218, 36);
             this.txtProductName.TabIndex = 25;
             // 
-            // txtProductID
+            // txtPartNumber
             // 
-            this.txtProductID.Animated = true;
-            this.txtProductID.BorderRadius = 9;
-            this.txtProductID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductID.DefaultText = "";
-            this.txtProductID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProductID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProductID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtProductID.ForeColor = System.Drawing.Color.Black;
-            this.txtProductID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductID.Location = new System.Drawing.Point(163, 31);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.PlaceholderText = "";
-            this.txtProductID.SelectedText = "";
-            this.txtProductID.Size = new System.Drawing.Size(218, 36);
-            this.txtProductID.TabIndex = 7;
+            this.txtPartNumber.Animated = true;
+            this.txtPartNumber.BorderRadius = 9;
+            this.txtPartNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPartNumber.DefaultText = "";
+            this.txtPartNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPartNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPartNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPartNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPartNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPartNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtPartNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPartNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPartNumber.Location = new System.Drawing.Point(163, 31);
+            this.txtPartNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPartNumber.Name = "txtPartNumber";
+            this.txtPartNumber.PlaceholderText = "";
+            this.txtPartNumber.SelectedText = "";
+            this.txtPartNumber.Size = new System.Drawing.Size(218, 36);
+            this.txtPartNumber.TabIndex = 7;
             // 
             // label3
             // 
@@ -609,7 +609,7 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -629,15 +629,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txtProductID;
+        private Guna.UI2.WinForms.Guna2TextBox txtPartNumber;
         private Guna.UI2.WinForms.Guna2TextBox txtProductName;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbCategory;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbBrand;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSupplier;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantityR;
-        private Guna.UI2.WinForms.Guna2TextBox txtStock;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox txtCost;
         private Guna.UI2.WinForms.Guna2GradientButton btnClear;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
-        private Guna.UI2.WinForms.Guna2ComboBox cmCategory;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbCategory;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TextBox txtModelComp;
         private System.Windows.Forms.Label label8;
@@ -648,6 +648,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnImportImg;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pbProduct;
     }
 }
