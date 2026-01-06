@@ -18,6 +18,7 @@ namespace MotorPartsInventoryManagement.Forms
         private SupplierForm _supplierForm;
         private CategoryForm _categoryForm;
         private ReportsForm _reportsForm;
+        private UserManagementForm _usermanagementForm;
         public AdminForm()
         {
             InitializeComponent();
@@ -122,6 +123,22 @@ namespace MotorPartsInventoryManagement.Forms
             this.panel4.Controls.Clear();
             this.panel4.Controls.Add(_reportsForm);
             _reportsForm.BringToFront();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            if (_usermanagementForm == null || _usermanagementForm.IsDisposed)
+            {
+                _usermanagementForm = new UserManagementForm
+                {
+                    Dock = DockStyle.Fill
+                };
+            }
+
+            // Replace current content of the right panel with the user control
+            this.panel4.Controls.Clear();
+            this.panel4.Controls.Add(_usermanagementForm);
+            _usermanagementForm.BringToFront();
         }
     }
 }

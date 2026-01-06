@@ -591,8 +591,8 @@
             // 
             // tabMovingParts
             // 
-            this.tabMovingParts.Controls.Add(this.panel12);
             this.tabMovingParts.Controls.Add(this.panel11);
+            this.tabMovingParts.Controls.Add(this.panel12);
             this.tabMovingParts.Controls.Add(this.panel10);
             this.tabMovingParts.Location = new System.Drawing.Point(4, 46);
             this.tabMovingParts.Name = "tabMovingParts";
@@ -698,11 +698,11 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.groupBox5);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 192);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(20);
-            this.panel11.Size = new System.Drawing.Size(1199, 484);
+            this.panel11.Size = new System.Drawing.Size(1199, 501);
             this.panel11.TabIndex = 2;
             // 
             // groupBox5
@@ -713,7 +713,7 @@
             this.groupBox5.Location = new System.Drawing.Point(20, 20);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.groupBox5.Size = new System.Drawing.Size(1159, 444);
+            this.groupBox5.Size = new System.Drawing.Size(1159, 461);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Sales Report Table";
@@ -733,17 +733,17 @@
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(1153, 405);
+            this.dataGridView5.Size = new System.Drawing.Size(1153, 422);
             this.dataGridView5.TabIndex = 0;
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.guna2GradientButton5);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 676);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(3, 693);
             this.panel12.Name = "panel12";
             this.panel12.Padding = new System.Windows.Forms.Padding(20);
-            this.panel12.Size = new System.Drawing.Size(1199, 76);
+            this.panel12.Size = new System.Drawing.Size(1199, 59);
             this.panel12.TabIndex = 3;
             // 
             // guna2GradientButton5

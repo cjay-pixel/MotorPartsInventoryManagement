@@ -59,6 +59,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -189,10 +191,7 @@
             this.panel2.Controls.Add(this.cbShowPass);
             this.panel2.Controls.Add(this.guna2TextBox5);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnClear);
-            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.guna2TextBox2);
@@ -253,7 +252,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.IndicateFocus = true;
-            this.btnDelete.Location = new System.Drawing.Point(24, 646);
+            this.btnDelete.Location = new System.Drawing.Point(26, 135);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(216, 45);
             this.btnDelete.TabIndex = 45;
@@ -273,7 +272,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.IndicateFocus = true;
-            this.btnUpdate.Location = new System.Drawing.Point(24, 584);
+            this.btnUpdate.Location = new System.Drawing.Point(26, 73);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(216, 45);
             this.btnUpdate.TabIndex = 44;
@@ -293,7 +292,7 @@
             this.btnClear.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.IndicateFocus = true;
-            this.btnClear.Location = new System.Drawing.Point(24, 706);
+            this.btnClear.Location = new System.Drawing.Point(26, 195);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(216, 45);
             this.btnClear.TabIndex = 43;
@@ -313,7 +312,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IndicateFocus = true;
-            this.btnAdd.Location = new System.Drawing.Point(24, 525);
+            this.btnAdd.Location = new System.Drawing.Point(26, 14);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(216, 45);
             this.btnAdd.TabIndex = 42;
@@ -517,6 +516,18 @@
             this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.btnUpdate);
+            this.panel7.Controls.Add(this.btnDelete);
+            this.panel7.Controls.Add(this.btnAdd);
+            this.panel7.Controls.Add(this.btnClear);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 512);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(264, 259);
+            this.panel7.TabIndex = 51;
+            // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,6 +545,7 @@
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -571,5 +583,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.Panel panel7;
     }
 }
