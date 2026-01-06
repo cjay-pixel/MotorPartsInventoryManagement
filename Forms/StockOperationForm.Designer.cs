@@ -31,19 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabStockIn = new System.Windows.Forms.TabPage();
-            this.tabStockOut = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gbStockInEntry = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbPart = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtQuantityR = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtDRN = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gbStockInHistory = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,18 +39,19 @@
             this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QuantityAdded = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiptNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.gbStockInEntry = new System.Windows.Forms.GroupBox();
+            this.txtDRN = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtQuantityR = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbPart = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabStockOut = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -72,9 +60,32 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabAdjustments = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -85,17 +96,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabLowStock = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -107,23 +107,23 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabStockIn.SuspendLayout();
-            this.tabStockOut.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.gbStockInEntry.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gbStockInHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.gbStockInEntry.SuspendLayout();
+            this.tabStockOut.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabAdjustments.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabLowStock.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -150,6 +150,7 @@
             this.tabControl1.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(20, 20);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(12, 6);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1991, 776);
             this.tabControl1.TabIndex = 0;
@@ -158,25 +159,85 @@
             // 
             this.tabStockIn.Controls.Add(this.panel3);
             this.tabStockIn.Controls.Add(this.panel2);
-            this.tabStockIn.Location = new System.Drawing.Point(4, 29);
+            this.tabStockIn.Location = new System.Drawing.Point(4, 35);
             this.tabStockIn.Name = "tabStockIn";
             this.tabStockIn.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStockIn.Size = new System.Drawing.Size(1983, 743);
+            this.tabStockIn.Size = new System.Drawing.Size(1983, 737);
             this.tabStockIn.TabIndex = 0;
             this.tabStockIn.Text = "Stock In";
             this.tabStockIn.UseVisualStyleBackColor = true;
             // 
-            // tabStockOut
+            // panel3
             // 
-            this.tabStockOut.Controls.Add(this.panel5);
-            this.tabStockOut.Controls.Add(this.panel4);
-            this.tabStockOut.Location = new System.Drawing.Point(4, 29);
-            this.tabStockOut.Name = "tabStockOut";
-            this.tabStockOut.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStockOut.Size = new System.Drawing.Size(1983, 743);
-            this.tabStockOut.TabIndex = 1;
-            this.tabStockOut.Text = "Stock Out";
-            this.tabStockOut.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.gbStockInHistory);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 256);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(20);
+            this.panel3.Size = new System.Drawing.Size(1977, 478);
+            this.panel3.TabIndex = 1;
+            // 
+            // gbStockInHistory
+            // 
+            this.gbStockInHistory.Controls.Add(this.dataGridView1);
+            this.gbStockInHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbStockInHistory.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbStockInHistory.Location = new System.Drawing.Point(20, 20);
+            this.gbStockInHistory.Name = "gbStockInHistory";
+            this.gbStockInHistory.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.gbStockInHistory.Size = new System.Drawing.Size(1937, 438);
+            this.gbStockInHistory.TabIndex = 1;
+            this.gbStockInHistory.TabStop = false;
+            this.gbStockInHistory.Text = "Stock In History";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.PartName,
+            this.Supplier,
+            this.QuantityAdded,
+            this.ReceiptNo});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1931, 399);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            // 
+            // PartName
+            // 
+            this.PartName.HeaderText = "Part Name";
+            this.PartName.MinimumWidth = 6;
+            this.PartName.Name = "PartName";
+            // 
+            // Supplier
+            // 
+            this.Supplier.HeaderText = "Supplier";
+            this.Supplier.MinimumWidth = 6;
+            this.Supplier.Name = "Supplier";
+            // 
+            // QuantityAdded
+            // 
+            this.QuantityAdded.HeaderText = "Quantity Added";
+            this.QuantityAdded.MinimumWidth = 6;
+            this.QuantityAdded.Name = "QuantityAdded";
+            // 
+            // ReceiptNo
+            // 
+            this.ReceiptNo.HeaderText = "Receipt No.";
+            this.ReceiptNo.MinimumWidth = 6;
+            this.ReceiptNo.Name = "ReceiptNo";
             // 
             // panel2
             // 
@@ -208,117 +269,6 @@
             this.gbStockInEntry.TabIndex = 0;
             this.gbStockInEntry.TabStop = false;
             this.gbStockInEntry.Text = "Stock In Entry";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label2.Location = new System.Drawing.Point(27, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Part Name:";
-            // 
-            // cmbPart
-            // 
-            this.cmbPart.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPart.BorderRadius = 9;
-            this.cmbPart.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPart.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPart.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPart.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbPart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPart.ItemHeight = 30;
-            this.cmbPart.Location = new System.Drawing.Point(131, 44);
-            this.cmbPart.Name = "cmbPart";
-            this.cmbPart.Size = new System.Drawing.Size(218, 36);
-            this.cmbPart.TabIndex = 28;
-            // 
-            // cmbSupplier
-            // 
-            this.cmbSupplier.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSupplier.BorderRadius = 9;
-            this.cmbSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSupplier.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSupplier.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbSupplier.ItemHeight = 30;
-            this.cmbSupplier.Location = new System.Drawing.Point(131, 91);
-            this.cmbSupplier.Name = "cmbSupplier";
-            this.cmbSupplier.Size = new System.Drawing.Size(218, 36);
-            this.cmbSupplier.TabIndex = 30;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label4.Location = new System.Drawing.Point(27, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 22);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Supplier:";
-            // 
-            // txtQuantityR
-            // 
-            this.txtQuantityR.Animated = true;
-            this.txtQuantityR.BorderRadius = 9;
-            this.txtQuantityR.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantityR.DefaultText = "";
-            this.txtQuantityR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantityR.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantityR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.txtQuantityR.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantityR.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Location = new System.Drawing.Point(567, 87);
-            this.txtQuantityR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtQuantityR.Name = "txtQuantityR";
-            this.txtQuantityR.PlaceholderText = "";
-            this.txtQuantityR.SelectedText = "";
-            this.txtQuantityR.Size = new System.Drawing.Size(218, 36);
-            this.txtQuantityR.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label5.Location = new System.Drawing.Point(406, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 44);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Quantity\r\nto Add:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(842, 52);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker1.TabIndex = 33;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Animated = true;
-            this.btnSave.BorderRadius = 9;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnSave.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.btnSave.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.IndicateFocus = true;
-            this.btnSave.Location = new System.Drawing.Point(31, 149);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(267, 37);
-            this.btnSave.TabIndex = 34;
-            this.btnSave.Text = "SAVE";
             // 
             // txtDRN
             // 
@@ -352,77 +302,200 @@
             this.label10.TabIndex = 38;
             this.label10.Text = "Delivery Receipt No.:";
             // 
-            // panel3
+            // btnSave
             // 
-            this.panel3.Controls.Add(this.gbStockInHistory);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 256);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20);
-            this.panel3.Size = new System.Drawing.Size(1977, 484);
-            this.panel3.TabIndex = 1;
+            this.btnSave.Animated = true;
+            this.btnSave.BorderRadius = 9;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnSave.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.IndicateFocus = true;
+            this.btnSave.Location = new System.Drawing.Point(31, 149);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(267, 37);
+            this.btnSave.TabIndex = 34;
+            this.btnSave.Text = "SAVE";
             // 
-            // gbStockInHistory
+            // dateTimePicker1
             // 
-            this.gbStockInHistory.Controls.Add(this.dataGridView1);
-            this.gbStockInHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbStockInHistory.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbStockInHistory.Location = new System.Drawing.Point(20, 20);
-            this.gbStockInHistory.Name = "gbStockInHistory";
-            this.gbStockInHistory.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.gbStockInHistory.Size = new System.Drawing.Size(1937, 444);
-            this.gbStockInHistory.TabIndex = 1;
-            this.gbStockInHistory.TabStop = false;
-            this.gbStockInHistory.Text = "Stock In History";
+            this.dateTimePicker1.Location = new System.Drawing.Point(842, 52);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(267, 23);
+            this.dateTimePicker1.TabIndex = 33;
             // 
-            // dataGridView1
+            // txtQuantityR
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.PartName,
-            this.Supplier,
-            this.QuantityAdded,
-            this.ReceiptNo});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1931, 405);
-            this.dataGridView1.TabIndex = 0;
+            this.txtQuantityR.Animated = true;
+            this.txtQuantityR.BorderRadius = 9;
+            this.txtQuantityR.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantityR.DefaultText = "";
+            this.txtQuantityR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantityR.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantityR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityR.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtQuantityR.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantityR.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityR.Location = new System.Drawing.Point(567, 87);
+            this.txtQuantityR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQuantityR.Name = "txtQuantityR";
+            this.txtQuantityR.PlaceholderText = "";
+            this.txtQuantityR.SelectedText = "";
+            this.txtQuantityR.Size = new System.Drawing.Size(218, 36);
+            this.txtQuantityR.TabIndex = 32;
             // 
-            // Date
+            // label5
             // 
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label5.Location = new System.Drawing.Point(406, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 44);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Quantity\r\nto Add:";
             // 
-            // PartName
+            // cmbSupplier
             // 
-            this.PartName.HeaderText = "Part Name";
-            this.PartName.MinimumWidth = 6;
-            this.PartName.Name = "PartName";
+            this.cmbSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSupplier.BorderRadius = 9;
+            this.cmbSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSupplier.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupplier.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSupplier.ItemHeight = 30;
+            this.cmbSupplier.Location = new System.Drawing.Point(131, 91);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.Size = new System.Drawing.Size(218, 36);
+            this.cmbSupplier.TabIndex = 30;
             // 
-            // Supplier
+            // label4
             // 
-            this.Supplier.HeaderText = "Supplier";
-            this.Supplier.MinimumWidth = 6;
-            this.Supplier.Name = "Supplier";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label4.Location = new System.Drawing.Point(27, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 22);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Supplier:";
             // 
-            // QuantityAdded
+            // cmbPart
             // 
-            this.QuantityAdded.HeaderText = "Quantity Added";
-            this.QuantityAdded.MinimumWidth = 6;
-            this.QuantityAdded.Name = "QuantityAdded";
+            this.cmbPart.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPart.BorderRadius = 9;
+            this.cmbPart.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPart.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPart.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPart.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbPart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbPart.ItemHeight = 30;
+            this.cmbPart.Location = new System.Drawing.Point(131, 44);
+            this.cmbPart.Name = "cmbPart";
+            this.cmbPart.Size = new System.Drawing.Size(218, 36);
+            this.cmbPart.TabIndex = 28;
             // 
-            // ReceiptNo
+            // label2
             // 
-            this.ReceiptNo.HeaderText = "Receipt No.";
-            this.ReceiptNo.MinimumWidth = 6;
-            this.ReceiptNo.Name = "ReceiptNo";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label2.Location = new System.Drawing.Point(27, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Part Name:";
+            // 
+            // tabStockOut
+            // 
+            this.tabStockOut.Controls.Add(this.panel5);
+            this.tabStockOut.Controls.Add(this.panel4);
+            this.tabStockOut.Location = new System.Drawing.Point(4, 35);
+            this.tabStockOut.Name = "tabStockOut";
+            this.tabStockOut.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStockOut.Size = new System.Drawing.Size(1983, 737);
+            this.tabStockOut.TabIndex = 1;
+            this.tabStockOut.Text = "Stock Out";
+            this.tabStockOut.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.groupBox2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 256);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(20);
+            this.panel5.Size = new System.Drawing.Size(1977, 478);
+            this.panel5.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(20, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.groupBox2.Size = new System.Drawing.Size(1937, 438);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Stock Out History";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1931, 399);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Part Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Supplier";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity Deducted";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Reason";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // panel4
             // 
@@ -454,6 +527,38 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Out Entry";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Animated = true;
+            this.guna2TextBox1.BorderRadius = 9;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(940, 49);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(388, 78);
+            this.guna2TextBox1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label1.Location = new System.Drawing.Point(776, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 44);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Reason (Shop Use /\r\nInternal / Other):";
             // 
             // guna2GradientButton1
             // 
@@ -566,121 +671,96 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Part Name:";
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderRadius = 9;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(940, 49);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(388, 78);
-            this.guna2TextBox1.TabIndex = 36;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label1.Location = new System.Drawing.Point(776, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 44);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Reason (Shop Use /\r\nInternal / Other):";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.groupBox2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 256);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(20);
-            this.panel5.Size = new System.Drawing.Size(1977, 484);
-            this.panel5.TabIndex = 2;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(20, 20);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.groupBox2.Size = new System.Drawing.Size(1937, 444);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Stock Out History";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1931, 405);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Part Name";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Supplier";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity Deducted";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Reason";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
             // tabAdjustments
             // 
             this.tabAdjustments.Controls.Add(this.panel7);
             this.tabAdjustments.Controls.Add(this.panel6);
-            this.tabAdjustments.Location = new System.Drawing.Point(4, 29);
+            this.tabAdjustments.Location = new System.Drawing.Point(4, 35);
             this.tabAdjustments.Name = "tabAdjustments";
             this.tabAdjustments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdjustments.Size = new System.Drawing.Size(1983, 743);
+            this.tabAdjustments.Size = new System.Drawing.Size(1983, 737);
             this.tabAdjustments.TabIndex = 2;
             this.tabAdjustments.Text = "Adjustments";
             this.tabAdjustments.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.groupBox4);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 301);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(20);
+            this.panel7.Size = new System.Drawing.Size(1977, 433);
+            this.panel7.TabIndex = 3;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dataGridView3);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(20, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.groupBox4.Size = new System.Drawing.Size(1937, 393);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Adjustment Log";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.Type,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1931, 354);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Part Name";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Supplier";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Remarks";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // panel6
             // 
@@ -714,6 +794,32 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Adjustments Entry";
+            // 
+            // guna2ComboBox5
+            // 
+            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox5.BorderRadius = 9;
+            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox5.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox5.ItemHeight = 30;
+            this.guna2ComboBox5.Location = new System.Drawing.Point(173, 142);
+            this.guna2ComboBox5.Name = "guna2ComboBox5";
+            this.guna2ComboBox5.Size = new System.Drawing.Size(218, 36);
+            this.guna2ComboBox5.TabIndex = 38;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label13.Location = new System.Drawing.Point(27, 151);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(133, 22);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Adjustment Type:";
             // 
             // guna2TextBox3
             // 
@@ -858,118 +964,13 @@
             this.label12.TabIndex = 26;
             this.label12.Text = "Part Name:";
             // 
-            // guna2ComboBox5
-            // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 9;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox5.ItemHeight = 30;
-            this.guna2ComboBox5.Location = new System.Drawing.Point(173, 142);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox5.TabIndex = 38;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label13.Location = new System.Drawing.Point(27, 151);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 22);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Adjustment Type:";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.groupBox4);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 301);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(20);
-            this.panel7.Size = new System.Drawing.Size(1977, 439);
-            this.panel7.TabIndex = 3;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dataGridView3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(20, 20);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.groupBox4.Size = new System.Drawing.Size(1937, 399);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Adjustment Log";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.Type,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1931, 360);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Part Name";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Supplier";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Remarks";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
             // tabLowStock
             // 
             this.tabLowStock.Controls.Add(this.panel8);
-            this.tabLowStock.Location = new System.Drawing.Point(4, 29);
+            this.tabLowStock.Location = new System.Drawing.Point(4, 35);
             this.tabLowStock.Name = "tabLowStock";
             this.tabLowStock.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLowStock.Size = new System.Drawing.Size(1983, 743);
+            this.tabLowStock.Size = new System.Drawing.Size(1983, 737);
             this.tabLowStock.TabIndex = 3;
             this.tabLowStock.Text = "Low Stock";
             this.tabLowStock.UseVisualStyleBackColor = true;
@@ -981,7 +982,7 @@
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(20);
-            this.panel8.Size = new System.Drawing.Size(1977, 737);
+            this.panel8.Size = new System.Drawing.Size(1977, 731);
             this.panel8.TabIndex = 3;
             // 
             // dataGridView4
@@ -1000,7 +1001,7 @@
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1937, 697);
+            this.dataGridView4.Size = new System.Drawing.Size(1937, 691);
             this.dataGridView4.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn12
@@ -1043,26 +1044,26 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabStockIn.ResumeLayout(false);
-            this.tabStockOut.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.gbStockInEntry.ResumeLayout(false);
-            this.gbStockInEntry.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.gbStockInHistory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.gbStockInEntry.ResumeLayout(false);
+            this.gbStockInEntry.PerformLayout();
+            this.tabStockOut.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabAdjustments.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabLowStock.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
