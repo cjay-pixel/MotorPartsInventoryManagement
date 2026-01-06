@@ -90,11 +90,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(463, 91);
+            this.label8.Location = new System.Drawing.Point(468, 102);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 34);
+            this.label8.Size = new System.Drawing.Size(61, 17);
             this.label8.TabIndex = 35;
-            this.label8.Text = "Reason (Shop Use /\r\nInternal / Other):";
+            this.label8.Text = "Reason:";
             // 
             // guna2GradientButton2
             // 
