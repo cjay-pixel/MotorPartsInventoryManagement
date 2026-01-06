@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCat = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuanRec = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.inventory_clearBtn = new System.Windows.Forms.Button();
             this.inventory_addBtn = new System.Windows.Forms.Button();
-            this.inventory_status = new System.Windows.Forms.ComboBox();
+            this.cmbSuppli = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.inventory_stock = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.inventory_productName = new System.Windows.Forms.TextBox();
+            this.txtProduct_Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.inventory_productID = new System.Windows.Forms.TextBox();
+            this.txtProductID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,36 +57,36 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbCat);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtQuanRec);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.inventory_clearBtn);
             this.panel2.Controls.Add(this.inventory_addBtn);
-            this.panel2.Controls.Add(this.inventory_status);
+            this.panel2.Controls.Add(this.cmbSuppli);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.inventory_stock);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.inventory_productName);
+            this.panel2.Controls.Add(this.txtProduct_Name);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.inventory_productID);
+            this.panel2.Controls.Add(this.txtProductID);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(12, 462);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(902, 273);
             this.panel2.TabIndex = 11;
             // 
-            // comboBox1
+            // cmbCat
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCat.FormattingEnabled = true;
+            this.cmbCat.Items.AddRange(new object[] {
             "Damaged",
             "Missing"});
-            this.comboBox1.Location = new System.Drawing.Point(124, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(218, 30);
-            this.comboBox1.TabIndex = 24;
+            this.cmbCat.Location = new System.Drawing.Point(124, 157);
+            this.cmbCat.Name = "cmbCat";
+            this.cmbCat.Size = new System.Drawing.Size(218, 30);
+            this.cmbCat.TabIndex = 24;
             // 
             // label3
             // 
@@ -97,13 +97,13 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Category:";
             // 
-            // textBox1
+            // txtQuanRec
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(493, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 28);
-            this.textBox1.TabIndex = 22;
+            this.txtQuanRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuanRec.Location = new System.Drawing.Point(493, 64);
+            this.txtQuanRec.Name = "txtQuanRec";
+            this.txtQuanRec.Size = new System.Drawing.Size(218, 28);
+            this.txtQuanRec.TabIndex = 22;
             // 
             // label5
             // 
@@ -144,17 +144,17 @@
             this.inventory_addBtn.Text = "SAVE";
             this.inventory_addBtn.UseVisualStyleBackColor = false;
             // 
-            // inventory_status
+            // cmbSuppli
             // 
-            this.inventory_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventory_status.FormattingEnabled = true;
-            this.inventory_status.Items.AddRange(new object[] {
+            this.cmbSuppli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSuppli.FormattingEnabled = true;
+            this.cmbSuppli.Items.AddRange(new object[] {
             "Damaged",
             "Missing"});
-            this.inventory_status.Location = new System.Drawing.Point(124, 111);
-            this.inventory_status.Name = "inventory_status";
-            this.inventory_status.Size = new System.Drawing.Size(218, 30);
-            this.inventory_status.TabIndex = 12;
+            this.cmbSuppli.Location = new System.Drawing.Point(124, 111);
+            this.cmbSuppli.Name = "cmbSuppli";
+            this.cmbSuppli.Size = new System.Drawing.Size(218, 30);
+            this.cmbSuppli.TabIndex = 12;
             // 
             // label4
             // 
@@ -182,13 +182,13 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Stock:";
             // 
-            // inventory_productName
+            // txtProduct_Name
             // 
-            this.inventory_productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventory_productName.Location = new System.Drawing.Point(124, 71);
-            this.inventory_productName.Name = "inventory_productName";
-            this.inventory_productName.Size = new System.Drawing.Size(218, 28);
-            this.inventory_productName.TabIndex = 4;
+            this.txtProduct_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduct_Name.Location = new System.Drawing.Point(124, 71);
+            this.txtProduct_Name.Name = "txtProduct_Name";
+            this.txtProduct_Name.Size = new System.Drawing.Size(218, 28);
+            this.txtProduct_Name.TabIndex = 4;
             // 
             // label2
             // 
@@ -199,13 +199,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Product Name:";
             // 
-            // inventory_productID
+            // txtProductID
             // 
-            this.inventory_productID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventory_productID.Location = new System.Drawing.Point(124, 33);
-            this.inventory_productID.Name = "inventory_productID";
-            this.inventory_productID.Size = new System.Drawing.Size(218, 28);
-            this.inventory_productID.TabIndex = 2;
+            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductID.Location = new System.Drawing.Point(124, 33);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(218, 28);
+            this.txtProductID.TabIndex = 2;
             // 
             // label1
             // 
@@ -245,23 +245,23 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
@@ -291,19 +291,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuanRec;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button inventory_clearBtn;
         private System.Windows.Forms.Button inventory_addBtn;
-        private System.Windows.Forms.ComboBox inventory_status;
+        private System.Windows.Forms.ComboBox cmbSuppli;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox inventory_stock;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox inventory_productName;
+        private System.Windows.Forms.TextBox txtProduct_Name;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox inventory_productID;
+        private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;

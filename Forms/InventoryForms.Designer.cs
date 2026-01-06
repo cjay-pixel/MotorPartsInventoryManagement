@@ -35,13 +35,17 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnImportImg = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSellingPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtReorder = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtModelComp = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -57,10 +61,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnImportImg = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -122,7 +122,7 @@
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Location = new System.Drawing.Point(114, 20);
@@ -136,10 +136,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 27);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search:";
             // 
@@ -150,13 +150,13 @@
             this.panel4.Controls.Add(this.btnImportImg);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.btnUpdate);
-            this.panel4.Controls.Add(this.guna2TextBox3);
+            this.panel4.Controls.Add(this.txtSellingPrice);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.guna2TextBox2);
+            this.panel4.Controls.Add(this.txtReorder);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.guna2ComboBox1);
+            this.panel4.Controls.Add(this.cmCategory);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.guna2TextBox1);
+            this.panel4.Controls.Add(this.txtModelComp);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.btnClear);
             this.panel4.Controls.Add(this.btnAdd);
@@ -173,132 +173,203 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.panel4.Location = new System.Drawing.Point(20, 451);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1579, 288);
             this.panel4.TabIndex = 12;
             // 
-            // guna2TextBox3
+            // guna2PictureBox1
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderRadius = 9;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(620, 168);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(218, 36);
-            this.guna2TextBox3.TabIndex = 39;
+            this.guna2PictureBox1.BorderRadius = 9;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.DarkGray;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(954, 35);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(180, 166);
+            this.guna2PictureBox1.TabIndex = 44;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // btnImportImg
+            // 
+            this.btnImportImg.Animated = true;
+            this.btnImportImg.BorderRadius = 9;
+            this.btnImportImg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImportImg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImportImg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImportImg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImportImg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImportImg.FillColor = System.Drawing.Color.YellowGreen;
+            this.btnImportImg.FillColor2 = System.Drawing.Color.DarkOliveGreen;
+            this.btnImportImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnImportImg.ForeColor = System.Drawing.Color.White;
+            this.btnImportImg.IndicateFocus = true;
+            this.btnImportImg.Location = new System.Drawing.Point(954, 215);
+            this.btnImportImg.Name = "btnImportImg";
+            this.btnImportImg.Size = new System.Drawing.Size(180, 45);
+            this.btnImportImg.TabIndex = 43;
+            this.btnImportImg.Text = "IMPORT";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Animated = true;
+            this.btnDelete.BorderRadius = 9;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.IndianRed;
+            this.btnDelete.FillColor2 = System.Drawing.Color.Brown;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IndicateFocus = true;
+            this.btnDelete.Location = new System.Drawing.Point(1246, 156);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(216, 45);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "DELETE";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Animated = true;
+            this.btnUpdate.BorderRadius = 9;
+            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdate.FillColor = System.Drawing.Color.CadetBlue;
+            this.btnUpdate.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.IndicateFocus = true;
+            this.btnUpdate.Location = new System.Drawing.Point(1246, 94);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(216, 45);
+            this.btnUpdate.TabIndex = 40;
+            this.btnUpdate.Text = "UPDATE";
+            // 
+            // txtSellingPrice
+            // 
+            this.txtSellingPrice.Animated = true;
+            this.txtSellingPrice.BorderRadius = 9;
+            this.txtSellingPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSellingPrice.DefaultText = "";
+            this.txtSellingPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSellingPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSellingPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSellingPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSellingPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSellingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtSellingPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtSellingPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSellingPrice.Location = new System.Drawing.Point(620, 168);
+            this.txtSellingPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSellingPrice.Name = "txtSellingPrice";
+            this.txtSellingPrice.PlaceholderText = "";
+            this.txtSellingPrice.SelectedText = "";
+            this.txtSellingPrice.Size = new System.Drawing.Size(218, 36);
+            this.txtSellingPrice.TabIndex = 39;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label11.Location = new System.Drawing.Point(505, 175);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 22);
+            this.label11.Size = new System.Drawing.Size(90, 17);
             this.label11.TabIndex = 38;
             this.label11.Text = "Selling Price:";
             // 
-            // guna2TextBox2
+            // txtReorder
             // 
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderRadius = 9;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(163, 224);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(218, 36);
-            this.guna2TextBox2.TabIndex = 37;
+            this.txtReorder.Animated = true;
+            this.txtReorder.BorderRadius = 9;
+            this.txtReorder.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReorder.DefaultText = "";
+            this.txtReorder.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtReorder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtReorder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReorder.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReorder.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReorder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtReorder.ForeColor = System.Drawing.Color.Black;
+            this.txtReorder.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReorder.Location = new System.Drawing.Point(163, 224);
+            this.txtReorder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtReorder.Name = "txtReorder";
+            this.txtReorder.PlaceholderText = "";
+            this.txtReorder.SelectedText = "";
+            this.txtReorder.Size = new System.Drawing.Size(218, 36);
+            this.txtReorder.TabIndex = 37;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label10.Location = new System.Drawing.Point(52, 230);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 22);
+            this.label10.Size = new System.Drawing.Size(102, 17);
             this.label10.TabIndex = 36;
             this.label10.Text = "Reorder Level:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // guna2ComboBox1
+            // cmCategory
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 9;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(620, 32);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox1.TabIndex = 35;
+            this.cmCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cmCategory.BorderRadius = 9;
+            this.cmCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmCategory.ItemHeight = 30;
+            this.cmCategory.Location = new System.Drawing.Point(620, 32);
+            this.cmCategory.Name = "cmCategory";
+            this.cmCategory.Size = new System.Drawing.Size(218, 36);
+            this.cmCategory.TabIndex = 35;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label9.Location = new System.Drawing.Point(505, 38);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 22);
+            this.label9.Size = new System.Drawing.Size(69, 17);
             this.label9.TabIndex = 34;
-            this.label9.Text = "Catergory:";
+            this.label9.Text = "Category:";
             // 
-            // guna2TextBox1
+            // txtModelComp
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderRadius = 9;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(163, 125);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(218, 36);
-            this.guna2TextBox1.TabIndex = 33;
+            this.txtModelComp.Animated = true;
+            this.txtModelComp.BorderRadius = 9;
+            this.txtModelComp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtModelComp.DefaultText = "";
+            this.txtModelComp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtModelComp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtModelComp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtModelComp.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtModelComp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtModelComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtModelComp.ForeColor = System.Drawing.Color.Black;
+            this.txtModelComp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtModelComp.Location = new System.Drawing.Point(163, 125);
+            this.txtModelComp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtModelComp.Name = "txtModelComp";
+            this.txtModelComp.PlaceholderText = "";
+            this.txtModelComp.SelectedText = "";
+            this.txtModelComp.Size = new System.Drawing.Size(218, 36);
+            this.txtModelComp.TabIndex = 33;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label8.Location = new System.Drawing.Point(52, 125);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 44);
+            this.label8.Size = new System.Drawing.Size(91, 34);
             this.label8.TabIndex = 32;
             this.label8.Text = "Motor Model\r\nCompatibility:";
             // 
@@ -313,7 +384,7 @@
             this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClear.FillColor = System.Drawing.Color.Red;
             this.btnClear.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnClear.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.IndicateFocus = true;
             this.btnClear.Location = new System.Drawing.Point(1246, 216);
@@ -333,7 +404,7 @@
             this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdd.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnAdd.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.btnAdd.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IndicateFocus = true;
             this.btnAdd.Location = new System.Drawing.Point(1246, 35);
@@ -353,7 +424,7 @@
             this.txtQuantityR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtQuantityR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtQuantityR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtQuantityR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtQuantityR.ForeColor = System.Drawing.Color.Black;
             this.txtQuantityR.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantityR.Location = new System.Drawing.Point(620, 224);
@@ -375,7 +446,7 @@
             this.txtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStock.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtStock.ForeColor = System.Drawing.Color.Black;
             this.txtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStock.Location = new System.Drawing.Point(621, 119);
@@ -394,7 +465,7 @@
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbCategory.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cmbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbCategory.ItemHeight = 30;
             this.cmbCategory.Location = new System.Drawing.Point(163, 175);
@@ -410,7 +481,7 @@
             this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupplier.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSupplier.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cmbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSupplier.ItemHeight = 30;
             this.cmbSupplier.Location = new System.Drawing.Point(620, 76);
@@ -429,7 +500,7 @@
             this.txtProductName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProductName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProductName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductName.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtProductName.ForeColor = System.Drawing.Color.Black;
             this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProductName.Location = new System.Drawing.Point(163, 76);
@@ -451,7 +522,7 @@
             this.txtProductID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProductID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtProductID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductID.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtProductID.ForeColor = System.Drawing.Color.Black;
             this.txtProductID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProductID.Location = new System.Drawing.Point(163, 31);
@@ -465,133 +536,62 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(52, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 22);
+            this.label3.Size = new System.Drawing.Size(50, 17);
             this.label3.TabIndex = 23;
             this.label3.Text = "Brand:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label5.Location = new System.Drawing.Point(505, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 44);
+            this.label5.Size = new System.Drawing.Size(66, 34);
             this.label5.TabIndex = 21;
             this.label5.Text = "Quantity\r\non Hand:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label4.Location = new System.Drawing.Point(505, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 22);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Supplier:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label6.Location = new System.Drawing.Point(505, 125);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 22);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Cost Price:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label2.Location = new System.Drawing.Point(52, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Part Name:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label7.Location = new System.Drawing.Point(52, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 22);
+            this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Part Number:";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Animated = true;
-            this.btnUpdate.BorderRadius = 9;
-            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdate.FillColor = System.Drawing.Color.CadetBlue;
-            this.btnUpdate.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnUpdate.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.IndicateFocus = true;
-            this.btnUpdate.Location = new System.Drawing.Point(1246, 94);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(216, 45);
-            this.btnUpdate.TabIndex = 40;
-            this.btnUpdate.Text = "UPDATE";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Animated = true;
-            this.btnDelete.BorderRadius = 9;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.IndianRed;
-            this.btnDelete.FillColor2 = System.Drawing.Color.Brown;
-            this.btnDelete.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.IndicateFocus = true;
-            this.btnDelete.Location = new System.Drawing.Point(1246, 156);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(216, 45);
-            this.btnDelete.TabIndex = 41;
-            this.btnDelete.Text = "DELETE";
-            // 
-            // btnImportImg
-            // 
-            this.btnImportImg.Animated = true;
-            this.btnImportImg.BorderRadius = 9;
-            this.btnImportImg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImportImg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImportImg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImportImg.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImportImg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImportImg.FillColor = System.Drawing.Color.YellowGreen;
-            this.btnImportImg.FillColor2 = System.Drawing.Color.DarkOliveGreen;
-            this.btnImportImg.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnImportImg.ForeColor = System.Drawing.Color.White;
-            this.btnImportImg.IndicateFocus = true;
-            this.btnImportImg.Location = new System.Drawing.Point(954, 215);
-            this.btnImportImg.Name = "btnImportImg";
-            this.btnImportImg.Size = new System.Drawing.Size(180, 45);
-            this.btnImportImg.TabIndex = 43;
-            this.btnImportImg.Text = "IMPORT";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 9;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(954, 35);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(180, 166);
-            this.guna2PictureBox1.TabIndex = 44;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // InventoryForms
             // 
@@ -637,13 +637,13 @@
         private Guna.UI2.WinForms.Guna2TextBox txtStock;
         private Guna.UI2.WinForms.Guna2GradientButton btnClear;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmCategory;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtModelComp;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtReorder;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtSellingPrice;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2GradientButton btnImportImg;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;

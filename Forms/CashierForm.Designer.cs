@@ -63,20 +63,20 @@
             this.pnlShadowLeft = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlC = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnSupplier = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.btnAllItems = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logoBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnAllItems = new System.Windows.Forms.Button();
+            this.logoBox = new System.Windows.Forms.PictureBox();
             this.pnlItems.SuspendLayout();
             this.PnlItemsSearch.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -90,8 +90,8 @@
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlItems
@@ -101,7 +101,7 @@
             this.pnlItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlItems.Location = new System.Drawing.Point(363, 0);
             this.pnlItems.Name = "pnlItems";
-            this.pnlItems.Size = new System.Drawing.Size(420, 765);
+            this.pnlItems.Size = new System.Drawing.Size(468, 765);
             this.pnlItems.TabIndex = 22;
             // 
             // pnlItemsInventory
@@ -110,7 +110,7 @@
             this.pnlItemsInventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlItemsInventory.Location = new System.Drawing.Point(0, 65);
             this.pnlItemsInventory.Name = "pnlItemsInventory";
-            this.pnlItemsInventory.Size = new System.Drawing.Size(420, 700);
+            this.pnlItemsInventory.Size = new System.Drawing.Size(468, 700);
             this.pnlItemsInventory.TabIndex = 1;
             // 
             // PnlItemsSearch
@@ -119,7 +119,7 @@
             this.PnlItemsSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnlItemsSearch.Location = new System.Drawing.Point(0, 0);
             this.PnlItemsSearch.Name = "PnlItemsSearch";
-            this.PnlItemsSearch.Size = new System.Drawing.Size(420, 65);
+            this.PnlItemsSearch.Size = new System.Drawing.Size(468, 65);
             this.PnlItemsSearch.TabIndex = 0;
             // 
             // panel4
@@ -128,7 +128,7 @@
             this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Location = new System.Drawing.Point(26, 9);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(388, 46);
+            this.panel4.Size = new System.Drawing.Size(436, 46);
             this.panel4.TabIndex = 1;
             // 
             // txtSearch
@@ -136,7 +136,7 @@
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(19, 13);
+            this.txtSearch.Location = new System.Drawing.Point(43, 13);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(287, 20);
             this.txtSearch.TabIndex = 0;
@@ -149,7 +149,7 @@
             this.pnlOrder.Controls.Add(this.dataGridView1);
             this.pnlOrder.Controls.Add(this.pnlOrderTop);
             this.pnlOrder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlOrder.Location = new System.Drawing.Point(783, 0);
+            this.pnlOrder.Location = new System.Drawing.Point(831, 0);
             this.pnlOrder.Name = "pnlOrder";
             this.pnlOrder.Size = new System.Drawing.Size(510, 765);
             this.pnlOrder.TabIndex = 21;
@@ -451,6 +451,75 @@
             this.panel3.Size = new System.Drawing.Size(353, 449);
             this.panel3.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.logoBox);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(353, 316);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnLogout);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 252);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(353, 64);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogout.BorderRadius = 9;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.LightGray;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Location = new System.Drawing.Point(228, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(105, 39);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cashier";
+            // 
+            // pnlFillR
+            // 
+            this.pnlFillR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlFillR.Location = new System.Drawing.Point(353, 0);
+            this.pnlFillR.Name = "pnlFillR";
+            this.pnlFillR.Size = new System.Drawing.Size(10, 765);
+            this.pnlFillR.TabIndex = 1;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // btnUser
             // 
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
@@ -559,17 +628,6 @@
             this.btnAllItems.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAllItems.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.logoBox);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 316);
-            this.panel1.TabIndex = 0;
-            // 
             // logoBox
             // 
             this.logoBox.BackColor = System.Drawing.Color.Transparent;
@@ -583,69 +641,11 @@
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 252);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(353, 64);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogout.BorderRadius = 9;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.LightGray;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Location = new System.Drawing.Point(228, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(105, 39);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cashier";
-            // 
-            // pnlFillR
-            // 
-            this.pnlFillR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFillR.Location = new System.Drawing.Point(353, 0);
-            this.pnlFillR.Name = "pnlFillR";
-            this.pnlFillR.Size = new System.Drawing.Size(10, 765);
-            this.pnlFillR.TabIndex = 1;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 765);
+            this.ClientSize = new System.Drawing.Size(1341, 765);
             this.Controls.Add(this.pnlItems);
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlShadowLeft);
@@ -668,9 +668,9 @@
             this.pnlC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
 
         }
