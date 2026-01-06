@@ -197,6 +197,7 @@
     <Compile Include="Forms\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Managers\SupplierList.cs" />
     <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
