@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MotorPartsInventoryManagement.Forms
 {
-    public partial class DamageStaffForm : UserControl
+    public partial class CategoryForm : UserControl
     {
-        public DamageStaffForm()
+        public CategoryForm()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
