@@ -17,6 +17,7 @@ namespace MotorPartsInventoryManagement.Forms
         public SupplierForm()
         {
             InitializeComponent();
+            displaySuppliers();
         }
         int selectedSupplierId = -1;
         private void btnAdd_Click(object sender, EventArgs e)
