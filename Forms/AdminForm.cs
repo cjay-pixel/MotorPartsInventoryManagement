@@ -157,5 +157,23 @@ namespace MotorPartsInventoryManagement.Forms
             //this.panel4.Controls.Add(_cashierForm);
             //_cashierForm.BringToFront();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            //var result = MessageBox.Show(
+            //"Are you sure you want to logout?",
+            //"Confirm Logout",
+            //MessageBoxButtons.YesNo,
+            //MessageBoxIcon.Question);
+
+            //if (result == DialogResult.Yes)
+            //{
+            //    this.FindForm().Close();
+            //}
+            if (MessageBox.Show("Are you sure you want to logout?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.FindForm().Close();
+            }
+        }
     }
 }

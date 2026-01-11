@@ -19,12 +19,16 @@ namespace MotorPartsInventoryManagement.Forms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            //if (MessageBox.Show("Are you sure you want to logout?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    Form1 loginForm = new Form1();
+            //    loginForm.Show();
+
+            //    this.Hide();
+            //}
             if (MessageBox.Show("Are you sure you want to logout?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Form1 loginForm = new Form1();
-                loginForm.Show();
-
-                this.Hide();
+                this.FindForm().Close();
             }
         }
     }
