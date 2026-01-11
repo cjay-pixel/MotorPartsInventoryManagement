@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBrand = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.pbProduct = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblProdName = new System.Windows.Forms.Label();
-            this.lblBrand = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +58,18 @@
             this.panel1.Controls.Add(this.lblProdName);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 151);
+            this.panel1.Size = new System.Drawing.Size(300, 149);
             this.panel1.TabIndex = 0;
+            // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.Location = new System.Drawing.Point(20, 47);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(48, 20);
+            this.lblBrand.TabIndex = 14;
+            this.lblBrand.Text = "Brand";
             // 
             // lblStock
             // 
@@ -144,23 +154,14 @@
             this.lblProdName.TabIndex = 0;
             this.lblProdName.Text = "Product Name";
             // 
-            // lblBrand
-            // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.Location = new System.Drawing.Point(20, 47);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(48, 20);
-            this.lblBrand.TabIndex = 14;
-            this.lblBrand.Text = "Brand";
-            // 
             // CardProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Name = "CardProductForm";
-            this.Size = new System.Drawing.Size(308, 157);
+            this.Size = new System.Drawing.Size(306, 155);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();

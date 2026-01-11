@@ -34,7 +34,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtQuantityR = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtQuantityToAdd = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gbStockInHistory = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStockIn = new System.Windows.Forms.DataGridView();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.gbStockInEntry.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gbStockInHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockIn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -71,7 +71,7 @@
             this.gbStockInEntry.Controls.Add(this.label10);
             this.gbStockInEntry.Controls.Add(this.btnSave);
             this.gbStockInEntry.Controls.Add(this.dateTimePicker1);
-            this.gbStockInEntry.Controls.Add(this.txtQuantityR);
+            this.gbStockInEntry.Controls.Add(this.txtQuantityToAdd);
             this.gbStockInEntry.Controls.Add(this.label5);
             this.gbStockInEntry.Controls.Add(this.cmbSupplier);
             this.gbStockInEntry.Controls.Add(this.label4);
@@ -137,6 +137,7 @@
             this.btnSave.Size = new System.Drawing.Size(267, 37);
             this.btnSave.TabIndex = 34;
             this.btnSave.Text = "SAVE";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dateTimePicker1
             // 
@@ -145,27 +146,27 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(267, 22);
             this.dateTimePicker1.TabIndex = 33;
             // 
-            // txtQuantityR
+            // txtQuantityToAdd
             // 
-            this.txtQuantityR.Animated = true;
-            this.txtQuantityR.BorderRadius = 9;
-            this.txtQuantityR.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuantityR.DefaultText = "";
-            this.txtQuantityR.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuantityR.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuantityR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuantityR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtQuantityR.ForeColor = System.Drawing.Color.Black;
-            this.txtQuantityR.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantityR.Location = new System.Drawing.Point(567, 87);
-            this.txtQuantityR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtQuantityR.Name = "txtQuantityR";
-            this.txtQuantityR.PlaceholderText = "";
-            this.txtQuantityR.SelectedText = "";
-            this.txtQuantityR.Size = new System.Drawing.Size(218, 36);
-            this.txtQuantityR.TabIndex = 32;
+            this.txtQuantityToAdd.Animated = true;
+            this.txtQuantityToAdd.BorderRadius = 9;
+            this.txtQuantityToAdd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantityToAdd.DefaultText = "";
+            this.txtQuantityToAdd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantityToAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantityToAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityToAdd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantityToAdd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityToAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtQuantityToAdd.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantityToAdd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantityToAdd.Location = new System.Drawing.Point(567, 87);
+            this.txtQuantityToAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQuantityToAdd.Name = "txtQuantityToAdd";
+            this.txtQuantityToAdd.PlaceholderText = "";
+            this.txtQuantityToAdd.SelectedText = "";
+            this.txtQuantityToAdd.Size = new System.Drawing.Size(218, 36);
+            this.txtQuantityToAdd.TabIndex = 32;
             // 
             // label5
             // 
@@ -241,7 +242,7 @@
             // 
             // gbStockInHistory
             // 
-            this.gbStockInHistory.Controls.Add(this.dataGridView1);
+            this.gbStockInHistory.Controls.Add(this.dgvStockIn);
             this.gbStockInHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbStockInHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbStockInHistory.Location = new System.Drawing.Point(20, 20);
@@ -252,24 +253,24 @@
             this.gbStockInHistory.TabStop = false;
             this.gbStockInHistory.Text = "Stock In History";
             // 
-            // dataGridView1
+            // dgvStockIn
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStockIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStockIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.PartName,
             this.Supplier,
             this.QuantityAdded,
             this.ReceiptNo});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1206, 459);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvStockIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStockIn.Location = new System.Drawing.Point(3, 35);
+            this.dgvStockIn.Name = "dgvStockIn";
+            this.dgvStockIn.RowHeadersVisible = false;
+            this.dgvStockIn.RowHeadersWidth = 51;
+            this.dgvStockIn.RowTemplate.Height = 24;
+            this.dgvStockIn.Size = new System.Drawing.Size(1206, 459);
+            this.dgvStockIn.TabIndex = 0;
             // 
             // Date
             // 
@@ -314,7 +315,7 @@
             this.gbStockInEntry.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.gbStockInHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStockIn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +328,7 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantityR;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantityToAdd;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSupplier;
         private System.Windows.Forms.Label label4;
@@ -335,7 +336,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox gbStockInHistory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStockIn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn PartName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;

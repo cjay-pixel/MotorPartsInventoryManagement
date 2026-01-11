@@ -216,7 +216,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(105, 39);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Logout";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label1
             // 

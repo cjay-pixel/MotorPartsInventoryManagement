@@ -19,6 +19,7 @@ namespace MotorPartsInventoryManagement.Forms
         private CategoryForm _categoryForm;
         private ReportsForm _reportsForm;
         private UserManagementForm _usermanagementForm;
+        private SalesForm _salesForm;
         //private CashierForm _cashierForm;
         public AdminForm()
         {
@@ -144,18 +145,18 @@ namespace MotorPartsInventoryManagement.Forms
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            //if (_cashierForm == null || _cashierForm.IsDisposed)
-            //{
-            //    _cashierForm = new CashierForm
-            //    {
-            //        Dock = DockStyle.Fill
-            //    };
-            //}
+            if (_salesForm == null || _salesForm.IsDisposed)
+            {
+                _salesForm = new SalesForm
+                {
+                    Dock = DockStyle.Fill
+                };
+            }
 
-            //// Replace current content of the right panel with the user control
-            //this.panel4.Controls.Clear();
-            //this.panel4.Controls.Add(_cashierForm);
-            //_cashierForm.BringToFront();
+            // Replace current content of the right panel with the user control
+            this.panel4.Controls.Clear();
+            this.panel4.Controls.Add(_salesForm);
+            _salesForm.BringToFront();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
