@@ -23,8 +23,8 @@ namespace MotorPartsInventoryManagement.Forms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSupplierName.Text) ||
-      string.IsNullOrWhiteSpace(txtFirstname.Text) ||
-      string.IsNullOrWhiteSpace(txtLastname.Text) ||
+      string.IsNullOrWhiteSpace(txtFName.Text) ||
+      string.IsNullOrWhiteSpace(txtLName.Text) ||
       string.IsNullOrWhiteSpace(txtAddress.Text) ||
       string.IsNullOrWhiteSpace(txtPhone.Text) ||
       string.IsNullOrWhiteSpace(txtEmail.Text) ||
@@ -39,8 +39,8 @@ namespace MotorPartsInventoryManagement.Forms
                 MySqlParameter[] parameters =
                 {
             new MySqlParameter("@p_SupplierName", txtSupplierName.Text.Trim()),
-            new MySqlParameter("@p_ContactFirstName", txtFirstname.Text.Trim()),
-            new MySqlParameter("@p_ContactLastName", txtLastname.Text.Trim()),
+            new MySqlParameter("@p_ContactFirstName", txtFName.Text.Trim()),
+            new MySqlParameter("@p_ContactLastName", txtLName.Text.Trim()),
             new MySqlParameter("@p_Address", txtAddress.Text.Trim()),
             new MySqlParameter("@p_Phone", txtPhone.Text.Trim()),
             new MySqlParameter("@p_Email", txtEmail.Text.Trim()),
@@ -72,8 +72,8 @@ namespace MotorPartsInventoryManagement.Forms
             }
 
             if (string.IsNullOrWhiteSpace(txtSupplierName.Text) ||
-                string.IsNullOrWhiteSpace(txtFirstname.Text) ||
-                string.IsNullOrWhiteSpace(txtLastname.Text) ||
+                string.IsNullOrWhiteSpace(txtFName.Text) ||
+                string.IsNullOrWhiteSpace(txtLName.Text) ||
                 string.IsNullOrWhiteSpace(txtAddress.Text) ||
                 string.IsNullOrWhiteSpace(txtPhone.Text) ||
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
@@ -89,8 +89,8 @@ namespace MotorPartsInventoryManagement.Forms
                 {
             new MySqlParameter("@p_SupplierID", selectedSupplierId),
             new MySqlParameter("@p_SupplierName", txtSupplierName.Text.Trim()),
-            new MySqlParameter("@p_ContactFirstName", txtFirstname.Text.Trim()),
-            new MySqlParameter("@p_ContactLastName", txtLastname.Text.Trim()),
+            new MySqlParameter("@p_ContactFirstName", txtFName.Text.Trim()),
+            new MySqlParameter("@p_ContactLastName", txtLName.Text.Trim()),
             new MySqlParameter("@p_Address", txtAddress.Text.Trim()),
             new MySqlParameter("@p_Phone", txtPhone.Text.Trim()),
             new MySqlParameter("@p_Email", txtEmail.Text.Trim()),
@@ -116,8 +116,8 @@ namespace MotorPartsInventoryManagement.Forms
         private void clearFields()
         {
             txtSupplierName.Clear();
-            txtFirstname.Clear();
-            txtLastname.Clear();
+            txtFName.Clear();
+            txtLName.Clear();
             txtAddress.Clear();
             txtPhone.Clear();
             txtEmail.Clear();
@@ -142,8 +142,8 @@ namespace MotorPartsInventoryManagement.Forms
                 );
 
                 txtSupplierName.Text = dgvSupplier.Rows[e.RowIndex].Cells["SupplierName"].Value.ToString();
-                txtFirstname.Text = dgvSupplier.Rows[e.RowIndex].Cells["ContactFirstName"].Value.ToString();
-                txtLastname.Text = dgvSupplier.Rows[e.RowIndex].Cells["ContactLastName"].Value.ToString();
+                txtFName.Text = dgvSupplier.Rows[e.RowIndex].Cells["ContactFirstName"].Value.ToString();
+                txtLName.Text = dgvSupplier.Rows[e.RowIndex].Cells["ContactLastName"].Value.ToString();
                 txtAddress.Text = dgvSupplier.Rows[e.RowIndex].Cells["Address"].Value.ToString();
                 txtPhone.Text = dgvSupplier.Rows[e.RowIndex].Cells["Phone"].Value.ToString();
                 txtEmail.Text = dgvSupplier.Rows[e.RowIndex].Cells["Email"].Value.ToString();
@@ -154,8 +154,8 @@ namespace MotorPartsInventoryManagement.Forms
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtSupplierName.Clear();
-            txtFirstname.Clear();
-            txtLastname.Clear();
+            txtFName.Clear();
+            txtLName.Clear();
             txtAddress.Clear();
             txtPhone.Clear();
             txtEmail.Clear();

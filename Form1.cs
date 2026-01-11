@@ -1,45 +1,4 @@
-﻿//using MotorPartsInventoryManagement.Database;
-//using Org.BouncyCastle.Asn1.Cmp;
-//using System;
-//using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Data;
-//using System.Drawing;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Web.SessionState;
-//using System.Windows.Forms;
-
-//namespace MotorPartsInventoryManagement
-//{
-//    public partial class Form1 : Form
-//    {
-//        public Form1()
-//        {
-//            InitializeComponent();
-//        }
-
-//        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
-//        {
-//            if (cbShowPass.Checked)
-//            {
-//                txtPassword.PasswordChar = '\0';
-//            }
-//            else
-//            {
-//                txtPassword.PasswordChar = '*';
-//            }
-//        }
-
-//        private void Form1_Load(object sender, EventArgs e)
-//        {
-
-//        }
-//    }
-//}
-
-using System;
+﻿using System;
 using System.Windows.Forms;
 using MotorPartsInventoryManagement.Database;
 using MotorPartsInventoryManagement.Forms;
@@ -93,17 +52,18 @@ namespace MotorPartsInventoryManagement
         private void PerformLogin()
         {
             // Validate inputs
-            if (cmbRole.SelectedIndex == -1)
-            {
-                MessageBox.Show(
-                    "Please select your role.",
-                    "Validation Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                cmbRole.Focus();
-                return;
-            }
+            //if (cmbRole.SelectedIndex == -1)
+            //{
+            //    MessageBox.Show(
+            //        "Please select your role.",
+            //        "Validation Error",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    cmbRole.Focus();
+            //    return;
+            //}
 
+            // Validate Username
             if (string.IsNullOrWhiteSpace(txtUsername.Text))
             {
                 MessageBox.Show(
@@ -115,6 +75,7 @@ namespace MotorPartsInventoryManagement
                 return;
             }
 
+            // Validate Password
             if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 MessageBox.Show(
@@ -202,9 +163,9 @@ namespace MotorPartsInventoryManagement
                             dashboardForm = new AdminForm();
                             break;
 
-                        //case "Cashier":
-                        //    dashboardForm = new CashierDashboardForm();
-                        //    break;
+                        case "Cashier":
+                            dashboardForm = new CashierForm();
+                            break;
 
                         case "StockStaff":
                             dashboardForm = new StockStaffForm();
