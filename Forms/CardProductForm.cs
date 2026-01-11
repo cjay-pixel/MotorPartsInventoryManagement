@@ -94,5 +94,9 @@ namespace MotorPartsInventoryManagement.Forms
         {
             AddToCartClicked?.Invoke(this, EventArgs.Empty);
         }
+
+       
+
+        
     }
 }

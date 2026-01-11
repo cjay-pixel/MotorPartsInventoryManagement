@@ -1,10 +1,13 @@
 ﻿using MotorPartsInventoryManagement.Database;
+using MotorPartsInventoryManagement.Models;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MotorPartsInventoryManagement.Managers
 {
@@ -42,6 +45,50 @@ namespace MotorPartsInventoryManagement.Managers
             }
 
             return list;
+        }
+
+        public static int ProcessSale(int userID, decimal totalAmount, decimal discountAmount, List<CartItem> cartItems)
+        {
+            try
+            {
+                // Convert cart items to JSON format for stored procedure
+                var saleItemsJson = ConvertCartItemsToJson(cartItems);
+
+                MySqlParameter[] parameters =
+                {
+                    new MySqlParameter("@p_UserID", userID),
+                    new MySqlParameter("@p_TotalAmount", totalAmount),
+                    new MySqlParameter("@p_DiscountAmount", discountAmount),
+                    new MySqlParameter("@p_SaleItems", saleItemsJson),
+                    new MySqlParameter("@p_SaleID", MySqlDbType.Int32)
+                    {
+                        Direction = ParameterDirection.Output
+                    }
+                };
+
+                DatabaseHelper.ExecuteStoredProcedure("sp_ProcessSale", parameters);
+
+                // Get the output SaleID
+                int saleID = Convert.ToInt32(parameters[4].Value);
+                return saleID;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error processing sale: " + ex.Message);
+            }
+        }
+
+        private static string ConvertCartItemsToJson(List<CartItem> cartItems)
+        {
+            var items = cartItems.Select(item => new
+            {
+                PartID = item.PartID,
+                Quantity = item.Quantity,
+                UnitPrice = item.UnitPrice,
+                Subtotal = item.Subtotal
+            }).ToList();
+
+            return JsonConvert.SerializeObject(items);
         }
 
         // 🔹 Search products for sales

@@ -347,7 +347,7 @@ namespace MotorPartsInventoryManagement.Managers
         {
             public int LowStockCount { get; set; }
             public int TotalProducts { get; set; }
-            public decimal TotalRevenue { get; set; }
+            //public decimal TotalRevenue { get; set; }
             public int TotalTransactions { get; set; }
         }
     }

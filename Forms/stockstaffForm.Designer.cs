@@ -42,7 +42,7 @@
             this.btnStock = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.logoBox = new System.Windows.Forms.PictureBox();
-            this.inventorystaffForm1 = new MotorPartsInventoryManagement.Forms.InventoryStaffForm();
+            this.inventoryStaffForm1 = new MotorPartsInventoryManagement.Forms.InventoryStaffForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -152,7 +152,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.inventorystaffForm1);
+            this.panel4.Controls.Add(this.inventoryStaffForm1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(398, 0);
             this.panel4.Name = "panel4";
@@ -248,13 +248,13 @@
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
             // 
-            // inventorystaffForm1
+            // inventoryStaffForm1
             // 
-            this.inventorystaffForm1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inventorystaffForm1.Location = new System.Drawing.Point(0, 0);
-            this.inventorystaffForm1.Name = "inventorystaffForm1";
-            this.inventorystaffForm1.Size = new System.Drawing.Size(929, 790);
-            this.inventorystaffForm1.TabIndex = 0;
+            this.inventoryStaffForm1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inventoryStaffForm1.Location = new System.Drawing.Point(0, 0);
+            this.inventoryStaffForm1.Name = "inventoryStaffForm1";
+            this.inventoryStaffForm1.Size = new System.Drawing.Size(929, 790);
+            this.inventoryStaffForm1.TabIndex = 0;
             // 
             // StockStaffForm
             // 
@@ -295,6 +295,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFillR;
         private System.Windows.Forms.Panel panel4;
-        private InventoryStaffForm inventorystaffForm1;
+        private InventoryStaffForm inventoryStaffForm1;
     }
 }

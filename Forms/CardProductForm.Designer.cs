@@ -35,9 +35,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.add_btn = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblProdName = new System.Windows.Forms.Label();
+            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,7 @@
             this.add_btn.TabIndex = 9;
             this.add_btn.Text = "ADD";
             this.add_btn.UseVisualStyleBackColor = false;
+            this.add_btn.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtQuantity
             // 
@@ -124,14 +125,6 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(53, 22);
             this.txtQuantity.TabIndex = 8;
-            // 
-            // pbProduct
-            // 
-            this.pbProduct.Location = new System.Drawing.Point(189, 12);
-            this.pbProduct.Name = "pbProduct";
-            this.pbProduct.Size = new System.Drawing.Size(104, 129);
-            this.pbProduct.TabIndex = 2;
-            this.pbProduct.TabStop = false;
             // 
             // lblPrice
             // 
@@ -153,6 +146,14 @@
             this.lblProdName.Size = new System.Drawing.Size(110, 20);
             this.lblProdName.TabIndex = 0;
             this.lblProdName.Text = "Product Name";
+            // 
+            // pbProduct
+            // 
+            this.pbProduct.Location = new System.Drawing.Point(189, 12);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(104, 129);
+            this.pbProduct.TabIndex = 2;
+            this.pbProduct.TabStop = false;
             // 
             // CardProductForm
             // 
