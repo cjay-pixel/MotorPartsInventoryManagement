@@ -216,6 +216,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(105, 39);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Logout";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label1
             // 
@@ -253,15 +254,16 @@
             this.inventorystaffForm1.Size = new System.Drawing.Size(929, 790);
             this.inventorystaffForm1.TabIndex = 0;
             // 
-            // stockstaffForm
+            // StockStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 790);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlShadowLeft);
-            this.Name = "stockstaffForm";
+            this.Name = "StockStaffForm";
             this.Text = "stockstaffForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlShadowLeft.ResumeLayout(false);
             this.pnlC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

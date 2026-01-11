@@ -37,6 +37,9 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlOrder = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnApplyDiscount = new System.Windows.Forms.Button();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,9 +80,6 @@
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.btnApplyDiscount = new System.Windows.Forms.Button();
             this.pnlItems.SuspendLayout();
             this.PnlItemsSearch.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -175,6 +175,40 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(508, 232);
             this.panel5.TabIndex = 3;
+            // 
+            // btnApplyDiscount
+            // 
+            this.btnApplyDiscount.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnApplyDiscount.FlatAppearance.BorderSize = 0;
+            this.btnApplyDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplyDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyDiscount.ForeColor = System.Drawing.Color.White;
+            this.btnApplyDiscount.Location = new System.Drawing.Point(315, 154);
+            this.btnApplyDiscount.Name = "btnApplyDiscount";
+            this.btnApplyDiscount.Size = new System.Drawing.Size(150, 31);
+            this.btnApplyDiscount.TabIndex = 12;
+            this.btnApplyDiscount.Text = "APPLY DISCOUNT";
+            this.btnApplyDiscount.UseVisualStyleBackColor = false;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(334, 121);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(88, 20);
+            this.lblDiscount.TabIndex = 10;
+            this.lblDiscount.Text = "PHP 0.00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(143, 20);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Discount Amount:";
             // 
             // lblTotal
             // 
@@ -647,40 +681,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 122);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 20);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Discount Amount:";
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(334, 121);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(88, 20);
-            this.lblDiscount.TabIndex = 10;
-            this.lblDiscount.Text = "PHP 0.00";
-            // 
-            // btnApplyDiscount
-            // 
-            this.btnApplyDiscount.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnApplyDiscount.FlatAppearance.BorderSize = 0;
-            this.btnApplyDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplyDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyDiscount.ForeColor = System.Drawing.Color.White;
-            this.btnApplyDiscount.Location = new System.Drawing.Point(315, 154);
-            this.btnApplyDiscount.Name = "btnApplyDiscount";
-            this.btnApplyDiscount.Size = new System.Drawing.Size(150, 31);
-            this.btnApplyDiscount.TabIndex = 12;
-            this.btnApplyDiscount.Text = "APPLY DISCOUNT";
-            this.btnApplyDiscount.UseVisualStyleBackColor = false;
-            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -691,6 +691,7 @@
             this.Controls.Add(this.pnlShadowLeft);
             this.Name = "CashierForm";
             this.Text = "CashierForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlItems.ResumeLayout(false);
             this.PnlItemsSearch.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
