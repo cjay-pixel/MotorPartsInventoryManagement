@@ -62,34 +62,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.tabAdjustments = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tabLowStock = new System.Windows.Forms.TabPage();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dgvLowStock = new System.Windows.Forms.DataGridView();
             this.txtReas = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveSO = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -99,6 +71,31 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbPartN = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.tabAdjustments = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvAdjustments = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtReason = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSaveA = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbSupp = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbPartNa = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tabLowStock = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.dgvLowStock = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabStockIn.SuspendLayout();
@@ -116,7 +113,7 @@
             this.tabAdjustments.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdjustments)).BeginInit();
             this.panel6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabLowStock.SuspendLayout();
@@ -524,340 +521,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Out Entry";
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(490, 111);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker2.TabIndex = 33;
-            // 
-            // tabAdjustments
-            // 
-            this.tabAdjustments.Controls.Add(this.panel7);
-            this.tabAdjustments.Controls.Add(this.panel6);
-            this.tabAdjustments.Location = new System.Drawing.Point(4, 31);
-            this.tabAdjustments.Name = "tabAdjustments";
-            this.tabAdjustments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAdjustments.Size = new System.Drawing.Size(1983, 741);
-            this.tabAdjustments.TabIndex = 2;
-            this.tabAdjustments.Text = "Adjustments";
-            this.tabAdjustments.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.groupBox4);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 301);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(20);
-            this.panel7.Size = new System.Drawing.Size(1977, 437);
-            this.panel7.TabIndex = 3;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dataGridView3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(20, 20);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.groupBox4.Size = new System.Drawing.Size(1937, 397);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Adjustment Log";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.Type,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 35);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1931, 359);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Part Name";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Supplier";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Remarks";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.groupBox3);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(20);
-            this.panel6.Size = new System.Drawing.Size(1977, 298);
-            this.panel6.TabIndex = 2;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.guna2ComboBox5);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.guna2TextBox3);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.guna2GradientButton2);
-            this.groupBox3.Controls.Add(this.dateTimePicker3);
-            this.groupBox3.Controls.Add(this.guna2TextBox4);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.guna2ComboBox3);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.guna2ComboBox4);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(20, 20);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1937, 258);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Adjustments Entry";
-            // 
-            // guna2ComboBox5
-            // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 9;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox5.ItemHeight = 30;
-            this.guna2ComboBox5.Location = new System.Drawing.Point(173, 142);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox5.TabIndex = 38;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label13.Location = new System.Drawing.Point(27, 151);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 17);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Adjustment Type:";
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderRadius = 9;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(626, 95);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(525, 83);
-            this.guna2TextBox3.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(463, 91);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 34);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "Reason (Shop Use /\r\nInternal / Other):";
-            // 
-            // guna2GradientButton2
-            // 
-            this.guna2GradientButton2.Animated = true;
-            this.guna2GradientButton2.BorderRadius = 9;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.IndicateFocus = true;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(31, 204);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton2.TabIndex = 34;
-            this.guna2GradientButton2.Text = "SAVE";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(884, 57);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(267, 22);
-            this.dateTimePicker3.TabIndex = 33;
-            // 
-            // guna2TextBox4
-            // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.BorderRadius = 9;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(626, 44);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(218, 36);
-            this.guna2TextBox4.TabIndex = 32;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(463, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 17);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Quantity:";
-            // 
-            // guna2ComboBox3
-            // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 9;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(173, 91);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox3.TabIndex = 30;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label11.Location = new System.Drawing.Point(27, 101);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 17);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Supplier:";
-            // 
-            // guna2ComboBox4
-            // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderRadius = 9;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Location = new System.Drawing.Point(173, 44);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox4.TabIndex = 28;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label12.Location = new System.Drawing.Point(27, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 17);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Part Name:";
-            // 
-            // tabLowStock
-            // 
-            this.tabLowStock.Controls.Add(this.panel8);
-            this.tabLowStock.Location = new System.Drawing.Point(4, 31);
-            this.tabLowStock.Name = "tabLowStock";
-            this.tabLowStock.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLowStock.Size = new System.Drawing.Size(1983, 741);
-            this.tabLowStock.TabIndex = 3;
-            this.tabLowStock.Text = "Low Stock";
-            this.tabLowStock.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.dgvLowStock);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(20);
-            this.panel8.Size = new System.Drawing.Size(1977, 735);
-            this.panel8.TabIndex = 3;
-            // 
-            // dgvLowStock
-            // 
-            this.dgvLowStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLowStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLowStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLowStock.Location = new System.Drawing.Point(20, 20);
-            this.dgvLowStock.Name = "dgvLowStock";
-            this.dgvLowStock.RowHeadersVisible = false;
-            this.dgvLowStock.RowHeadersWidth = 51;
-            this.dgvLowStock.RowTemplate.Height = 24;
-            this.dgvLowStock.Size = new System.Drawing.Size(1937, 695);
-            this.dgvLowStock.TabIndex = 1;
-            // 
             // txtReas
             // 
             this.txtReas.Animated = true;
@@ -984,6 +647,7 @@
             this.cmbPartN.Name = "cmbPartN";
             this.cmbPartN.Size = new System.Drawing.Size(218, 36);
             this.cmbPartN.TabIndex = 38;
+            this.cmbPartN.SelectedIndexChanged += new System.EventHandler(this.cmbPartN_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -994,6 +658,307 @@
             this.label7.Size = new System.Drawing.Size(79, 17);
             this.label7.TabIndex = 37;
             this.label7.Text = "Part Name:";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(490, 111);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(267, 22);
+            this.dateTimePicker2.TabIndex = 33;
+            // 
+            // tabAdjustments
+            // 
+            this.tabAdjustments.Controls.Add(this.panel7);
+            this.tabAdjustments.Controls.Add(this.panel6);
+            this.tabAdjustments.Location = new System.Drawing.Point(4, 31);
+            this.tabAdjustments.Name = "tabAdjustments";
+            this.tabAdjustments.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdjustments.Size = new System.Drawing.Size(1983, 741);
+            this.tabAdjustments.TabIndex = 2;
+            this.tabAdjustments.Text = "Adjustments";
+            this.tabAdjustments.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.groupBox4);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 301);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(20);
+            this.panel7.Size = new System.Drawing.Size(1977, 437);
+            this.panel7.TabIndex = 3;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgvAdjustments);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(20, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.groupBox4.Size = new System.Drawing.Size(1937, 397);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Adjustment Log";
+            // 
+            // dgvAdjustments
+            // 
+            this.dgvAdjustments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAdjustments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdjustments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvAdjustments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAdjustments.Location = new System.Drawing.Point(3, 35);
+            this.dgvAdjustments.Name = "dgvAdjustments";
+            this.dgvAdjustments.RowHeadersVisible = false;
+            this.dgvAdjustments.RowHeadersWidth = 51;
+            this.dgvAdjustments.RowTemplate.Height = 24;
+            this.dgvAdjustments.Size = new System.Drawing.Size(1931, 359);
+            this.dgvAdjustments.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupBox3);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(20);
+            this.panel6.Size = new System.Drawing.Size(1977, 298);
+            this.panel6.TabIndex = 2;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtReason);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.btnSaveA);
+            this.groupBox3.Controls.Add(this.dateTimePicker3);
+            this.groupBox3.Controls.Add(this.txtQuantity);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.cmbSupp);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.cmbPartNa);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(20, 20);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1937, 258);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Adjustments Entry";
+            // 
+            // txtReason
+            // 
+            this.txtReason.Animated = true;
+            this.txtReason.BorderRadius = 9;
+            this.txtReason.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtReason.DefaultText = "";
+            this.txtReason.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtReason.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtReason.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReason.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtReason.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtReason.ForeColor = System.Drawing.Color.Black;
+            this.txtReason.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtReason.Location = new System.Drawing.Point(626, 95);
+            this.txtReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtReason.Name = "txtReason";
+            this.txtReason.PlaceholderText = "";
+            this.txtReason.SelectedText = "";
+            this.txtReason.Size = new System.Drawing.Size(525, 83);
+            this.txtReason.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label8.Location = new System.Drawing.Point(463, 91);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(136, 34);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Reason (Shop Use /\r\nInternal / Other):";
+            // 
+            // btnSaveA
+            // 
+            this.btnSaveA.Animated = true;
+            this.btnSaveA.BorderRadius = 9;
+            this.btnSaveA.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveA.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveA.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveA.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSaveA.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnSaveA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveA.ForeColor = System.Drawing.Color.White;
+            this.btnSaveA.IndicateFocus = true;
+            this.btnSaveA.Location = new System.Drawing.Point(31, 204);
+            this.btnSaveA.Name = "btnSaveA";
+            this.btnSaveA.Size = new System.Drawing.Size(267, 37);
+            this.btnSaveA.TabIndex = 34;
+            this.btnSaveA.Text = "SAVE";
+            this.btnSaveA.Click += new System.EventHandler(this.btnSaveA_Click);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(466, 44);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(267, 22);
+            this.dateTimePicker3.TabIndex = 33;
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Animated = true;
+            this.txtQuantity.BorderRadius = 9;
+            this.txtQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantity.DefaultText = "";
+            this.txtQuantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQuantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQuantity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuantity.Location = new System.Drawing.Point(173, 142);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.PlaceholderText = "";
+            this.txtQuantity.SelectedText = "";
+            this.txtQuantity.Size = new System.Drawing.Size(218, 36);
+            this.txtQuantity.TabIndex = 32;
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label9.Location = new System.Drawing.Point(28, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 17);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Quantity:";
+            // 
+            // cmbSupp
+            // 
+            this.cmbSupp.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSupp.BorderRadius = 9;
+            this.cmbSupp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSupp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSupp.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbSupp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSupp.ItemHeight = 30;
+            this.cmbSupp.Location = new System.Drawing.Point(173, 91);
+            this.cmbSupp.Name = "cmbSupp";
+            this.cmbSupp.Size = new System.Drawing.Size(218, 36);
+            this.cmbSupp.TabIndex = 30;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label11.Location = new System.Drawing.Point(27, 101);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 17);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Supplier:";
+            // 
+            // cmbPartNa
+            // 
+            this.cmbPartNa.BackColor = System.Drawing.Color.Transparent;
+            this.cmbPartNa.BorderRadius = 9;
+            this.cmbPartNa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPartNa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPartNa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPartNa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPartNa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cmbPartNa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbPartNa.ItemHeight = 30;
+            this.cmbPartNa.Location = new System.Drawing.Point(173, 44);
+            this.cmbPartNa.Name = "cmbPartNa";
+            this.cmbPartNa.Size = new System.Drawing.Size(218, 36);
+            this.cmbPartNa.TabIndex = 28;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label12.Location = new System.Drawing.Point(27, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 17);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Part Name:";
+            // 
+            // tabLowStock
+            // 
+            this.tabLowStock.Controls.Add(this.panel8);
+            this.tabLowStock.Location = new System.Drawing.Point(4, 31);
+            this.tabLowStock.Name = "tabLowStock";
+            this.tabLowStock.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLowStock.Size = new System.Drawing.Size(1983, 741);
+            this.tabLowStock.TabIndex = 3;
+            this.tabLowStock.Text = "Low Stock";
+            this.tabLowStock.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.dgvLowStock);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(20);
+            this.panel8.Size = new System.Drawing.Size(1977, 735);
+            this.panel8.TabIndex = 3;
+            // 
+            // dgvLowStock
+            // 
+            this.dgvLowStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLowStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLowStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLowStock.Location = new System.Drawing.Point(20, 20);
+            this.dgvLowStock.Name = "dgvLowStock";
+            this.dgvLowStock.RowHeadersVisible = false;
+            this.dgvLowStock.RowHeadersWidth = 51;
+            this.dgvLowStock.RowTemplate.Height = 24;
+            this.dgvLowStock.Size = new System.Drawing.Size(1937, 695);
+            this.dgvLowStock.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Part Name";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Supplier";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Remarks";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // StockOperationForm
             // 
@@ -1021,7 +986,7 @@
             this.tabAdjustments.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdjustments)).EndInit();
             this.panel6.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -1072,27 +1037,19 @@
         private System.Windows.Forms.TabPage tabAdjustments;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtReason;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSaveA;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSupp;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbPartNa;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dgvAdjustments;
         private System.Windows.Forms.TabPage tabLowStock;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView dgvLowStock;
@@ -1105,5 +1062,10 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPartN;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

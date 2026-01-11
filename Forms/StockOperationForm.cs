@@ -25,7 +25,7 @@ namespace MotorPartsInventoryManagement.Forms
             displayTransactions();
             displayStockOutTransactions();
             displayLowStock();
-
+            displayAdjustments();
         }
 
         // Set current user (call this from your main form after login)
@@ -33,6 +33,7 @@ namespace MotorPartsInventoryManagement.Forms
         //{
         //    currentUser = user;
         //}
+
 
         private void LoadParts()
         {
@@ -49,65 +50,38 @@ namespace MotorPartsInventoryManagement.Forms
             cmbPart.DisplayMember = "ProductName";
             cmbPart.ValueMember = "PartID";
             cmbPart.SelectedIndex = -1;
+
             cmbPartN.DataSource = uniqueParts;
             cmbPartN.DisplayMember = "ProductName";
             cmbPartN.ValueMember = "PartID";
             cmbPartN.SelectedIndex = -1;
+
+            cmbPartNa.DataSource = uniqueParts;
+            cmbPartNa.DisplayMember = "ProductName";
+            cmbPartNa.ValueMember = "PartID";
+            cmbPartNa.SelectedIndex = -1;
         }
 
 
         private void LoadSuppliers()
         {
             List<SupplierManager> suppliers = SupplierManager.GetAll();
+
             cmbSupplier.DataSource = suppliers;
             cmbSupplier.DisplayMember = "SupplierName";
             cmbSupplier.ValueMember = "SupplierID";
             cmbSupplier.SelectedIndex = -1;
+
             cmbSuppli.DataSource = suppliers;
             cmbSuppli.DisplayMember = "SupplierName";
             cmbSuppli.ValueMember = "SupplierID";
             cmbSuppli.SelectedIndex = -1;
+
+            cmbSupp.DataSource = suppliers;
+            cmbSupp.DisplayMember = "SupplierName";
+            cmbSupp.ValueMember = "SupplierID";
+            cmbSupp.SelectedIndex = -1;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (!ValidateFields()) return;
-
-            // Check if user is logged in
-            if (SessionManager.CurrentUser == null)
-            {
-                MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-
-            try
-            {
-                int partID = Convert.ToInt32(cmbPart.SelectedValue);
-                int quantity = Convert.ToInt32(txtQuantityToAdd.Text.Trim());
-                string deliveryReceipt = txtDeliveryreceipt.Text.Trim();
-                string remarks = $"Supplier: {cmbSupplier.Text}";
-
-                // Perform Stock In
-                InventoryManager.StockIn(
-                    partID,
-                    SessionManager.CurrentUser.UserID,  // Now pulls from session
-                    quantity,
-                    deliveryReceipt,
-                    remarks
-                );
-
-
-                MessageBox.Show("Stock In successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearFields();
-                displayTransactions();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
 
         private void cmbPart_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -279,6 +253,13 @@ namespace MotorPartsInventoryManagement.Forms
                 return remarks.Replace("Supplier: ", "").Trim();
             }
 
+            // Handle format: "Supplier: X | Reason: Y" or "Supplier: X | Adjustment: Y"
+            int pipeIndex = remarks.IndexOf("|");
+            if (pipeIndex > 0 && remarks.StartsWith("Supplier: "))
+            {
+                return remarks.Substring(10, pipeIndex - 10).Trim();
+            }
+
             return remarks;
         }
 
@@ -288,6 +269,22 @@ namespace MotorPartsInventoryManagement.Forms
             cmbSupplier.SelectedIndex = -1;
             txtDeliveryreceipt.Clear();
             txtQuantityToAdd.Clear();
+        }
+
+        private void clearStockOutFields()
+        {
+            cmbPartN.SelectedIndex = -1;
+            cmbSuppli.SelectedIndex = -1;
+            txtQuanDed.Clear();
+            txtReas.Clear();
+        }
+
+        private void clearAdjustmentFields()
+        {
+            cmbPartNa.SelectedIndex = -1;
+            cmbSupp.SelectedIndex = -1;
+            txtQuantity.Clear();
+            txtReason.Clear();
         }
 
         private bool ValidateFields()
@@ -330,48 +327,7 @@ namespace MotorPartsInventoryManagement.Forms
         {
             displayTransactions();
             displayStockOutTransactions();
-
-        }
-
-        private void btnSaveSO_Click(object sender, EventArgs e)
-        {
-            if (!ValidateStockOutFields()) return;
-
-            if (SessionManager.CurrentUser == null)
-            {
-                MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            try
-            {
-                int partID = Convert.ToInt32(cmbPartN.SelectedValue);
-                int quantity = Convert.ToInt32(txtQuanDed.Text.Trim());
-                string supplier = cmbSuppli.Text;
-                string reason = txtReas.Text.Trim();
-
-                // Generate reference number automatically
-                string referenceNumber = "SO-" + DateTime.Now.ToString("yyyyMMddHHmmss");
-
-                // Store supplier and reason in remarks
-                string remarks = $"Supplier: {supplier} | Reason: {reason}";
-
-                InventoryManager.StockOut(
-                    partID,
-                    SessionManager.CurrentUser.UserID,
-                    quantity,
-                    referenceNumber,
-                    remarks
-                );
-
-                MessageBox.Show("Stock Out successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                displayStockOutTransactions();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            displayAdjustments();
         }
 
         private bool ValidateStockOutFields()
@@ -407,6 +363,182 @@ namespace MotorPartsInventoryManagement.Forms
             }
 
             return true;
+        }
+
+        private bool ValidateAdjustmentFields()
+        {
+            if (cmbPartNa.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a part.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (cmbSupp.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a supplier.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                MessageBox.Show("Please enter adjustment quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Allow negative numbers for adjustments (can be + or -)
+            if (!int.TryParse(txtQuantity.Text, out int qty) || qty == 0)
+            {
+                MessageBox.Show("Adjustment quantity must be a non-zero number.\nUse positive to add, negative to remove.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtReason.Text))
+            {
+                MessageBox.Show("Please enter a reason for the adjustment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!ValidateFields()) return;
+
+            // Check if user is logged in
+            if (SessionManager.CurrentUser == null)
+            {
+                MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            try
+            {
+                int partID = Convert.ToInt32(cmbPart.SelectedValue);
+                int quantity = Convert.ToInt32(txtQuantityToAdd.Text.Trim());
+                string deliveryReceipt = txtDeliveryreceipt.Text.Trim();
+                string remarks = $"Supplier: {cmbSupplier.Text}";
+
+                // Perform Stock In
+                InventoryManager.StockIn(
+                    partID,
+                    SessionManager.CurrentUser.UserID,  // Now pulls from session
+                    quantity,
+                    deliveryReceipt,
+                    remarks
+                );
+
+
+                MessageBox.Show("Stock In successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearFields();
+                displayTransactions();
+                displayLowStock();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSaveSO_Click(object sender, EventArgs e)
+        {
+            if (!ValidateStockOutFields()) return;
+
+            if (SessionManager.CurrentUser == null)
+            {
+                MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                int partID = Convert.ToInt32(cmbPartN.SelectedValue);
+                int quantity = Convert.ToInt32(txtQuanDed.Text.Trim());
+                string supplier = cmbSuppli.Text;
+                string reason = txtReas.Text.Trim();
+
+                // Generate reference number automatically
+                string referenceNumber = "SO-" + DateTime.Now.ToString("yyyyMMddHHmmss");
+
+                // Store supplier and reason in remarks
+                string remarks = $"Supplier: {supplier} | Reason: {reason}";
+
+                InventoryManager.StockOut(
+                    partID,
+                    SessionManager.CurrentUser.UserID,
+                    quantity,
+                    referenceNumber,
+                    remarks
+                );
+
+                MessageBox.Show("Stock Out successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearStockOutFields();
+                displayStockOutTransactions();
+                displayLowStock();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSaveA_Click(object sender, EventArgs e)
+        {
+            if (!ValidateAdjustmentFields()) return;
+
+            if (SessionManager.CurrentUser == null)
+            {
+                MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                int partID = Convert.ToInt32(cmbPartNa.SelectedValue);
+                int quantity = Convert.ToInt32(txtQuantity.Text.Trim());
+                string supplier = cmbSupp.Text;
+                string reason = txtReason.Text.Trim();
+
+                // Generate reference number for adjustment
+                string referenceNumber = "ADJ-" + DateTime.Now.ToString("yyyyMMddHHmmss");
+
+                // Store supplier and reason in remarks
+                string remarks = $"Supplier: {supplier} | Adjustment: {reason}";
+
+                // Determine if this is an addition or reduction based on quantity sign
+                if (quantity > 0)
+                {
+                    // Positive adjustment - add stock
+                    InventoryManager.StockIn(
+                        partID,
+                        SessionManager.CurrentUser.UserID,
+                        quantity,
+                        referenceNumber,
+                        remarks
+                    );
+                }
+                else
+                {
+                    // Negative adjustment - remove stock
+                    InventoryManager.StockOut(
+                        partID,
+                        SessionManager.CurrentUser.UserID,
+                        Math.Abs(quantity),  // Convert to positive for StockOut
+                        referenceNumber,
+                        remarks
+                    );
+                }
+
+                MessageBox.Show("Stock Adjustment successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearAdjustmentFields();
+                displayAdjustments();
+                displayLowStock();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void displayStockOutTransactions()
@@ -469,6 +601,108 @@ namespace MotorPartsInventoryManagement.Forms
             }
         }
 
+        private void displayAdjustments()
+        {
+            try
+            {
+                // Get Stock In transactions (additions)
+                List<InventoryManager> stockInTransactions = InventoryManager.GetStockInTransactions();
+
+                // Get Stock Out transactions (reductions)
+                List<InventoryManager> stockOutTransactions = InventoryManager.GetStockOutTransactions();
+
+                // Filter only adjustment transactions (reference number starts with "ADJ-")
+                var adjustmentAdditions = stockInTransactions
+                    .Where(t => t.ReferenceNumber != null && t.ReferenceNumber.StartsWith("ADJ-"))
+                    .ToList();
+
+                var adjustmentReductions = stockOutTransactions
+                    .Where(t => t.ReferenceNumber != null && t.ReferenceNumber.StartsWith("ADJ-"))
+                    .ToList();
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Date", typeof(DateTime));
+                dt.Columns.Add("Part Name", typeof(string));
+                dt.Columns.Add("Supplier", typeof(string));
+                dt.Columns.Add("Quantity", typeof(string));  // Changed to string to show +/-
+                dt.Columns.Add("Reason", typeof(string));
+
+                // Add Stock In adjustments (positive quantities)
+                foreach (var transaction in adjustmentAdditions)
+                {
+                    string supplier = ExtractSupplierFromRemarks(transaction.Remarks);
+                    string reason = ExtractAdjustmentReasonFromRemarks(transaction.Remarks);
+
+                    dt.Rows.Add(
+                        transaction.TransactionDate,
+                        transaction.PartName,
+                        supplier,
+                        "+" + transaction.Quantity,  // Prefix with +
+                        reason
+                    );
+                }
+
+                // Add Stock Out adjustments (negative quantities)
+                foreach (var transaction in adjustmentReductions)
+                {
+                    string supplier = ExtractSupplierFromRemarks(transaction.Remarks);
+                    string reason = ExtractAdjustmentReasonFromRemarks(transaction.Remarks);
+
+                    dt.Rows.Add(
+                        transaction.TransactionDate,
+                        transaction.PartName,
+                        supplier,
+                        "-" + transaction.Quantity,  // Prefix with -
+                        reason
+                    );
+                }
+
+                // Sort by date descending
+                DataView dv = dt.DefaultView;
+                dv.Sort = "Date DESC";
+                DataTable sortedDt = dv.ToTable();
+
+                dgvAdjustments.Columns.Clear();
+                dgvAdjustments.DataSource = sortedDt;
+                dgvAdjustments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvAdjustments.AllowUserToAddRows = false;
+
+                // Format columns
+                if (dgvAdjustments.Columns.Contains("Date"))
+                {
+                    dgvAdjustments.Columns["Date"].DefaultCellStyle.Format = "MM/dd/yyyy hh:mm tt";
+                    dgvAdjustments.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                }
+
+                if (dgvAdjustments.Columns.Contains("Quantity"))
+                    dgvAdjustments.Columns["Quantity"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                // Color code by quantity sign
+                foreach (DataGridViewRow row in dgvAdjustments.Rows)
+                {
+                    DateTime transDate = Convert.ToDateTime(row.Cells["Date"].Value);
+                    string quantity = row.Cells["Quantity"].Value.ToString();
+
+                    // Highlight recent adjustments (last 24 hours)
+                    if (transDate >= DateTime.Now.AddHours(-24))
+                    {
+                        if (quantity.StartsWith("+"))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightGreen;
+                        }
+                        else if (quantity.StartsWith("-"))
+                        {
+                            row.DefaultCellStyle.BackColor = Color.LightSalmon;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading adjustments: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private string ExtractReasonFromRemarks(string remarks)
         {
             if (string.IsNullOrEmpty(remarks)) return "";
@@ -483,7 +717,32 @@ namespace MotorPartsInventoryManagement.Forms
             return "";
         }
 
+        private string ExtractAdjustmentReasonFromRemarks(string remarks)
+        {
+            if (string.IsNullOrEmpty(remarks)) return "";
+
+            // Extract reason after "Adjustment: "
+            int reasonIndex = remarks.IndexOf("Adjustment: ");
+            if (reasonIndex >= 0)
+            {
+                return remarks.Substring(reasonIndex + 12).Trim();
+            }
+
+            // Fallback to regular reason extraction
+            return ExtractReasonFromRemarks(remarks);
+        }
+
         private void dgvStockOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPartN_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
