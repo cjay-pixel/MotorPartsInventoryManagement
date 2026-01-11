@@ -103,5 +103,20 @@ namespace MotorPartsInventoryManagement.Forms
                 this.Hide();
             }
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            if (_damagestaffForm == null || _damagestaffForm.IsDisposed)
+            {
+                _damagestaffForm = new DamageStaffForm
+                {
+                    Dock = DockStyle.Fill
+                };
+            }
+            // Replace current content of the right panel with the user control
+            this.panel4.Controls.Clear();
+            this.panel4.Controls.Add(_damagestaffForm);
+            _damagestaffForm.BringToFront();
+        }
     }
 }

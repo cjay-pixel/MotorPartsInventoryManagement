@@ -238,6 +238,9 @@
     <EmbeddedResource Include="Forms\InventoryForms.resx">
       <DependentUpon>InventoryForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\inventorystaffForm.resx">
+      <DependentUpon>InventoryStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportsForm.resx">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>

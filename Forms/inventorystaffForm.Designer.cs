@@ -40,9 +40,10 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(5, 17);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(908, 752);
+            this.panel2.Size = new System.Drawing.Size(929, 790);
             this.panel2.TabIndex = 6;
             // 
             // label7
@@ -70,12 +71,12 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(875, 692);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // inventorystaffForm
+            // InventoryStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Name = "inventorystaffForm";
+            this.Name = "InventoryStaffForm";
             this.Size = new System.Drawing.Size(929, 790);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
