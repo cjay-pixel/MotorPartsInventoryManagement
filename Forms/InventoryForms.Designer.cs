@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCost = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbBrand = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPartNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,9 +60,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtBrand = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
@@ -78,11 +78,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1579, 431);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvProducts);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 73);
             this.panel3.Name = "panel3";
@@ -90,16 +89,17 @@
             this.panel3.Size = new System.Drawing.Size(1579, 358);
             this.panel3.TabIndex = 8;
             // 
-            // dataGridView1
+            // dgvProducts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1539, 318);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProducts.Location = new System.Drawing.Point(20, 20);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.RowTemplate.Height = 24;
+            this.dgvProducts.Size = new System.Drawing.Size(1539, 318);
+            this.dgvProducts.TabIndex = 0;
+            this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
             // panel2
             // 
@@ -146,6 +146,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.txtBrand);
             this.panel4.Controls.Add(this.pbProduct);
             this.panel4.Controls.Add(this.btnImportImg);
             this.panel4.Controls.Add(this.btnDelete);
@@ -162,7 +163,6 @@
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtQuantity);
             this.panel4.Controls.Add(this.txtCost);
-            this.panel4.Controls.Add(this.cmbBrand);
             this.panel4.Controls.Add(this.cmbSupplier);
             this.panel4.Controls.Add(this.txtProductName);
             this.panel4.Controls.Add(this.txtPartNumber);
@@ -229,6 +229,7 @@
             this.btnDelete.Size = new System.Drawing.Size(216, 45);
             this.btnDelete.TabIndex = 41;
             this.btnDelete.Text = "DELETE";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -249,6 +250,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(216, 45);
             this.btnUpdate.TabIndex = 40;
             this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtSellingPrice
             // 
@@ -313,7 +315,6 @@
             this.label10.Size = new System.Drawing.Size(102, 17);
             this.label10.TabIndex = 36;
             this.label10.Text = "Reorder Level:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // cmbCategory
             // 
@@ -392,6 +393,7 @@
             this.btnClear.Size = new System.Drawing.Size(216, 45);
             this.btnClear.TabIndex = 31;
             this.btnClear.Text = "CLEAR";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -412,6 +414,7 @@
             this.btnAdd.Size = new System.Drawing.Size(216, 45);
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "ADD";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtQuantity
             // 
@@ -456,22 +459,6 @@
             this.txtCost.SelectedText = "";
             this.txtCost.Size = new System.Drawing.Size(218, 36);
             this.txtCost.TabIndex = 28;
-            // 
-            // cmbBrand
-            // 
-            this.cmbBrand.BackColor = System.Drawing.Color.Transparent;
-            this.cmbBrand.BorderRadius = 9;
-            this.cmbBrand.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBrand.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.cmbBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbBrand.ItemHeight = 30;
-            this.cmbBrand.Location = new System.Drawing.Point(163, 175);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(218, 36);
-            this.cmbBrand.TabIndex = 27;
             // 
             // cmbSupplier
             // 
@@ -593,6 +580,28 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Part Number:";
             // 
+            // txtBrand
+            // 
+            this.txtBrand.Animated = true;
+            this.txtBrand.BorderRadius = 9;
+            this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBrand.DefaultText = "";
+            this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBrand.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtBrand.ForeColor = System.Drawing.Color.Black;
+            this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBrand.Location = new System.Drawing.Point(163, 175);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.PlaceholderText = "";
+            this.txtBrand.SelectedText = "";
+            this.txtBrand.Size = new System.Drawing.Size(218, 36);
+            this.txtBrand.TabIndex = 45;
+            // 
             // InventoryForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -604,7 +613,7 @@
             this.Size = new System.Drawing.Size(1619, 759);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -621,7 +630,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -631,7 +640,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txtPartNumber;
         private Guna.UI2.WinForms.Guna2TextBox txtProductName;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbBrand;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSupplier;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private Guna.UI2.WinForms.Guna2TextBox txtCost;
@@ -649,5 +657,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
         private Guna.UI2.WinForms.Guna2PictureBox pbProduct;
+        private Guna.UI2.WinForms.Guna2TextBox txtBrand;
     }
 }
