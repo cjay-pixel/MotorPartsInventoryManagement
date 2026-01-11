@@ -263,6 +263,7 @@
             this.Controls.Add(this.pnlShadowLeft);
             this.Name = "StockStaffForm";
             this.Text = "stockstaffForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlShadowLeft.ResumeLayout(false);
             this.pnlC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -31,9 +31,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfParts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -82,10 +79,6 @@
             // 
             this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.ContactPerson,
-            this.NumberOfParts});
             this.dgvCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCategory.Location = new System.Drawing.Point(20, 20);
             this.dgvCategory.Name = "dgvCategory";
@@ -94,24 +87,6 @@
             this.dgvCategory.RowTemplate.Height = 24;
             this.dgvCategory.Size = new System.Drawing.Size(1063, 699);
             this.dgvCategory.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Category ID";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // ContactPerson
-            // 
-            this.ContactPerson.HeaderText = "Category Name";
-            this.ContactPerson.MinimumWidth = 6;
-            this.ContactPerson.Name = "ContactPerson";
-            // 
-            // NumberOfParts
-            // 
-            this.NumberOfParts.HeaderText = "Number of Parts";
-            this.NumberOfParts.MinimumWidth = 6;
-            this.NumberOfParts.Name = "NumberOfParts";
             // 
             // panel5
             // 
@@ -337,9 +312,6 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2TextBox txtCategory;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactPerson;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumberOfParts;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
