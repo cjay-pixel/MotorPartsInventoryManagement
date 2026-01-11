@@ -10,6 +10,7 @@ namespace MotorPartsInventoryManagement.Managers
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+        public int PartsCount { get; set; }
 
         // 🔹 Get all categories
         public static List<CategoryManager> GetAll()
@@ -23,7 +24,8 @@ namespace MotorPartsInventoryManagement.Managers
                 list.Add(new CategoryManager
                 {
                     CategoryID = Convert.ToInt32(row["CategoryID"]),
-                    CategoryName = row["CategoryName"].ToString()
+                    CategoryName = row["CategoryName"].ToString(),
+                    PartsCount = Convert.ToInt32(row["PartsCount"])
                 });
             }
 
@@ -37,7 +39,6 @@ namespace MotorPartsInventoryManagement.Managers
             {
                 new MySqlParameter("@p_CategoryName", categoryName)
             };
-
             DatabaseHelper.ExecuteStoredProcedure("AddCategory", parameters);
         }
 

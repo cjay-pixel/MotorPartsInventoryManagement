@@ -14,13 +14,54 @@ namespace MotorPartsInventoryManagement.Forms
 {
     public partial class CategoryForm : UserControl
     {
+        private List<CategoryManager> allCategories; // ✅ ADDED: Store all categories for search
+
         public CategoryForm()
         {
             InitializeComponent();
+            ConfigureDataGridView();
             displayCategories();
         }
 
         private int getID = 0;
+
+        // ✅ ADDED: New method to configure DataGridView columns
+        private void ConfigureDataGridView()
+        {
+            // Clear any existing columns
+            dgvCategory.AutoGenerateColumns = false;
+            dgvCategory.Columns.Clear();
+
+            // Add Category ID column (hidden)
+            DataGridViewTextBoxColumn colID = new DataGridViewTextBoxColumn();
+            colID.Name = "CategoryID";
+            colID.HeaderText = "ID";
+            colID.DataPropertyName = "CategoryID";
+            colID.Visible = false; // Hide the ID column
+            dgvCategory.Columns.Add(colID);
+
+            // Add Category Name column
+            DataGridViewTextBoxColumn colName = new DataGridViewTextBoxColumn();
+            colName.Name = "CategoryName";
+            colName.HeaderText = "Category Name";
+            colName.DataPropertyName = "CategoryName";
+            colName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCategory.Columns.Add(colName);
+
+            // Add Parts Count column
+            DataGridViewTextBoxColumn colPartsCount = new DataGridViewTextBoxColumn();
+            colPartsCount.Name = "PartsCount";
+            colPartsCount.HeaderText = "Parts Count";
+            colPartsCount.DataPropertyName = "PartsCount";
+            colPartsCount.Width = 150;
+            dgvCategory.Columns.Add(colPartsCount);
+
+            // Optional: Make the grid read-only
+            dgvCategory.ReadOnly = true;
+            dgvCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCategory.MultiSelect = false;
+        }
+
         private void dgvCategory_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -28,14 +69,15 @@ namespace MotorPartsInventoryManagement.Forms
                 DataGridViewRow row = dgvCategory.Rows[e.RowIndex];
                 getID = (int)row.Cells[0].Value;
                 txtCategory.Text = row.Cells[1].Value.ToString();
-
             }
         }
 
         public void displayCategories()
         {
-            dgvCategory.DataSource = CategoryManager.GetAll();
+            allCategories = CategoryManager.GetAll(); // ✅ CHANGED: Store categories
+            dgvCategory.DataSource = allCategories;
         }
+
         private bool ValidateFields()
         {
             if (string.IsNullOrWhiteSpace(txtCategory.Text))
@@ -121,5 +163,42 @@ namespace MotorPartsInventoryManagement.Forms
             }
         }
 
+        private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dgvCategory.Rows[e.RowIndex];
+                getID = (int)row.Cells[0].Value;
+                txtCategory.Text = row.Cells[1].Value.ToString();
+            }
+        }
+
+        // ✅ ADDED: Search functionality
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim().ToLower();
+
+            if (allCategories == null) return;
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                // Reset to all categories
+                dgvCategory.DataSource = null;
+                dgvCategory.DataSource = allCategories;
+            }
+            else
+            {
+                // Filter categories
+                var filteredCategories = allCategories
+                    .Where(cat =>
+                        cat.CategoryName.ToLower().Contains(searchText) ||
+                        cat.PartsCount.ToString().Contains(searchText)
+                    )
+                    .ToList();
+
+                dgvCategory.DataSource = null;
+                dgvCategory.DataSource = filteredCategories;
+            }
+        }
     }
 }
