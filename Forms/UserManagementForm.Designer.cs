@@ -33,39 +33,39 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtLName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -114,7 +114,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dataGridView4);
+            this.panel6.Controls.Add(this.dgvUsers);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(0, 61);
@@ -123,23 +123,52 @@
             this.panel6.Size = new System.Drawing.Size(932, 710);
             this.panel6.TabIndex = 10;
             // 
-            // dataGridView4
+            // dgvUsers
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Username,
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn15,
             this.Status});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(20, 20);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(892, 670);
-            this.dataGridView4.TabIndex = 2;
+            this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUsers.Location = new System.Drawing.Point(20, 20);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.RowHeadersVisible = false;
+            this.dgvUsers.RowHeadersWidth = 51;
+            this.dgvUsers.RowTemplate.Height = 24;
+            this.dgvUsers.Size = new System.Drawing.Size(892, 670);
+            this.dgvUsers.TabIndex = 2;
+            this.dgvUsers.SelectionChanged += new System.EventHandler(this.dgvUsers_SelectionChanged);
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Username";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "FullName";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "ROLE";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "STATUS";
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
             // 
             // panel5
             // 
@@ -172,6 +201,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(285, 36);
             this.txtSearch.TabIndex = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label5
             // 
@@ -194,7 +224,7 @@
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtPass);
+            this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtFName);
             this.panel2.Controls.Add(this.label6);
@@ -205,6 +235,65 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(264, 771);
             this.panel2.TabIndex = 5;
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmbStatus.BorderRadius = 9;
+            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbStatus.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbStatus.ItemHeight = 30;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Active",
+            "Not Active"});
+            this.cmbStatus.Location = new System.Drawing.Point(24, 470);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(218, 36);
+            this.cmbStatus.TabIndex = 50;
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRole.BorderRadius = 9;
+            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbRole.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbRole.ItemHeight = 30;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Cashier",
+            "Stock Staff"});
+            this.cmbRole.Location = new System.Drawing.Point(23, 390);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(218, 36);
+            this.cmbRole.TabIndex = 49;
+            // 
+            // cbShowPass
+            // 
+            this.cbShowPass.AutoSize = true;
+            this.cbShowPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbShowPass.CheckedState.BorderRadius = 0;
+            this.cbShowPass.CheckedState.BorderThickness = 0;
+            this.cbShowPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbShowPass.CheckMarkColor = System.Drawing.Color.Black;
+            this.cbShowPass.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cbShowPass.Location = new System.Drawing.Point(24, 323);
+            this.cbShowPass.Name = "cbShowPass";
+            this.cbShowPass.Size = new System.Drawing.Size(143, 26);
+            this.cbShowPass.TabIndex = 48;
+            this.cbShowPass.Text = "Show Password";
+            this.cbShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbShowPass.UncheckedState.BorderRadius = 0;
+            this.cbShowPass.UncheckedState.BorderThickness = 0;
+            this.cbShowPass.UncheckedState.FillColor = System.Drawing.Color.LightGray;
+            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
             // 
             // txtLName
             // 
@@ -238,25 +327,17 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Last Name:";
             // 
-            // btnDelete
+            // panel7
             // 
-            this.btnDelete.Animated = true;
-            this.btnDelete.BorderRadius = 9;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.IndianRed;
-            this.btnDelete.FillColor2 = System.Drawing.Color.Brown;
-            this.btnDelete.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.IndicateFocus = true;
-            this.btnDelete.Location = new System.Drawing.Point(26, 135);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(216, 45);
-            this.btnDelete.TabIndex = 45;
-            this.btnDelete.Text = "DELETE";
+            this.panel7.Controls.Add(this.btnUpdate);
+            this.panel7.Controls.Add(this.btnDelete);
+            this.panel7.Controls.Add(this.btnAdd);
+            this.panel7.Controls.Add(this.btnClear);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 512);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(264, 259);
+            this.panel7.TabIndex = 51;
             // 
             // btnUpdate
             // 
@@ -277,26 +358,28 @@
             this.btnUpdate.Size = new System.Drawing.Size(216, 45);
             this.btnUpdate.TabIndex = 44;
             this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnClear
+            // btnDelete
             // 
-            this.btnClear.Animated = true;
-            this.btnClear.BorderRadius = 9;
-            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClear.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClear.FillColor = System.Drawing.Color.Red;
-            this.btnClear.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnClear.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.IndicateFocus = true;
-            this.btnClear.Location = new System.Drawing.Point(26, 195);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(216, 45);
-            this.btnClear.TabIndex = 43;
-            this.btnClear.Text = "CLEAR";
+            this.btnDelete.Animated = true;
+            this.btnDelete.BorderRadius = 9;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.IndianRed;
+            this.btnDelete.FillColor2 = System.Drawing.Color.Brown;
+            this.btnDelete.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IndicateFocus = true;
+            this.btnDelete.Location = new System.Drawing.Point(26, 135);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(216, 45);
+            this.btnDelete.TabIndex = 45;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -317,6 +400,38 @@
             this.btnAdd.Size = new System.Drawing.Size(216, 45);
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "ADD";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Animated = true;
+            this.btnClear.BorderRadius = 9;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.Red;
+            this.btnClear.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnClear.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.IndicateFocus = true;
+            this.btnClear.Location = new System.Drawing.Point(26, 195);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(216, 45);
+            this.btnClear.TabIndex = 43;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label4.Location = new System.Drawing.Point(21, 445);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 22);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Status:";
             // 
             // label3
             // 
@@ -328,27 +443,28 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "Role:";
             // 
-            // txtPass
+            // txtPassword
             // 
-            this.txtPass.Animated = true;
-            this.txtPass.BorderRadius = 9;
-            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPass.DefaultText = "";
-            this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.txtPass.ForeColor = System.Drawing.Color.Black;
-            this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.Location = new System.Drawing.Point(24, 284);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.PlaceholderText = "";
-            this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(218, 36);
-            this.txtPass.TabIndex = 24;
+            this.txtPassword.Animated = true;
+            this.txtPassword.BorderRadius = 9;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(24, 284);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(218, 36);
+            this.txtPassword.TabIndex = 24;
             // 
             // label1
             // 
@@ -424,110 +540,6 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Username:";
             // 
-            // cbShowPass
-            // 
-            this.cbShowPass.AutoSize = true;
-            this.cbShowPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbShowPass.CheckedState.BorderRadius = 0;
-            this.cbShowPass.CheckedState.BorderThickness = 0;
-            this.cbShowPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbShowPass.CheckMarkColor = System.Drawing.Color.Black;
-            this.cbShowPass.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cbShowPass.Location = new System.Drawing.Point(24, 323);
-            this.cbShowPass.Name = "cbShowPass";
-            this.cbShowPass.Size = new System.Drawing.Size(143, 26);
-            this.cbShowPass.TabIndex = 48;
-            this.cbShowPass.Text = "Show Password";
-            this.cbShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbShowPass.UncheckedState.BorderRadius = 0;
-            this.cbShowPass.UncheckedState.BorderThickness = 0;
-            this.cbShowPass.UncheckedState.FillColor = System.Drawing.Color.LightGray;
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.BackColor = System.Drawing.Color.Transparent;
-            this.cmbRole.BorderRadius = 9;
-            this.cmbRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbRole.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbRole.ItemHeight = 30;
-            this.cmbRole.Items.AddRange(new object[] {
-            "Admin",
-            "Cashier",
-            "Stock Staff"});
-            this.cmbRole.Location = new System.Drawing.Point(23, 390);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(218, 36);
-            this.cmbRole.TabIndex = 49;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label4.Location = new System.Drawing.Point(21, 445);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 22);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Status:";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmbStatus.BorderRadius = 9;
-            this.cmbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbStatus.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbStatus.ItemHeight = 30;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "Active",
-            "Not Active"});
-            this.cmbStatus.Location = new System.Drawing.Point(24, 470);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(218, 36);
-            this.cmbStatus.TabIndex = 50;
-            // 
-            // Username
-            // 
-            this.Username.HeaderText = "Username";
-            this.Username.MinimumWidth = 6;
-            this.Username.Name = "Username";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Full Name";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnUpdate);
-            this.panel7.Controls.Add(this.btnDelete);
-            this.panel7.Controls.Add(this.btnAdd);
-            this.panel7.Controls.Add(this.btnClear);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 512);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(264, 259);
-            this.panel7.TabIndex = 51;
-            // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,7 +552,7 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -557,7 +569,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvUsers;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label5;
@@ -569,7 +581,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnClear;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtPass;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtFName;
         private System.Windows.Forms.Label label6;
@@ -579,10 +591,10 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
         private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Panel panel7;
     }
 }

@@ -54,7 +54,7 @@
             this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtLName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSupplierName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -298,7 +298,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.cmbStatus);
             this.panel2.Controls.Add(this.panel11);
-            this.panel2.Controls.Add(this.txtLastname);
+            this.panel2.Controls.Add(this.txtLName);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.label4);
@@ -306,7 +306,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtPhone);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtFirstname);
+            this.panel2.Controls.Add(this.txtFName);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSupplierName);
             this.panel2.Controls.Add(this.label2);
@@ -412,27 +412,27 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // txtLastname
+            // txtLName
             // 
-            this.txtLastname.Animated = true;
-            this.txtLastname.BorderRadius = 9;
-            this.txtLastname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLastname.DefaultText = "";
-            this.txtLastname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLastname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLastname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtLastname.ForeColor = System.Drawing.Color.Black;
-            this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Location = new System.Drawing.Point(24, 182);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.PlaceholderText = "";
-            this.txtLastname.SelectedText = "";
-            this.txtLastname.Size = new System.Drawing.Size(218, 36);
-            this.txtLastname.TabIndex = 47;
+            this.txtLName.Animated = true;
+            this.txtLName.BorderRadius = 9;
+            this.txtLName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLName.DefaultText = "";
+            this.txtLName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtLName.ForeColor = System.Drawing.Color.Black;
+            this.txtLName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLName.Location = new System.Drawing.Point(24, 182);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.PlaceholderText = "";
+            this.txtLName.SelectedText = "";
+            this.txtLName.Size = new System.Drawing.Size(218, 36);
+            this.txtLName.TabIndex = 47;
             // 
             // label7
             // 
@@ -540,27 +540,27 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Phone Number:";
             // 
-            // txtFirstname
+            // txtFName
             // 
-            this.txtFirstname.Animated = true;
-            this.txtFirstname.BorderRadius = 9;
-            this.txtFirstname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFirstname.DefaultText = "";
-            this.txtFirstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFirstname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFirstname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtFirstname.ForeColor = System.Drawing.Color.Black;
-            this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstname.Location = new System.Drawing.Point(24, 109);
-            this.txtFirstname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.PlaceholderText = "";
-            this.txtFirstname.SelectedText = "";
-            this.txtFirstname.Size = new System.Drawing.Size(218, 36);
-            this.txtFirstname.TabIndex = 22;
+            this.txtFName.Animated = true;
+            this.txtFName.BorderRadius = 9;
+            this.txtFName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFName.DefaultText = "";
+            this.txtFName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtFName.ForeColor = System.Drawing.Color.Black;
+            this.txtFName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFName.Location = new System.Drawing.Point(24, 109);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.PlaceholderText = "";
+            this.txtFName.SelectedText = "";
+            this.txtFName.Size = new System.Drawing.Size(218, 36);
+            this.txtFName.TabIndex = 22;
             // 
             // label6
             // 
@@ -674,14 +674,14 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtPhone;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txtFirstname;
+        private Guna.UI2.WinForms.Guna2TextBox txtFName;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtSupplierName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvSupplier;
-        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
+        private Guna.UI2.WinForms.Guna2TextBox txtLName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
