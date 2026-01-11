@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -460,6 +461,17 @@ namespace MotorPartsInventoryManagement.Forms
                     return;
                 }
             }
+
+            // Apply discount to selected item
+            CartItem selectedItem = cartItems[selectedCartIndex];
+            selectedItem.DiscountType = cmbDiscountType.Text;
+            selectedItem.DiscountValue = discountValue;
+
+            RefreshCart();
+
+            MessageBox.Show("Discount applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -532,6 +544,7 @@ namespace MotorPartsInventoryManagement.Forms
             try
             {
                 // Show print preview
+                printDocument1.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 280, 500);
                 printPreviewDialog1.Document = printDocument1;
                 printPreviewDialog1.ShowDialog();
 
@@ -693,6 +706,19 @@ namespace MotorPartsInventoryManagement.Forms
 
             check = true;
             lblChange.Text = $"₱{(cash - total):N2}";
+        }
+
+        private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                selectedCartIndex = e.RowIndex;
+                CartItem selectedItem = cartItems[selectedCartIndex];
+
+                // Display current discount
+                cmbDiscountType.Text = selectedItem.DiscountType;
+                txtDiscountVal.Text = selectedItem.DiscountValue.ToString();
+            }
         }
     }
     }

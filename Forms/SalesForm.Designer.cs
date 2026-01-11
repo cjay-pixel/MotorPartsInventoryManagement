@@ -281,6 +281,7 @@
             this.dgvCart.RowTemplate.Height = 24;
             this.dgvCart.Size = new System.Drawing.Size(508, 745);
             this.dgvCart.TabIndex = 1;
+            this.dgvCart.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellClick);
             // 
             // pnlOrderTop
             // 
