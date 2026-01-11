@@ -140,7 +140,7 @@
             this.dgvUsers.RowTemplate.Height = 24;
             this.dgvUsers.Size = new System.Drawing.Size(892, 670);
             this.dgvUsers.TabIndex = 2;
-            this.dgvUsers.SelectionChanged += new System.EventHandler(this.dgvUsers_SelectionChanged);
+           
             // 
             // Username
             // 
@@ -201,7 +201,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(285, 36);
             this.txtSearch.TabIndex = 8;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+           
             // 
             // label5
             // 
@@ -293,7 +293,7 @@
             this.cbShowPass.UncheckedState.BorderRadius = 0;
             this.cbShowPass.UncheckedState.BorderThickness = 0;
             this.cbShowPass.UncheckedState.FillColor = System.Drawing.Color.LightGray;
-            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
+            
             // 
             // txtLName
             // 

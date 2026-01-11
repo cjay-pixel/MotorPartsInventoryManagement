@@ -127,7 +127,7 @@ namespace MotorPartsInventoryManagement.Forms
 
         private void displaySuppliers()
         {
-            dgvSupplier.DataSource = SupplierList.GetAll();
+            dgvSupplier.DataSource = SupplierManager.GetAll();
 
             dgvSupplier.Columns["SupplierID"].Visible = false;
             dgvSupplier.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

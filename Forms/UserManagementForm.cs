@@ -1,284 +1,257 @@
-﻿using MotorPartsInventoryManagement.Managers;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MotorPartsInventoryManagement.Managers;
 
 namespace MotorPartsInventoryManagement.Forms
 {
     public partial class UserManagementForm : UserControl
     {
-        private int selectedUserID = 0;
-        private DataTable allUsersTable; // holds all users
-
+        private int selectedUserID = -1;
 
         public UserManagementForm()
         {
             InitializeComponent();
-            SetupComboBoxes();
-            SetupDataGridView();
-            LoadUsers();
-            UpdateButtonStates();
+            LoadRoles();
+            LoadStatuses();
+            displayUsers();
         }
 
-        private void SetupComboBoxes()
+        private void LoadRoles()
         {
-            //cmbRole.Items.Clear();
-            //cmbRole.Items.AddRange(new string[] { "Admin", "Cashier", "Stock Staff" });
-            //cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            cmbStatus.Items.Clear();
-            cmbStatus.Items.AddRange(new string[] { "Active", "Inactive" });
-            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbStatus.SelectedIndex = 0;
-        }
-
-        private void SetupDataGridView()
-        {
-            dgvUsers.AutoGenerateColumns = false;
-            dgvUsers.AllowUserToAddRows = false;
-            dgvUsers.AllowUserToDeleteRows = false;
-            dgvUsers.ReadOnly = true;
-            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsers.MultiSelect = false;
-
-            dgvUsers.Columns.Clear();
-
-            dgvUsers.Columns.Add(new DataGridViewTextBoxColumn { Name = "UserID", DataPropertyName = "UserID", Visible = false });
-            dgvUsers.Columns.Add(new DataGridViewTextBoxColumn { Name = "Username", DataPropertyName = "Username", HeaderText = "Username" });
-            dgvUsers.Columns.Add(new DataGridViewTextBoxColumn { Name = "FullName", DataPropertyName = "FullName", HeaderText = "Full Name" });
-            dgvUsers.Columns.Add(new DataGridViewTextBoxColumn { Name = "ROLE", DataPropertyName = "ROLE", HeaderText = "Role" });
-            dgvUsers.Columns.Add(new DataGridViewTextBoxColumn { Name = "STATUS", DataPropertyName = "STATUS", HeaderText = "Status" });
-        }
-
-        private void LoadUsers()
-        {
-            try
-            {
-                allUsersTable = UserManager.GetAllUsers(); // keep original
-                dgvUsers.DataSource = UserManager.GetAllUsers();
-                dgvUsers.ClearSelection();
-                selectedUserID = 0;
-                UpdateButtonStates();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading users:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void UpdateButtonStates()
-        {
-            btnUpdate.Enabled = selectedUserID > 0;
-            btnDelete.Enabled = selectedUserID > 0;
-        }
-
-        private void ClearInputs()
-        {
-            txtUsername.Clear();
-            txtFName.Clear();
-            txtLName.Clear();
-            txtPassword.Clear();
+            cmbRole.Items.Clear();
+            cmbRole.Items.Add("Admin");
+            cmbRole.Items.Add("Cashier");
+            cmbRole.Items.Add("StockStaff");
             cmbRole.SelectedIndex = -1;
-            cmbStatus.SelectedIndex = 0;
-            dgvUsers.ClearSelection();
-            selectedUserID = 0;
-            UpdateButtonStates();
         }
 
-        private bool ValidateInputs(bool isUpdate = false)
+        private void LoadStatuses()
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text)) { MessageBox.Show("Enter username"); txtUsername.Focus(); return false; }
-            if (string.IsNullOrWhiteSpace(txtFName.Text)) { MessageBox.Show("Enter first name"); txtFName.Focus(); return false; }
-            if (string.IsNullOrWhiteSpace(txtLName.Text)) { MessageBox.Show("Enter last name"); txtLName.Focus(); return false; }
-            if (!isUpdate && string.IsNullOrWhiteSpace(txtPassword.Text)) { MessageBox.Show("Enter password"); txtPassword.Focus(); return false; }
-            if (cmbRole.SelectedIndex == -1) { MessageBox.Show("Select role"); cmbRole.Focus(); return false; }
-            if (cmbStatus.SelectedIndex == -1) { MessageBox.Show("Select status"); cmbStatus.Focus(); return false; }
-            return true;
+            cmbStatus.Items.Clear();
+            cmbStatus.Items.Add("Active");
+            cmbStatus.Items.Add("Inactive");
+            cmbStatus.SelectedIndex = -1;
         }
-
-        // Add User
-        private bool isAddingNewUser = false;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!isAddingNewUser)
+            if (!ValidateFields()) return;
+
+            // Validate password
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                // First click → start Add mode
-                ClearInputs();
-                isAddingNewUser = true;
-                MessageBox.Show("Fill the form to add a new user.", "Add New User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Password is required.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Second click → actually add the user
-            if (!ValidateInputs()) return;
+            //if (txtPassword.Text != txtConfirmPassword.Text)
+            //{
+            //    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
+            // Check if username already exists
             if (UserManager.UsernameExists(txtUsername.Text.Trim()))
             {
-                MessageBox.Show("Username already exists!", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUsername.Focus();
+                MessageBox.Show("Username already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
-                UserManager.AddUser(
+                UserManager.Add(
                     txtUsername.Text.Trim(),
                     txtPassword.Text,
                     txtFName.Text.Trim(),
                     txtLName.Text.Trim(),
-                    cmbRole.SelectedItem.ToString(),
-                    cmbStatus.SelectedItem.ToString()
+                    cmbRole.Text,
+                    cmbStatus.Text
                 );
 
                 MessageBox.Show("User added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                LoadUsers();
-                ClearInputs();
-                isAddingNewUser = false; // Reset flag after adding
+                clearFields();
+                displayUsers();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error adding user:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-        // Select a user to edit
-        private void dgvUsers_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvUsers.SelectedRows.Count == 0)
-            {
-                selectedUserID = 0;
-                UpdateButtonStates();
-                return;
-            }
-
-            var drv = dgvUsers.SelectedRows[0].DataBoundItem as DataRowView;
-            if (drv == null) return;
-
-            selectedUserID = Convert.ToInt32(drv["UserID"]);
-            txtUsername.Text = drv["Username"].ToString();
-
-            var names = drv["FullName"].ToString().Split(' ');
-            txtFName.Text = names[0];
-            txtLName.Text = names.Length > 1 ? string.Join(" ", names.Skip(1)) : "";
-
-            cmbRole.SelectedItem = drv["ROLE"].ToString();
-            cmbStatus.SelectedItem = drv["STATUS"].ToString();
-
-            txtPassword.Clear();
-            UpdateButtonStates();
-        }
-
-        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-            txtPassword.PasswordChar = cbShowPass.Checked ? '\0' : '*';
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // Make sure a user is selected
-            if (selectedUserID == 0)
+            if (selectedUserID == -1)
             {
-                MessageBox.Show("Please select a user to update.", "No User Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a user to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Validate inputs (allow skipping password if not changing)
-            if (!ValidateInputs(isUpdate: true))
+            if (!ValidateFields()) return;
+
+            // Check if username exists for another user
+            if (UserManager.UsernameExists(txtUsername.Text.Trim(), selectedUserID))
+            {
+                MessageBox.Show("Username already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
 
             try
             {
-                // Update user
-                UserManager.UpdateUser(
-                    userID: selectedUserID,
-                    username: txtUsername.Text.Trim(),
-                    password: string.IsNullOrWhiteSpace(txtPassword.Text) ? null : txtPassword.Text, // keep existing if empty
-                    firstName: txtFName.Text.Trim(),
-                    lastName: txtLName.Text.Trim(),
-                    role: cmbRole.SelectedItem.ToString(),
-                    status: cmbStatus.SelectedItem.ToString()
+                UserManager.Update(
+                    selectedUserID,
+                    txtUsername.Text.Trim(),
+                    txtFName.Text.Trim(),
+                    txtLName.Text.Trim(),
+                    cmbRole.Text,
+                    cmbStatus.Text
                 );
 
-                MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Update password if provided
+                if (!string.IsNullOrWhiteSpace(txtPassword.Text))
+                {
+                    //if (txtPassword.Text != txtConfirmPassword.Text)
+                    //{
+                    //    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //    return;
+                    //}
 
-                // Reload table and clear selection
-                LoadUsers();
-                ClearInputs();
+                    UserManager.UpdatePassword(selectedUserID, txtPassword.Text);
+                }
+
+                MessageBox.Show("User updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearFields();
+                displayUsers();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error updating user:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvUsers.SelectedRows.Count == 0)
+            if (selectedUserID == -1)
             {
-                MessageBox.Show("Please select a user to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a user to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            var result = MessageBox.Show(
-                "Are you sure you want to delete this user?",
-                "Confirm Delete",
+            var confirm = MessageBox.Show(
+                "Are you sure you want to deactivate this user?",
+                "Confirm Deactivation",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+                MessageBoxIcon.Question
+            );
 
-            if (result == DialogResult.Yes)
+            if (confirm != DialogResult.Yes) return;
+
+            try
             {
-                DataRowView drv = dgvUsers.SelectedRows[0].DataBoundItem as DataRowView;
-                int userID = Convert.ToInt32(drv["UserID"]);
-
-                try
-                {
-                    UserManager.DeleteUser(userID);
-                    MessageBox.Show("User deleted successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    LoadUsers(); // Refresh DataGridView
-                    ClearInputs();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error deleting user:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                UserManager.Deactivate(selectedUserID);
+                MessageBox.Show("User deactivated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearFields();
+                displayUsers();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ClearInputs();
+            clearFields();
         }
 
-
-        // Search
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string searchText = txtSearch.Text.Trim().ToLower();
-
-            if (allUsersTable == null) return;
-
-            if (string.IsNullOrEmpty(searchText))
+            if (e.RowIndex >= 0)
             {
-                dgvUsers.DataSource = allUsersTable; // reset to all users
-            }
-            else
-            {
-                var filteredRows = allUsersTable.AsEnumerable()
-                    .Where(row =>
-                        row["Username"].ToString().ToLower().Contains(searchText) ||
-                        row["FullName"].ToString().ToLower().Contains(searchText) ||
-                        row["ROLE"].ToString().ToLower().Contains(searchText) ||
-                        row["STATUS"].ToString().ToLower().Contains(searchText)
-                    );
+                DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
 
-                dgvUsers.DataSource = filteredRows.Any() ? filteredRows.CopyToDataTable() : allUsersTable.Clone();
+                selectedUserID = Convert.ToInt32(row.Cells["UserID"].Value);
+                txtUsername.Text = row.Cells["Username"].Value.ToString();
+                txtFName.Text = row.Cells["FirstName"].Value.ToString();
+                txtLName.Text = row.Cells["LastName"].Value.ToString();
+                cmbRole.Text = row.Cells["Role"].Value.ToString();
+                cmbStatus.Text = row.Cells["Status"].Value.ToString();
+
+                // Clear password fields when selecting a user
+                txtPassword.Clear();
+                // txtConfirmPassword.Clear();
             }
+        }
+
+        private void displayUsers()
+        {
+            try
+            {
+                dgvUsers.DataSource = UserManager.GetAll();
+
+                if (dgvUsers.Columns.Contains("UserID"))
+                    dgvUsers.Columns["UserID"].Visible = false;
+
+                dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvUsers.AllowUserToAddRows = false;
+
+                // Color code by status
+                foreach (DataGridViewRow row in dgvUsers.Rows)
+                {
+                    if (row.Cells["Status"].Value?.ToString() == "Inactive")
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightGray;
+                        row.DefaultCellStyle.ForeColor = Color.DarkGray;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading users: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void clearFields()
+        {
+            txtUsername.Clear();
+            txtFName.Clear();
+            txtLName.Clear();
+            txtPassword.Clear();
+            //txtConfirmPassword.Clear();
+            cmbRole.SelectedIndex = -1;
+            cmbStatus.SelectedIndex = -1;
+            selectedUserID = -1;
+        }
+
+        private bool ValidateFields()
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtFName.Text) ||
+                string.IsNullOrWhiteSpace(txtLName.Text) ||
+                cmbRole.SelectedIndex == -1 ||
+                cmbStatus.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void UserManagementForm_Load(object sender, EventArgs e)
+        {
+            displayUsers();
+        }
+
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 
