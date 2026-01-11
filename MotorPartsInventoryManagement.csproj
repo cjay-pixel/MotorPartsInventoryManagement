@@ -197,9 +197,11 @@
     <Compile Include="Forms\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Managers\CartItem.cs" />
     <Compile Include="Managers\CategoryManager.cs" />
     <Compile Include="Managers\InventoryManager.cs" />
     <Compile Include="Managers\MotorPartManager.cs" />
+    <Compile Include="Managers\SalesManager.cs" />
     <Compile Include="Managers\SupplierManager.cs" />
     <Compile Include="Managers\UserManager.cs" />
     <Compile Include="Models\User.cs" />
