@@ -100,6 +100,20 @@ namespace MotorPartsInventoryManagement.Managers
             return list;
         }
 
+        // Stock Adjustments
+
+        public static void StockAdjustment(int partID, int userID, int newQuantity, string remarks)
+        {
+            MySqlParameter[] parameters =
+            {
+                new MySqlParameter("@p_PartID", partID),
+                new MySqlParameter("@p_UserID", userID),
+                new MySqlParameter("@p_NewQuantity", newQuantity),
+                new MySqlParameter("@p_Remarks", remarks)
+            };
+            DatabaseHelper.ExecuteStoredProcedure("sp_StockAdjustment", parameters);
+        }
+
 
 
         // 🔹 Get transactions by part
