@@ -24,51 +24,35 @@ namespace MotorPartsInventoryManagement.Forms
         {
             try
             {
-                // Clear existing cards
                 flowLayoutPanelProducts.Controls.Clear();
-
-                // Get all products (grouped by product name)
                 List<SalesManager> products = SalesManager.GetAll();
 
-                // Create card for each product
                 foreach (var product in products)
                 {
                     CardProductForm card = new CardProductForm();
 
-                    // Set product data
                     card.id = product.PartID;
                     card.productID = product.PartNumber;
                     card.productName = product.PartName;
                     card.productBrand = product.Brand;
+                    card.productCompatibility = product.MotorCompatibility;
                     card.category = product.CategoryName;
                     card.productStock = product.TotalStock.ToString();
-                    card.productPrice = "₱" + product.SellingPrice.ToString("N2"); // PHP currency format
+                    card.productPrice = "₱" + product.SellingPrice.ToString("N2");
 
-                    // Load product image
-                    if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath))
-                    {
-                        try
-                        {
-                            using (FileStream fs = new FileStream(product.ImagePath, FileMode.Open, FileAccess.Read))
-                            {
-                                card.productImage = Image.FromStream(fs);
-                            }
-                        }
-                        catch
-                        {
-                            card.productImage = null; // Use default image if loading fails
-                        }
-                    }
-                    else
-                    {
-                        card.productImage = null; // Use default image
-                    }
 
-                    // Add card to flow layout panel
+
+                    card.productImage = LoadProductImage(product.ImagePath);
+
+                    // Subscribe to add to cart event
+                    card.Tag = product; // Store product data in Tag
+                 //   card.AddToCartClicked += Card_Click;
+
+
+
                     flowLayoutPanelProducts.Controls.Add(card);
                 }
 
-                // Update product count label if you have one
                 //  lblProductCount.Text = $"Showing {products.Count} product(s)";
             }
             catch (Exception ex)
@@ -76,5 +60,37 @@ namespace MotorPartsInventoryManagement.Forms
                 MessageBox.Show("Error loading products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        private Image LoadProductImage(string imagePath)
+        {
+            if (string.IsNullOrWhiteSpace(imagePath))
+                return null;
+
+            if (!File.Exists(imagePath))
+            {
+                string alternativePath = Path.Combine(Application.StartupPath, "ProductImages", Path.GetFileName(imagePath));
+                if (File.Exists(alternativePath))
+                    imagePath = alternativePath;
+                else
+                    return null;
+            }
+
+            try
+            {
+                using (FileStream fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                {
+                    Image originalImage = Image.FromStream(fs);
+                    Image imageCopy = new Bitmap(originalImage);
+                    originalImage.Dispose();
+                    return imageCopy;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
-}
+    }
+

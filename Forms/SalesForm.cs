@@ -29,6 +29,8 @@ namespace MotorPartsInventoryManagement.Forms
             InitializeCartGrid();
             LoadCategories();
             displayProducts();
+            this.VisibleChanged += SalesForm_VisibleChanged;
+            
             printDocument1.PrintPage += printDocument1_PrintPage;
             printDocument1.BeginPrint += printDocument1_BeginPrint;
         }
@@ -762,10 +764,18 @@ namespace MotorPartsInventoryManagement.Forms
                 RefreshCart();
             }
         }
-
+       
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             SearchAndFilterProducts();
+        }
+
+        private void SalesForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayProducts(); // refresh every time you return
+            }
         }
     }
     }

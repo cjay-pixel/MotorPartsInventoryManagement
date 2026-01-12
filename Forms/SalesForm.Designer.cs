@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesForm));
             this.pnlOrder = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnApplyDiscount = new System.Windows.Forms.Button();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dgvCart = new System.Windows.Forms.DataGridView();
             this.pnlOrderTop = new System.Windows.Forms.Panel();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlItems = new System.Windows.Forms.Panel();
@@ -58,10 +62,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.btnApplyDiscount = new System.Windows.Forms.Button();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnRemoveItem = new System.Windows.Forms.Button();
             this.pnlOrder.SuspendLayout();
             this.panel5.SuspendLayout();
             this.PnlOrderBottom.SuspendLayout();
@@ -104,6 +104,41 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(508, 232);
             this.panel5.TabIndex = 3;
+            // 
+            // btnApplyDiscount
+            // 
+            this.btnApplyDiscount.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnApplyDiscount.FlatAppearance.BorderSize = 0;
+            this.btnApplyDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplyDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplyDiscount.ForeColor = System.Drawing.Color.White;
+            this.btnApplyDiscount.Location = new System.Drawing.Point(308, 153);
+            this.btnApplyDiscount.Name = "btnApplyDiscount";
+            this.btnApplyDiscount.Size = new System.Drawing.Size(150, 31);
+            this.btnApplyDiscount.TabIndex = 15;
+            this.btnApplyDiscount.Text = "APPLY DISCOUNT";
+            this.btnApplyDiscount.UseVisualStyleBackColor = false;
+            this.btnApplyDiscount.Click += new System.EventHandler(this.btnApplyDiscount_Click);
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(335, 120);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(88, 20);
+            this.lblDiscount.TabIndex = 14;
+            this.lblDiscount.Text = "PHP 0.00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(143, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Discount Amount:";
             // 
             // lblTotal
             // 
@@ -265,14 +300,14 @@
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCart.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.EnableHeadersVisualStyles = false;
             this.dgvCart.Location = new System.Drawing.Point(0, 65);
@@ -294,6 +329,22 @@
             this.pnlOrderTop.Name = "pnlOrderTop";
             this.pnlOrderTop.Size = new System.Drawing.Size(508, 65);
             this.pnlOrderTop.TabIndex = 0;
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveItem.BackColor = System.Drawing.Color.LightCoral;
+            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveItem.Location = new System.Drawing.Point(305, 16);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(103, 34);
+            this.btnRemoveItem.TabIndex = 3;
+            this.btnRemoveItem.Text = "Remove Item";
+            this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnClear
             // 
@@ -379,57 +430,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // btnApplyDiscount
-            // 
-            this.btnApplyDiscount.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnApplyDiscount.FlatAppearance.BorderSize = 0;
-            this.btnApplyDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApplyDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyDiscount.ForeColor = System.Drawing.Color.White;
-            this.btnApplyDiscount.Location = new System.Drawing.Point(308, 153);
-            this.btnApplyDiscount.Name = "btnApplyDiscount";
-            this.btnApplyDiscount.Size = new System.Drawing.Size(150, 31);
-            this.btnApplyDiscount.TabIndex = 15;
-            this.btnApplyDiscount.Text = "APPLY DISCOUNT";
-            this.btnApplyDiscount.UseVisualStyleBackColor = false;
-            this.btnApplyDiscount.Click += new System.EventHandler(this.btnApplyDiscount_Click);
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(335, 120);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(88, 20);
-            this.lblDiscount.TabIndex = 14;
-            this.lblDiscount.Text = "PHP 0.00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 20);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Discount Amount:";
-            // 
-            // btnRemoveItem
-            // 
-            this.btnRemoveItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveItem.BackColor = System.Drawing.Color.LightCoral;
-            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
-            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveItem.Location = new System.Drawing.Point(305, 16);
-            this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(103, 34);
-            this.btnRemoveItem.TabIndex = 3;
-            this.btnRemoveItem.Text = "Remove Item";
-            this.btnRemoveItem.UseVisualStyleBackColor = false;
-            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
-            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,6 +438,7 @@
             this.Controls.Add(this.pnlOrder);
             this.Name = "SalesForm";
             this.Size = new System.Drawing.Size(1085, 812);
+            this.VisibleChanged += new System.EventHandler(this.SalesForm_VisibleChanged);
             this.pnlOrder.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

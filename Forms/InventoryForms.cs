@@ -26,6 +26,8 @@ namespace MotorPartsInventoryManagement.Forms
             LoadCategories();
             LoadSuppliers();
             displayProducts();
+
+            this.VisibleChanged += InventoryForms_VisibleChanged;
         }
 
 
@@ -332,6 +334,14 @@ namespace MotorPartsInventoryManagement.Forms
         private void InventoryForms_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void InventoryForms_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayProducts(); // refresh every time you return
+            }
         }
     }
 }

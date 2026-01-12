@@ -30,7 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbStockInEntry = new System.Windows.Forms.GroupBox();
-            this.txtDRN = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDeliveryreceipt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +67,7 @@
             // 
             // gbStockInEntry
             // 
-            this.gbStockInEntry.Controls.Add(this.txtDRN);
+            this.gbStockInEntry.Controls.Add(this.txtDeliveryreceipt);
             this.gbStockInEntry.Controls.Add(this.label10);
             this.gbStockInEntry.Controls.Add(this.btnSave);
             this.gbStockInEntry.Controls.Add(this.dateTimePicker1);
@@ -86,27 +86,27 @@
             this.gbStockInEntry.TabStop = false;
             this.gbStockInEntry.Text = "Stock In Entry";
             // 
-            // txtDRN
+            // txtDeliveryreceipt
             // 
-            this.txtDRN.Animated = true;
-            this.txtDRN.BorderRadius = 9;
-            this.txtDRN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDRN.DefaultText = "";
-            this.txtDRN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDRN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDRN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDRN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDRN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtDRN.ForeColor = System.Drawing.Color.Black;
-            this.txtDRN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDRN.Location = new System.Drawing.Point(567, 44);
-            this.txtDRN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDRN.Name = "txtDRN";
-            this.txtDRN.PlaceholderText = "";
-            this.txtDRN.SelectedText = "";
-            this.txtDRN.Size = new System.Drawing.Size(218, 36);
-            this.txtDRN.TabIndex = 39;
+            this.txtDeliveryreceipt.Animated = true;
+            this.txtDeliveryreceipt.BorderRadius = 9;
+            this.txtDeliveryreceipt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDeliveryreceipt.DefaultText = "";
+            this.txtDeliveryreceipt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDeliveryreceipt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDeliveryreceipt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDeliveryreceipt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDeliveryreceipt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDeliveryreceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtDeliveryreceipt.ForeColor = System.Drawing.Color.Black;
+            this.txtDeliveryreceipt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDeliveryreceipt.Location = new System.Drawing.Point(567, 44);
+            this.txtDeliveryreceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDeliveryreceipt.Name = "txtDeliveryreceipt";
+            this.txtDeliveryreceipt.PlaceholderText = "";
+            this.txtDeliveryreceipt.SelectedText = "";
+            this.txtDeliveryreceipt.Size = new System.Drawing.Size(218, 36);
+            this.txtDeliveryreceipt.TabIndex = 39;
             // 
             // label10
             // 
@@ -324,7 +324,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gbStockInEntry;
-        private Guna.UI2.WinForms.Guna2TextBox txtDRN;
+        private Guna.UI2.WinForms.Guna2TextBox txtDeliveryreceipt;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

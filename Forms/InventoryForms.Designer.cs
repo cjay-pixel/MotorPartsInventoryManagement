@@ -612,6 +612,7 @@
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Size = new System.Drawing.Size(1619, 759);
             this.Load += new System.EventHandler(this.InventoryForms_Load);
+            this.VisibleChanged += new System.EventHandler(this.InventoryForms_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
