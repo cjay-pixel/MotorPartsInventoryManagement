@@ -27,6 +27,7 @@ namespace MotorPartsInventoryManagement.Forms
             InitializeComponent();
             InitializeCartGrid();
             displayProducts();
+            LoadCategoryButtons();
 
             printDocument1.PrintPage += printDocument1_PrintPage;
             printDocument1.BeginPrint += printDocument1_BeginPrint;
@@ -577,18 +578,239 @@ namespace MotorPartsInventoryManagement.Forms
             RefreshCart();
         }
 
-        //private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (e.RowIndex >= 0)
-        //    {
-        //        selectedCartIndex = e.RowIndex;
-        //        CartItem selectedItem = cartItems[selectedCartIndex];
+        private void LoadCategoryButtons()
+        {
+            try
+            {
+                // Clear existing buttons (if reloading)
+                pnlCategoryButtons.Controls.Clear();
 
-        //        // Display current discount
-        //        cmbDiscountType.Text = selectedItem.DiscountType;
-        //        txtDiscountVal.Text = selectedItem.DiscountValue.ToString();
-        //    }
+                // Get all categories from database
+                List<CategoryManager> categories = CategoryManager.GetAll();
 
-        //}
+                // Button styling for FlowLayoutPanel
+                int buttonWidth = 373;
+                int buttonHeight = 68;
+
+                // Add "All" button first
+                Button btnAll = CreateCategoryButton("All", buttonWidth, buttonHeight);
+                btnAll.BackColor = Color.Transparent; // Blue
+                btnAll.ForeColor = Color.Black;
+                pnlCategoryButtons.Controls.Add(btnAll);
+
+                // Create button for each category
+                foreach (var category in categories)
+                {
+                    Button btn = CreateCategoryButton(category.CategoryName, buttonWidth, buttonHeight);
+                    btn.BackColor = Color.Transparent;
+                    btn.ForeColor = Color.Black;
+                    pnlCategoryButtons.Controls.Add(btn);
+                }
+
+                // Optional: Add refresh button at the bottom
+                Button btnRefresh = new Button
+                {
+                    Text = "🔄 Refresh Categories",
+                    Width = buttonWidth,
+                    Height = buttonHeight,
+                    Font = new Font("Microsofot Sans-Serif", 12, FontStyle.Bold),
+                    BackColor = Color.Transparent, // Gray
+                    ForeColor = Color.Black,
+                    FlatStyle = FlatStyle.Flat,
+                    Cursor = Cursors.Hand,
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    Padding = new Padding(15, 0, 0, 0),
+                    Margin = new Padding(0, 10, 0, 0) // Extra top margin
+                };
+                btnRefresh.FlatAppearance.BorderSize = 0;
+                btnRefresh.Click += (s, e) => LoadCategoryButtons();
+                pnlCategoryButtons.Controls.Add(btnRefresh);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading categories: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        // ========================================
+        // CREATE CATEGORY BUTTON
+        // ========================================
+
+        private Button CreateCategoryButton(string categoryName, int width, int height)
+        {
+            string icon = GetCategoryIcon(categoryName);
+
+            Button btn = new Button
+            {
+                Text = $"{icon}  {categoryName}",
+                Width = width,
+                Height = height,
+                Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold),
+                FlatStyle = FlatStyle.Flat,
+                Cursor = Cursors.Hand,
+                Tag = categoryName, // Store category name in Tag
+                TextAlign = ContentAlignment.MiddleLeft, // Align text to left
+                Padding = new Padding(40, 0, 0, 0), // Add left padding
+                Margin = new Padding(0, 0, 0, 5) // Bottom margin between buttons
+            };
+
+            btn.FlatAppearance.BorderSize = 0;
+            // btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(39, 174, 96); // Darker on hover
+
+            // Add click event
+            btn.Click += CategoryButton_Click;
+
+            return btn;
+        }
+
+        private string GetCategoryIcon(string categoryName)
+        {
+            // Map category names to icons
+            switch (categoryName.ToLower())
+            {
+                case "all":
+                    return "📦"; // All products
+
+                // Common motor parts categories
+                case "engine":
+                case "engines":
+                    return "⚙️";
+
+                case "brakes":
+                case "brake":
+                case "braking system":
+                    return "🛑";
+
+                case "filters":
+                case "filter":
+                    return "🔧";
+
+                case "oils":
+                case "oil":
+                case "lubricants":
+                    return "🛢️";
+
+                case "tires":
+                case "tire":
+                case "wheels":
+                    return "⚫";
+
+                case "lights":
+                case "lighting":
+                    return "💡";
+
+                case "electrical":
+                case "electronics":
+                    return "🔌";
+
+                case "suspension":
+                    return "🔩";
+
+                case "exhaust":
+                    return "💨";
+
+                case "cooling":
+                case "radiator":
+                    return "❄️";
+
+                case "transmission":
+                    return "⚡";
+
+                case "body parts":
+                case "body":
+                    return "🚗";
+
+                case "interior":
+                    return "🪑";
+
+                case "tools":
+                    return "🔨";
+
+                case "accessories":
+                    return "✨";
+
+                case "battery":
+                case "batteries":
+                    return "🔋";
+
+                case "belts":
+                case "hoses":
+                    return "➰";
+
+                default:
+                    return "📁"; // Default icon for unknown categories
+            }
+        }
+
+        // ========================================
+        // CATEGORY BUTTON CLICK EVENT
+        // ========================================
+
+        private void CategoryButton_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton == null) return;
+
+            string selectedCategory = clickedButton.Tag.ToString();
+
+            //// Filter products by category
+            FilterProductsByCategory(selectedCategory);
+        }
+
+
+
+
+        // ========================================
+        // FILTER PRODUCTS BY CATEGORY
+        // ========================================
+
+        private void FilterProductsByCategory(string categoryName)
+        {
+            try
+            {
+                pnlItemsInventory.Controls.Clear();
+
+                // Get filtered products
+                List<SalesManager> products;
+                if (categoryName == "All")
+                {
+                    products = SalesManager.GetAll();
+                }
+                else
+                {
+                    products = SalesManager.FilterByCategory(categoryName);
+                }
+
+                // Display filtered products
+                foreach (var product in products)
+                {
+                    CardProductForm card = new CardProductForm();
+
+                    card.id = product.PartID;
+                    card.productID = product.PartNumber;
+                    card.productName = product.PartName;
+                    card.productBrand = product.Brand;
+                    card.category = product.CategoryName;
+                    card.productStock = product.TotalStock.ToString();
+                    card.productPrice = "₱" + product.SellingPrice.ToString("N2");
+
+                    card.productImage = LoadProductImage(product.ImagePath);
+
+                    card.Tag = product;
+                    card.AddToCartClicked += Card_Click;
+
+                    pnlItemsInventory.Controls.Add(card);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error filtering products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
     }
 }

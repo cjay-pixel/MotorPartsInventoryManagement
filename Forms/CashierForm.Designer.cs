@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.pnlItems = new System.Windows.Forms.Panel();
             this.pnlItemsInventory = new System.Windows.Forms.FlowLayoutPanel();
@@ -76,6 +76,7 @@
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.pnlCategoryButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlItems.SuspendLayout();
             this.PnlItemsSearch.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -367,14 +368,14 @@
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCart.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.EnableHeadersVisualStyles = false;
             this.dgvCart.Location = new System.Drawing.Point(0, 65);
@@ -439,6 +440,7 @@
             // 
             // pnlC
             // 
+            this.pnlC.Controls.Add(this.pnlCategoryButtons);
             this.pnlC.Controls.Add(this.panel3);
             this.pnlC.Controls.Add(this.panel1);
             this.pnlC.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -652,6 +654,16 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // pnlCategoryButtons
+            // 
+            this.pnlCategoryButtons.AutoScroll = true;
+            this.pnlCategoryButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCategoryButtons.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.pnlCategoryButtons.Location = new System.Drawing.Point(0, 316);
+            this.pnlCategoryButtons.Name = "pnlCategoryButtons";
+            this.pnlCategoryButtons.Size = new System.Drawing.Size(353, 449);
+            this.pnlCategoryButtons.TabIndex = 9;
+            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -735,5 +747,6 @@
         private System.Windows.Forms.Button btnApplyDiscount;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.FlowLayoutPanel pnlCategoryButtons;
     }
 }
