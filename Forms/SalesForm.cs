@@ -533,6 +533,9 @@ namespace MotorPartsInventoryManagement.Forms
 
                 // Refresh product list to show updated stock
                 displayProducts();
+
+                AdminForm main = Application.OpenForms["AdminForm"] as AdminForm;
+                main?._inventoryForms?.displayProducts();
             }
             catch (Exception ex)
             {

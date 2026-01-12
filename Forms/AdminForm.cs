@@ -12,7 +12,7 @@ namespace MotorPartsInventoryManagement.Forms
 {
     public partial class AdminForm : Form
     {
-        private InventoryForms _inventoryForms;
+        public InventoryForms _inventoryForms;
         private AdminDashboardForm _adminDashboardForms;
         private StockOperationForm _stockOperationForm;
         private SupplierForm _supplierForm;

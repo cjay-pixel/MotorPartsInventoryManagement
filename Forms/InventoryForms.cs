@@ -328,5 +328,10 @@ namespace MotorPartsInventoryManagement.Forms
 
             return true;
         }
+
+        private void InventoryForms_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
