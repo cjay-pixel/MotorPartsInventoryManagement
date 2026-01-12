@@ -595,25 +595,25 @@ namespace MotorPartsInventoryManagement.Forms
             Font textFont = new Font("Courier New", 10);
             Font boldFont = new Font("Courier New", 10, FontStyle.Bold);
 
-            float x = 10;
+            // Center the receipt on the page
+            float receiptWidth = 260;
+            float x = (e.PageBounds.Width - receiptWidth) / 2;  // Dynamically center the receipt block
             float y = 10;
-            float receiptWidth = 260;   // fixed thermal width
-            float width = x + receiptWidth;
-
+            float width = x + receiptWidth;  // Right edge of the receipt
 
             StringFormat center = new StringFormat { Alignment = StringAlignment.Center };
             StringFormat right = new StringFormat { Alignment = StringAlignment.Far };
 
             // ===== HEADER =====
-            g.DrawString("RECEIPT OF SALE", titleFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("RECEIPT OF SALE", titleFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 25;
 
-            g.DrawString("LAO HOMELAND HARDWARE", titleFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("CAJ MOTOR PARTS", titleFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 25;
 
-            g.DrawString("Address: 896 Rigoberto Gardens", textFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("Visayan Village, Tagum City", textFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 15;
-            g.DrawString("Tel: +63 912 345 6789", textFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("Tel: +63 912 345 6789", textFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 20;
 
             g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
@@ -653,8 +653,7 @@ namespace MotorPartsInventoryManagement.Forms
 
                 g.DrawString(qty, textFont, Brushes.Black, x, y);
                 g.DrawString(name, textFont, Brushes.Black, x + 40, y);
-                g.DrawString($"PHP {Convert.ToDecimal(price):N2}",
-                             textFont, Brushes.Black, width, y, right);
+                g.DrawString($"PHP {Convert.ToDecimal(price):N2}", textFont, Brushes.Black, width, y, right);
 
                 y += 15;
                 rowIndex++;
@@ -667,6 +666,34 @@ namespace MotorPartsInventoryManagement.Forms
                 }
             }
 
+            // ===== TOTALS =====
+            if (!isLastPage)
+            {
+                isLastPage = true;
+
+                y += 10;
+                g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
+                y += 20;
+
+                g.DrawString("TOTAL", boldFont, Brushes.Black, x, y);
+                g.DrawString(lblTotal.Text, boldFont, Brushes.Black, width, y, right);
+                y += 20;
+
+                g.DrawString("CASH", textFont, Brushes.Black, x, y);
+                g.DrawString(txtAmount.Text, textFont, Brushes.Black, width, y, right);
+                y += 15;
+
+                g.DrawString("CHANGE", textFont, Brushes.Black, x, y);
+                g.DrawString(lblChange.Text, textFont, Brushes.Black, width, y, right);
+                y += 25;
+
+                g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
+                y += 25;
+
+                g.DrawString("THANK YOU!", boldFont, Brushes.Black, width / 2, y, center);  // Already centered
+            }
+
+            e.HasMorePages = false;
         }
         bool check = false;
 

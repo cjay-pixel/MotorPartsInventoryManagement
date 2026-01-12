@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -102,25 +103,25 @@ namespace MotorPartsInventoryManagement.Forms
             Font textFont = new Font("Courier New", 10);
             Font boldFont = new Font("Courier New", 10, FontStyle.Bold);
 
-            float x = 10;
+            // Center the receipt on the page
+            float receiptWidth = 260;
+            float x = (e.PageBounds.Width - receiptWidth) / 2;  // Dynamically center the receipt block
             float y = 10;
-            float receiptWidth = 260;   // fixed thermal width
-            float width = x + receiptWidth;
-
+            float width = x + receiptWidth;  // Right edge of the receipt
 
             StringFormat center = new StringFormat { Alignment = StringAlignment.Center };
             StringFormat right = new StringFormat { Alignment = StringAlignment.Far };
 
             // ===== HEADER =====
-            g.DrawString("RECEIPT OF SALE", titleFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("RECEIPT OF SALE", titleFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 25;
 
-            g.DrawString("LAO HOMELAND HARDWARE", titleFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("CAJ MOTOR PARTS", titleFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 25;
 
-            g.DrawString("Address: 896 Rigoberto Gardens", textFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("Visayan Village, Tagum City", textFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 15;
-            g.DrawString("Tel: +63 912 345 6789", textFont, Brushes.Black, width / 2, y, center);
+            g.DrawString("Tel: +63 912 345 6789", textFont, Brushes.Black, width / 2, y, center);  // Already centered
             y += 20;
 
             g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
@@ -160,8 +161,7 @@ namespace MotorPartsInventoryManagement.Forms
 
                 g.DrawString(qty, textFont, Brushes.Black, x, y);
                 g.DrawString(name, textFont, Brushes.Black, x + 40, y);
-                g.DrawString($"PHP {Convert.ToDecimal(price):N2}",
-                             textFont, Brushes.Black, width, y, right);
+                g.DrawString($"PHP {Convert.ToDecimal(price):N2}", textFont, Brushes.Black, width, y, right);
 
                 y += 15;
                 rowIndex++;
@@ -174,12 +174,10 @@ namespace MotorPartsInventoryManagement.Forms
                 }
             }
 
-
-            // ===== TOTALS (PRINT ONCE ONLY) =====
-            // ===== TOTALS (PRINT ONCE ONLY – PREVIEW SAFE) =====
+            // ===== TOTALS =====
             if (!isLastPage)
             {
-                isLastPage = true; // 🔒 LOCK IT — PRINT ONCE
+                isLastPage = true;
 
                 y += 10;
                 g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
@@ -200,74 +198,11 @@ namespace MotorPartsInventoryManagement.Forms
                 g.DrawString("------------------------------------------", textFont, Brushes.Black, x, y);
                 y += 25;
 
-                g.DrawString("THANK YOU!", boldFont, Brushes.Black, width / 2, y, center);
+                g.DrawString("THANK YOU!", boldFont, Brushes.Black, width / 2, y, center);  // Already centered
             }
 
-
             e.HasMorePages = false;
-
-
-
-
         }
-
-
-        //private void displayProducts()
-        //{
-        //    try
-        //    {
-        //        // Clear existing cards
-        //        pnlItemsInventory.Controls.Clear();
-
-        //        // Get all products (grouped by product name)
-        //        List<SalesManager> products = SalesManager.GetAll();
-
-        //        // Create card for each product
-        //        foreach (var product in products)
-        //        {
-        //            CardProductForm card = new CardProductForm();
-
-        //            // Set product data
-        //            card.id = product.PartID;
-        //            card.productID = product.PartNumber;
-        //            card.productName = product.PartName;
-        //            card.productBrand = product.Brand;
-        //            card.category = product.CategoryName;
-        //            card.productStock = product.TotalStock.ToString();
-        //            card.productPrice = "₱" + product.SellingPrice.ToString("N2"); // PHP currency format
-
-        //            // Load product image
-        //            if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath))
-        //            {
-        //                try
-        //                {
-        //                    using (FileStream fs = new FileStream(product.ImagePath, FileMode.Open, FileAccess.Read))
-        //                    {
-        //                        card.productImage = Image.FromStream(fs);
-        //                    }
-        //                }
-        //                catch
-        //                {
-        //                    card.productImage = null; // Use default image if loading fails
-        //                }
-        //            }
-        //            else
-        //            {
-        //                card.productImage = null; // Use default image
-        //            }
-
-        //            // Add card to flow layout panel
-        //            pnlItemsInventory.Controls.Add(card);
-        //        }
-
-        //        // Update product count label if you have one
-        //        //  lblProductCount.Text = $"Showing {products.Count} product(s)";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error loading products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
 
         bool check = false;
         private void txtAmount_KeyDown(object sender, KeyEventArgs e)
@@ -601,6 +536,7 @@ namespace MotorPartsInventoryManagement.Forms
             try
             {
                 // Show print preview
+                printDocument1.DefaultPageSettings.PaperSize = new PaperSize("Receipt", 280, 500);
                 printPreviewDialog1.Document = printDocument1;
                 printPreviewDialog1.ShowDialog();
 
