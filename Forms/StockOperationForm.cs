@@ -28,13 +28,7 @@ namespace MotorPartsInventoryManagement.Forms
             displayAdjustments();
         }
 
-        // Set current user (call this from your main form after login)
-        //public void SetCurrentUser(User user)
-        //{
-        //    currentUser = user;
-        //}
-
-
+     
         private void LoadParts()
         {
             List<MotorPartsManager> allParts = MotorPartsManager.GetAll();
@@ -90,9 +84,7 @@ namespace MotorPartsInventoryManagement.Forms
                 // Get selected part details
                 MotorPartsManager selectedPart = (MotorPartsManager)cmbPart.SelectedItem;
 
-                // Display current stock info (if you have labels for this)
-                // lblCurrentStock.Text = $"Current Stock: {selectedPart.Quantity}";
-                // lblPartNumber.Text = $"Part #: {selectedPart.PartNumber}";
+               
             }
         }
 
@@ -550,7 +542,7 @@ namespace MotorPartsInventoryManagement.Forms
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Date", typeof(DateTime));
                 dt.Columns.Add("Part Name", typeof(string));
-                dt.Columns.Add("Supplier", typeof(string));
+                dt.Columns.Add("Remarks", typeof(string));
                 dt.Columns.Add("Quantity Removed", typeof(int));
                 dt.Columns.Add("Reason", typeof(string));
 

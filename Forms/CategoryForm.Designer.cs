@@ -256,6 +256,7 @@
             this.Controls.Add(this.panel6);
             this.Name = "CategoryForm";
             this.Size = new System.Drawing.Size(1407, 840);
+            this.VisibleChanged += new System.EventHandler(this.CategoryForm_VisibleChanged);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();

@@ -21,6 +21,8 @@ namespace MotorPartsInventoryManagement.Forms
             InitializeComponent();
             ConfigureDataGridView();
             displayCategories();
+
+            this.VisibleChanged += CategoryForm_VisibleChanged;
         }
 
         private int getID = 0;
@@ -198,6 +200,14 @@ namespace MotorPartsInventoryManagement.Forms
 
                 dgvCategory.DataSource = null;
                 dgvCategory.DataSource = filteredCategories;
+            }
+        }
+
+        private void CategoryForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayCategories(); // refresh every time you return
             }
         }
     }
