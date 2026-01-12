@@ -137,6 +137,7 @@
             this.btnSave.Size = new System.Drawing.Size(267, 37);
             this.btnSave.TabIndex = 34;
             this.btnSave.Text = "SAVE";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dateTimePicker3
             // 

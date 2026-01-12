@@ -60,8 +60,12 @@ namespace MotorPartsInventoryManagement.Forms
 
             try
             {
-                int partID = Convert.ToInt32(cmbPartName.SelectedValue);
-                int quantity = Convert.ToInt32(txtQuantity.Text.Trim()); // can be + or -
+                string productName = cmbPartName.Text;
+                int supplierID = Convert.ToInt32(cmbSupplier.SelectedValue);
+                int quantity = Convert.ToInt32(txtQuantity.Text.Trim());
+
+                int partID = InventoryManager.GetPartIDByNameAndSupplier(productName, supplierID);
+
                 string supplier = cmbSupplier.Text;
                 string reason = txtReason.Text.Trim();
 
@@ -72,6 +76,7 @@ namespace MotorPartsInventoryManagement.Forms
                 {
                     InventoryManager.StockIn(
                         partID,
+                        supplierID,
                         SessionManager.CurrentUser.UserID,
                         quantity,
                         referenceNumber,
@@ -88,6 +93,7 @@ namespace MotorPartsInventoryManagement.Forms
                         remarks
                     );
                 }
+
 
                 MessageBox.Show("Stock Adjustment successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearFields();
