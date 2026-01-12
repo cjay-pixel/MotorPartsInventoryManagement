@@ -35,18 +35,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.add_btn = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.pbProduct = new System.Windows.Forms.PictureBox();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblProdName = new System.Windows.Forms.Label();
-            this.pbProduct = new System.Windows.Forms.PictureBox();
+            this.lblMotorComp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblMotorComp);
             this.panel1.Controls.Add(this.lblBrand);
             this.panel1.Controls.Add(this.lblStock);
             this.panel1.Controls.Add(this.label3);
@@ -56,9 +55,10 @@
             this.panel1.Controls.Add(this.pbProduct);
             this.panel1.Controls.Add(this.lblPrice);
             this.panel1.Controls.Add(this.lblProdName);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 149);
+            this.panel1.Size = new System.Drawing.Size(356, 155);
             this.panel1.TabIndex = 0;
             // 
             // lblBrand
@@ -111,7 +111,7 @@
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.ForeColor = System.Drawing.Color.White;
-            this.add_btn.Location = new System.Drawing.Point(104, 122);
+            this.add_btn.Location = new System.Drawing.Point(107, 122);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(74, 23);
             this.add_btn.TabIndex = 9;
@@ -121,10 +121,18 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(45, 122);
+            this.txtQuantity.Location = new System.Drawing.Point(47, 122);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(53, 22);
             this.txtQuantity.TabIndex = 8;
+            // 
+            // pbProduct
+            // 
+            this.pbProduct.Location = new System.Drawing.Point(222, 12);
+            this.pbProduct.Name = "pbProduct";
+            this.pbProduct.Size = new System.Drawing.Size(114, 129);
+            this.pbProduct.TabIndex = 2;
+            this.pbProduct.TabStop = false;
             // 
             // lblPrice
             // 
@@ -141,19 +149,21 @@
             // 
             this.lblProdName.AutoSize = true;
             this.lblProdName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdName.Location = new System.Drawing.Point(13, 11);
+            this.lblProdName.Location = new System.Drawing.Point(12, 7);
             this.lblProdName.Name = "lblProdName";
             this.lblProdName.Size = new System.Drawing.Size(110, 20);
             this.lblProdName.TabIndex = 0;
             this.lblProdName.Text = "Product Name";
             // 
-            // pbProduct
+            // lblMotorComp
             // 
-            this.pbProduct.Location = new System.Drawing.Point(189, 12);
-            this.pbProduct.Name = "pbProduct";
-            this.pbProduct.Size = new System.Drawing.Size(104, 129);
-            this.pbProduct.TabIndex = 2;
-            this.pbProduct.TabStop = false;
+            this.lblMotorComp.AutoSize = true;
+            this.lblMotorComp.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotorComp.Location = new System.Drawing.Point(15, 28);
+            this.lblMotorComp.Name = "lblMotorComp";
+            this.lblMotorComp.Size = new System.Drawing.Size(125, 17);
+            this.lblMotorComp.TabIndex = 15;
+            this.lblMotorComp.Text = "Motor Compatibility";
             // 
             // CardProductForm
             // 
@@ -162,7 +172,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Name = "CardProductForm";
-            this.Size = new System.Drawing.Size(306, 155);
+            this.Size = new System.Drawing.Size(356, 155);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProduct)).EndInit();
@@ -182,5 +192,6 @@
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Label lblMotorComp;
     }
 }

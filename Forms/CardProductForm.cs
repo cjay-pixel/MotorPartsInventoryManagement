@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -84,6 +85,12 @@ namespace MotorPartsInventoryManagement.Forms
         {
             get { return lblBrand.Text; }
             set { lblBrand.Text = value; }
+        }
+
+        public string productCompatibility
+        {
+            get { return lblMotorComp.Text; }
+            set { lblMotorComp.Text = value; }
         }
 
         public string category { set; get; }

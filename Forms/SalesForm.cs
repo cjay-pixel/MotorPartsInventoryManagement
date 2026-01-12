@@ -192,6 +192,7 @@ namespace MotorPartsInventoryManagement.Forms
                     card.id = product.PartID;
                     card.productID = product.PartNumber;
                     card.productName = product.PartName;
+                    card.productCompatibility = product.MotorCompatibility;
                     card.productBrand = product.Brand;
                     card.category = product.CategoryName;
                     card.productStock = product.TotalStock.ToString();
@@ -340,14 +341,17 @@ namespace MotorPartsInventoryManagement.Forms
             {
                 flpProducts.Controls.Clear();
 
-                // Get search keyword
                 string searchKeyword = txtSearch.Text.Trim();
-
-                // Get selected category
-                //    string selectedCategory = cmbCategoryFilter.SelectedItem?.ToString() ?? "All";
+            //    string selectedCategory = GetSelectedCategory(); // Get current category filter
 
                 // Get all products
                 List<SalesManager> products = SalesManager.GetAll();
+
+                // Apply category filter first
+                //if (!string.IsNullOrEmpty(selectedCategory) && selectedCategory != "All")
+                //{
+                //    products = products.Where(p => p.CategoryName.Equals(selectedCategory, StringComparison.OrdinalIgnoreCase)).ToList();
+                //}
 
                 // Apply search filter
                 if (!string.IsNullOrWhiteSpace(searchKeyword))
@@ -356,65 +360,45 @@ namespace MotorPartsInventoryManagement.Forms
                     products = products.Where(p =>
                         p.PartName.ToLower().Contains(searchKeyword) ||
                         p.PartNumber.ToLower().Contains(searchKeyword) ||
+                        p.MotorCompatibility.ToLower().Contains(searchKeyword) ||
                         p.Brand.ToLower().Contains(searchKeyword) ||
                         p.CategoryName.ToLower().Contains(searchKeyword)
                     ).ToList();
                 }
 
-                // Apply category filter
-                //if (selectedCategory != "All")
-                //{
-                //    products = products.Where(p => p.CategoryName == selectedCategory).ToList();
-                //}
-
                 // Display filtered products
-                foreach (var product in products)
-                {
-                    CardProductForm card = new CardProductForm();
+                DisplayProducts(products);
 
-                    card.id = product.PartID;
-                    card.productID = product.PartNumber;
-                    card.productName = product.PartName;
-                    card.productBrand = product.Brand;
-                    card.category = product.CategoryName;
-                    card.productStock = product.TotalStock.ToString();
-                    card.productPrice = "₱" + product.SellingPrice.ToString("N2");
-
-                    // Load image
-                    if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath))
-                    {
-                        try
-                        {
-                            using (FileStream fs = new FileStream(product.ImagePath, FileMode.Open, FileAccess.Read))
-                            {
-                                card.productImage = Image.FromStream(fs);
-                            }
-                        }
-                        catch
-                        {
-                            card.productImage = null;
-                        }
-                    }
-                    else
-                    {
-                        card.productImage = null;
-                    }
-
-                    flpProducts.Controls.Add(card);
-                }
-
-                // Update count
-                //    lblProductCount.Text = $"Showing {products.Count} product(s)";
+                // Update result count
+                //lblResultCount.Text = $"Found {products.Count} product(s)";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error filtering products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error searching products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void DisplayProducts(List<SalesManager> products)
+        {
+            foreach (var product in products)
+            {
+                CardProductForm card = new CardProductForm();
 
-        // ========================================
-        // BUTTON EVENTS
-        // ========================================
+                card.id = product.PartID;
+                card.productID = product.PartNumber;
+                card.productName = product.PartName;
+                card.productBrand = product.Brand;
+                card.category = product.CategoryName;
+                card.productStock = product.TotalStock.ToString();
+                card.productPrice = "₱" + product.SellingPrice.ToString("N2");
+
+                card.productImage = LoadProductImage(product.ImagePath);
+
+                card.Tag = product;
+                card.AddToCartClicked += Card_Click;
+
+                flpProducts.Controls.Add(card);
+            }
+        }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -777,6 +761,11 @@ namespace MotorPartsInventoryManagement.Forms
                 selectedCartIndex = -1;
                 RefreshCart();
             }
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            SearchAndFilterProducts();
         }
     }
     }

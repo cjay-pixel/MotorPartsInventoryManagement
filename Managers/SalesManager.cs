@@ -17,6 +17,7 @@ namespace MotorPartsInventoryManagement.Managers
         public int PartID { get; set; }
         public string PartNumber { get; set; }
         public string PartName { get; set; }
+        public string MotorCompatibility { get; set; }
         public string Brand { get; set; }
         public string CategoryName { get; set; }
         public int TotalStock { get; set; }
@@ -36,6 +37,7 @@ namespace MotorPartsInventoryManagement.Managers
                     PartID = Convert.ToInt32(row["PartID"]),
                     PartNumber = row["PartNumber"].ToString(),
                     PartName = row["PartName"].ToString(),
+                    MotorCompatibility = row["MotorCompatibility"].ToString(),
                     Brand = row["Brand"].ToString(),
                     CategoryName = row["CategoryName"].ToString(),
                     TotalStock = Convert.ToInt32(row["TotalStock"]),

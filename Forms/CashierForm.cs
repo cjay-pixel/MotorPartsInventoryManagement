@@ -18,6 +18,7 @@ namespace MotorPartsInventoryManagement.Forms
 {
     public partial class CashierForm : Form
     {
+        private string selectedCategory = "All";
         private int rowIndex = 0;
         private bool isLastPage = false;
         private List<CartItem> cartItems = new List<CartItem>();
@@ -261,6 +262,7 @@ namespace MotorPartsInventoryManagement.Forms
                     card.productID = product.PartNumber;
                     card.productName = product.PartName;
                     card.productBrand = product.Brand;
+                    card.productCompatibility = product.MotorCompatibility;
                     card.category = product.CategoryName;
                     card.productStock = product.TotalStock.ToString();
                     card.productPrice = "₱" + product.SellingPrice.ToString("N2");
@@ -738,7 +740,7 @@ namespace MotorPartsInventoryManagement.Forms
             Button clickedButton = sender as Button;
             if (clickedButton == null) return;
 
-            string selectedCategory = clickedButton.Tag.ToString();
+            selectedCategory = clickedButton.Tag.ToString();
 
             //// Filter products by category
             FilterProductsByCategory(selectedCategory);
@@ -777,6 +779,7 @@ namespace MotorPartsInventoryManagement.Forms
                     card.productID = product.PartNumber;
                     card.productName = product.PartName;
                     card.productBrand = product.Brand;
+                    card.productCompatibility = product.MotorCompatibility;
                     card.category = product.CategoryName;
                     card.productStock = product.TotalStock.ToString();
                     card.productPrice = "₱" + product.SellingPrice.ToString("N2");
@@ -820,6 +823,81 @@ namespace MotorPartsInventoryManagement.Forms
                 selectedCartIndex = -1;
                 RefreshCart();
             }
+        }
+
+        private void SearchAndFilterProducts()
+        {
+            try
+            {
+                pnlItemsInventory.Controls.Clear();
+
+                string searchKeyword = txtSearch.Text.Trim();
+                string selectedCategory = GetSelectedCategory(); // Get current category filter
+
+                // Get all products
+                List<SalesManager> products = SalesManager.GetAll();
+
+                // Apply category filter first
+                if (!string.IsNullOrEmpty(selectedCategory) && selectedCategory != "All")
+                {
+                    products = products.Where(p => p.CategoryName.Equals(selectedCategory, StringComparison.OrdinalIgnoreCase)).ToList();
+                }
+
+                // Apply search filter
+                if (!string.IsNullOrWhiteSpace(searchKeyword))
+                {
+                    searchKeyword = searchKeyword.ToLower();
+                    products = products.Where(p =>
+                        p.PartName.ToLower().Contains(searchKeyword) ||
+                        p.PartNumber.ToLower().Contains(searchKeyword) ||
+                        p.MotorCompatibility.ToLower().Contains(searchKeyword) ||
+                        p.Brand.ToLower().Contains(searchKeyword) ||
+                        p.CategoryName.ToLower().Contains(searchKeyword)
+                    ).ToList();
+                }
+
+                // Display filtered products
+                DisplayProducts(products);
+
+                // Update result count
+                //lblResultCount.Text = $"Found {products.Count} product(s)";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching products: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private string GetSelectedCategory()
+        {
+            // Return the currently selected category (tracked via the selectedCategory variable)
+            return selectedCategory;
+        }
+        private void DisplayProducts(List<SalesManager> products)
+        {
+            foreach (var product in products)
+            {
+                CardProductForm card = new CardProductForm();
+
+                card.id = product.PartID;
+                card.productID = product.PartNumber;
+                card.productName = product.PartName;
+                card.productBrand = product.Brand;
+                card.category = product.CategoryName;
+                card.productStock = product.TotalStock.ToString();
+                card.productPrice = "₱" + product.SellingPrice.ToString("N2");
+
+                card.productImage = LoadProductImage(product.ImagePath);
+
+                card.Tag = product;
+                card.AddToCartClicked += Card_Click;
+
+                pnlItemsInventory.Controls.Add(card);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchAndFilterProducts();
         }
     }
 }
