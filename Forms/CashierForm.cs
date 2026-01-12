@@ -437,22 +437,7 @@ namespace MotorPartsInventoryManagement.Forms
             MessageBox.Show("Discount applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnRemoveItem_Click(object sender, EventArgs e)
-        {
-            if (selectedCartIndex == -1)
-            {
-                MessageBox.Show("Please select an item to remove.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            cartItems.RemoveAt(selectedCartIndex);
-            selectedCartIndex = -1;
-
-            cmbDiscountType.SelectedIndex = -1;
-            txtDiscountVal.Clear();
-
-            RefreshCart();
-        }
+      
 
         private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -810,7 +795,31 @@ namespace MotorPartsInventoryManagement.Forms
             }
         }
 
+        private void btnRemoveItem_Click(object sender, EventArgs e)
+        {
+            if (selectedCartIndex == -1)
+            {
+                MessageBox.Show("Please select an item to remove.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            cartItems.RemoveAt(selectedCartIndex);
+            selectedCartIndex = -1;
 
+            cmbDiscountType.SelectedIndex = -1;
+            txtDiscountVal.Clear();
+
+            RefreshCart();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Clear all items from cart?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                cartItems.Clear();
+                selectedCartIndex = -1;
+                RefreshCart();
+            }
+        }
     }
 }
