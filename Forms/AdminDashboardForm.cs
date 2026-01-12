@@ -55,7 +55,6 @@ namespace MotorPartsInventoryManagement.Forms
             dgvTodaysSale.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-
         private void LoadDashboardStats()
         {
             try
@@ -70,7 +69,7 @@ namespace MotorPartsInventoryManagement.Forms
             }
             catch (Exception ex)
             {
-               // MessageBox.Show("Error loading dashboard statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading dashboard statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         }

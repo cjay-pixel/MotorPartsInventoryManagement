@@ -133,7 +133,7 @@
             this.lblTotalRev.AutoSize = true;
             this.lblTotalRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalRev.ForeColor = System.Drawing.Color.White;
-            this.lblTotalRev.Location = new System.Drawing.Point(164, 41);
+            this.lblTotalRev.Location = new System.Drawing.Point(159, 41);
             this.lblTotalRev.Name = "lblTotalRev";
             this.lblTotalRev.Size = new System.Drawing.Size(43, 46);
             this.lblTotalRev.TabIndex = 2;
