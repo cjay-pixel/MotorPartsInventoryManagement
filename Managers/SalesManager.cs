@@ -47,6 +47,28 @@ namespace MotorPartsInventoryManagement.Managers
             return list;
         }
 
+        public static DataTable GetTodaysSales()
+        {
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand("GetTodaysSales", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
         public static int ProcessSale(int userID, decimal totalAmount, decimal discountAmount, List<CartItem> cartItems)
         {
             try
