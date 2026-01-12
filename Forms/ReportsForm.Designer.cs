@@ -33,139 +33,134 @@
             this.tabSalesReports = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gbStockInHistory = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSalesReports = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSalesExport = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gbStockInEntry = new System.Windows.Forms.GroupBox();
-            this.btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbPart = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnApply = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.cmbReportType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabInventoryReports = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabStockReports = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabSupplierReports = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dgvInventoryReports = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnInventoryExport = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tabMovingParts = new System.Windows.Forms.TabPage();
-            this.tabItemReport = new System.Windows.Forms.TabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dgvFSParts = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MovementStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnFastSlowExport = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpFrom2 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnApply2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dtpFrom1 = new System.Windows.Forms.DateTimePicker();
+            this.tabStockReports = new System.Windows.Forms.TabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvLowStockReport = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnLowStockExport = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.tabSupplierReports = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dgvDSReport = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiptNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.guna2GradientButton8 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton9 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.btnDelSuppExport = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpTo3 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnApply3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dtpFrom3 = new System.Windows.Forms.DateTimePicker();
+            this.cmbSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tabItemReport = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dgvDLIReport = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btnDamLostExport = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtpTo4 = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnApply4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dtpFrom4 = new System.Windows.Forms.DateTimePicker();
+            this.cmbType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabSalesReports.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gbStockInHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalesReports)).BeginInit();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gbStockInEntry.SuspendLayout();
             this.tabInventoryReports.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryReports)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.tabMovingParts.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFSParts)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabStockReports.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabSupplierReports.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tabMovingParts.SuspendLayout();
-            this.tabItemReport.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLowStockReport)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.tabSupplierReports.SuspendLayout();
             this.panel13.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSReport)).BeginInit();
             this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.panel16.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabItemReport.SuspendLayout();
             this.panel17.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDLIReport)).BeginInit();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -222,7 +217,7 @@
             // 
             // gbStockInHistory
             // 
-            this.gbStockInHistory.Controls.Add(this.dataGridView1);
+            this.gbStockInHistory.Controls.Add(this.dgvSalesReports);
             this.gbStockInHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbStockInHistory.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbStockInHistory.Location = new System.Drawing.Point(20, 20);
@@ -233,22 +228,70 @@
             this.gbStockInHistory.TabStop = false;
             this.gbStockInHistory.Text = "Sales Report Table";
             // 
-            // dataGridView1
+            // dgvSalesReports
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSalesReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalesReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalesReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.PartName,
             this.Supplier});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1153, 390);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvSalesReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSalesReports.Location = new System.Drawing.Point(3, 36);
+            this.dgvSalesReports.Name = "dgvSalesReports";
+            this.dgvSalesReports.RowHeadersVisible = false;
+            this.dgvSalesReports.RowHeadersWidth = 51;
+            this.dgvSalesReports.RowTemplate.Height = 24;
+            this.dgvSalesReports.Size = new System.Drawing.Size(1153, 390);
+            this.dgvSalesReports.TabIndex = 0;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            // 
+            // PartName
+            // 
+            this.PartName.HeaderText = "Total Sales";
+            this.PartName.MinimumWidth = 6;
+            this.PartName.Name = "PartName";
+            // 
+            // Supplier
+            // 
+            this.Supplier.HeaderText = "Number of Transactions";
+            this.Supplier.MinimumWidth = 6;
+            this.Supplier.Name = "Supplier";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnSalesExport);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(3, 678);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(20);
+            this.panel4.Size = new System.Drawing.Size(1199, 74);
+            this.panel4.TabIndex = 2;
+            // 
+            // btnSalesExport
+            // 
+            this.btnSalesExport.Animated = true;
+            this.btnSalesExport.BorderRadius = 9;
+            this.btnSalesExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalesExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSalesExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSalesExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSalesExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSalesExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSalesExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnSalesExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesExport.ForeColor = System.Drawing.Color.White;
+            this.btnSalesExport.IndicateFocus = true;
+            this.btnSalesExport.Location = new System.Drawing.Point(51, 23);
+            this.btnSalesExport.Name = "btnSalesExport";
+            this.btnSalesExport.Size = new System.Drawing.Size(267, 37);
+            this.btnSalesExport.TabIndex = 35;
+            this.btnSalesExport.Text = "EXPORT REPORT";
             // 
             // panel2
             // 
@@ -263,11 +306,11 @@
             // gbStockInEntry
             // 
             this.gbStockInEntry.Controls.Add(this.label5);
-            this.gbStockInEntry.Controls.Add(this.dateTimePicker4);
+            this.gbStockInEntry.Controls.Add(this.dtpTo);
             this.gbStockInEntry.Controls.Add(this.label4);
-            this.gbStockInEntry.Controls.Add(this.btnSave);
-            this.gbStockInEntry.Controls.Add(this.dateTimePicker1);
-            this.gbStockInEntry.Controls.Add(this.cmbPart);
+            this.gbStockInEntry.Controls.Add(this.btnApply);
+            this.gbStockInEntry.Controls.Add(this.dtpFrom);
+            this.gbStockInEntry.Controls.Add(this.cmbReportType);
             this.gbStockInEntry.Controls.Add(this.label2);
             this.gbStockInEntry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbStockInEntry.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,51 +321,78 @@
             this.gbStockInEntry.TabStop = false;
             this.gbStockInEntry.Text = "Filters";
             // 
-            // btnSave
+            // label5
             // 
-            this.btnSave.Animated = true;
-            this.btnSave.BorderRadius = 9;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.CadetBlue;
-            this.btnSave.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnSave.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.IndicateFocus = true;
-            this.btnSave.Location = new System.Drawing.Point(31, 104);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(267, 37);
-            this.btnSave.TabIndex = 34;
-            this.btnSave.Text = "APPLY";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label5.Location = new System.Drawing.Point(762, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 22);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "To:";
             // 
-            // dateTimePicker1
+            // dtpTo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(465, 49);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker1.TabIndex = 33;
+            this.dtpTo.Location = new System.Drawing.Point(795, 48);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(267, 23);
+            this.dtpTo.TabIndex = 36;
             // 
-            // cmbPart
+            // label4
             // 
-            this.cmbPart.BackColor = System.Drawing.Color.Transparent;
-            this.cmbPart.BorderRadius = 9;
-            this.cmbPart.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbPart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPart.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPart.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbPart.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbPart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbPart.ItemHeight = 30;
-            this.cmbPart.Items.AddRange(new object[] {
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label4.Location = new System.Drawing.Point(407, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 22);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "From:";
+            // 
+            // btnApply
+            // 
+            this.btnApply.Animated = true;
+            this.btnApply.BorderRadius = 9;
+            this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply.FillColor = System.Drawing.Color.CadetBlue;
+            this.btnApply.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnApply.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply.ForeColor = System.Drawing.Color.White;
+            this.btnApply.IndicateFocus = true;
+            this.btnApply.Location = new System.Drawing.Point(31, 104);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(267, 37);
+            this.btnApply.TabIndex = 34;
+            this.btnApply.Text = "APPLY";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Location = new System.Drawing.Point(465, 49);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(267, 23);
+            this.dtpFrom.TabIndex = 33;
+            // 
+            // cmbReportType
+            // 
+            this.cmbReportType.BackColor = System.Drawing.Color.Transparent;
+            this.cmbReportType.BorderRadius = 9;
+            this.cmbReportType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbReportType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbReportType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbReportType.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbReportType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbReportType.ItemHeight = 30;
+            this.cmbReportType.Items.AddRange(new object[] {
             "Daily",
             "Monthly"});
-            this.cmbPart.Location = new System.Drawing.Point(131, 44);
-            this.cmbPart.Name = "cmbPart";
-            this.cmbPart.Size = new System.Drawing.Size(218, 36);
-            this.cmbPart.TabIndex = 28;
+            this.cmbReportType.Location = new System.Drawing.Point(131, 44);
+            this.cmbReportType.Name = "cmbReportType";
+            this.cmbReportType.Size = new System.Drawing.Size(218, 36);
+            this.cmbReportType.TabIndex = 28;
             // 
             // label2
             // 
@@ -358,7 +428,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.dgvInventoryReports);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(20, 20);
@@ -369,199 +439,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inventory Summary Report";
             // 
-            // dataGridView2
+            // dgvInventoryReports
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1153, 594);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // tabStockReports
-            // 
-            this.tabStockReports.Controls.Add(this.panel7);
-            this.tabStockReports.Controls.Add(this.panel6);
-            this.tabStockReports.Location = new System.Drawing.Point(4, 46);
-            this.tabStockReports.Name = "tabStockReports";
-            this.tabStockReports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStockReports.Size = new System.Drawing.Size(1205, 755);
-            this.tabStockReports.TabIndex = 2;
-            this.tabStockReports.Text = "Low Stock Reports";
-            this.tabStockReports.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.groupBox4);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(20);
-            this.panel7.Size = new System.Drawing.Size(1199, 673);
-            this.panel7.TabIndex = 3;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dataGridView3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(20, 20);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.groupBox4.Size = new System.Drawing.Size(1159, 633);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Low Stock Report";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn8,
-            this.Type});
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1153, 594);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // tabSupplierReports
-            // 
-            this.tabSupplierReports.Controls.Add(this.panel13);
-            this.tabSupplierReports.Controls.Add(this.panel14);
-            this.tabSupplierReports.Controls.Add(this.panel8);
-            this.tabSupplierReports.Location = new System.Drawing.Point(4, 46);
-            this.tabSupplierReports.Name = "tabSupplierReports";
-            this.tabSupplierReports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSupplierReports.Size = new System.Drawing.Size(1205, 755);
-            this.tabSupplierReports.TabIndex = 3;
-            this.tabSupplierReports.Text = "Delivery & Supplier Report";
-            this.tabSupplierReports.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label4.Location = new System.Drawing.Point(407, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 22);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "From:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label5.Location = new System.Drawing.Point(762, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 22);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "To:";
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(795, 48);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker4.TabIndex = 36;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            // 
-            // PartName
-            // 
-            this.PartName.HeaderText = "Total Sales";
-            this.PartName.MinimumWidth = 6;
-            this.PartName.Name = "PartName";
-            // 
-            // Supplier
-            // 
-            this.Supplier.HeaderText = "Number of Transactions";
-            this.Supplier.MinimumWidth = 6;
-            this.Supplier.Name = "Supplier";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Part Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Category";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity on Hand";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Reorder Level";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Stock Status";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.guna2GradientButton1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(3, 678);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(1199, 74);
-            this.panel4.TabIndex = 2;
-            // 
-            // guna2GradientButton1
-            // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BorderRadius = 9;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.IndicateFocus = true;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton1.TabIndex = 35;
-            this.guna2GradientButton1.Text = "EXPORT REPORT";
+            this.dgvInventoryReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInventoryReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventoryReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInventoryReports.Location = new System.Drawing.Point(3, 36);
+            this.dgvInventoryReports.Name = "dgvInventoryReports";
+            this.dgvInventoryReports.RowHeadersVisible = false;
+            this.dgvInventoryReports.RowHeadersWidth = 51;
+            this.dgvInventoryReports.RowTemplate.Height = 24;
+            this.dgvInventoryReports.Size = new System.Drawing.Size(1153, 594);
+            this.dgvInventoryReports.TabIndex = 0;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.guna2GradientButton3);
+            this.panel9.Controls.Add(this.btnInventoryExport);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(3, 676);
             this.panel9.Name = "panel9";
@@ -569,25 +462,25 @@
             this.panel9.Size = new System.Drawing.Size(1199, 76);
             this.panel9.TabIndex = 3;
             // 
-            // guna2GradientButton3
+            // btnInventoryExport
             // 
-            this.guna2GradientButton3.Animated = true;
-            this.guna2GradientButton3.BorderRadius = 9;
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.IndicateFocus = true;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton3.TabIndex = 35;
-            this.guna2GradientButton3.Text = "EXPORT REPORT";
+            this.btnInventoryExport.Animated = true;
+            this.btnInventoryExport.BorderRadius = 9;
+            this.btnInventoryExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInventoryExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInventoryExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInventoryExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInventoryExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInventoryExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnInventoryExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnInventoryExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventoryExport.ForeColor = System.Drawing.Color.White;
+            this.btnInventoryExport.IndicateFocus = true;
+            this.btnInventoryExport.Location = new System.Drawing.Point(51, 23);
+            this.btnInventoryExport.Name = "btnInventoryExport";
+            this.btnInventoryExport.Size = new System.Drawing.Size(267, 37);
+            this.btnInventoryExport.TabIndex = 35;
+            this.btnInventoryExport.Text = "EXPORT REPORT";
             // 
             // tabMovingParts
             // 
@@ -602,99 +495,6 @@
             this.tabMovingParts.Text = "Fast-Moving / Slow-Moving Parts";
             this.tabMovingParts.UseVisualStyleBackColor = true;
             // 
-            // tabItemReport
-            // 
-            this.tabItemReport.Controls.Add(this.panel17);
-            this.tabItemReport.Controls.Add(this.panel16);
-            this.tabItemReport.Controls.Add(this.panel15);
-            this.tabItemReport.Location = new System.Drawing.Point(4, 46);
-            this.tabItemReport.Name = "tabItemReport";
-            this.tabItemReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabItemReport.Size = new System.Drawing.Size(1205, 755);
-            this.tabItemReport.TabIndex = 5;
-            this.tabItemReport.Text = "Damaged & Lost Items Report";
-            this.tabItemReport.UseVisualStyleBackColor = true;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.groupBox1);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20);
-            this.panel10.Size = new System.Drawing.Size(1199, 189);
-            this.panel10.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.guna2GradientButton4);
-            this.groupBox1.Controls.Add(this.dateTimePicker5);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1159, 149);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filters";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label1.Location = new System.Drawing.Point(382, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 22);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "To:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(415, 44);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker2.TabIndex = 36;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label3.Location = new System.Drawing.Point(27, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 22);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "From:";
-            // 
-            // guna2GradientButton4
-            // 
-            this.guna2GradientButton4.Animated = true;
-            this.guna2GradientButton4.BorderRadius = 9;
-            this.guna2GradientButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton4.FillColor = System.Drawing.Color.CadetBlue;
-            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.guna2GradientButton4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.IndicateFocus = true;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(31, 88);
-            this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton4.TabIndex = 34;
-            this.guna2GradientButton4.Text = "APPLY";
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(85, 45);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker5.TabIndex = 33;
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.groupBox5);
@@ -707,7 +507,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView5);
+            this.groupBox5.Controls.Add(this.dgvFSParts);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(20, 20);
@@ -718,53 +518,23 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Sales Report Table";
             // 
-            // dataGridView5
+            // dgvFSParts
             // 
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFSParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFSParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFSParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn17,
             this.MovementStatus});
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersVisible = false;
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(1153, 422);
-            this.dataGridView5.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.guna2GradientButton5);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(3, 693);
-            this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(20);
-            this.panel12.Size = new System.Drawing.Size(1199, 59);
-            this.panel12.TabIndex = 3;
-            // 
-            // guna2GradientButton5
-            // 
-            this.guna2GradientButton5.Animated = true;
-            this.guna2GradientButton5.BorderRadius = 9;
-            this.guna2GradientButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton5.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton5.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.IndicateFocus = true;
-            this.guna2GradientButton5.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton5.TabIndex = 35;
-            this.guna2GradientButton5.Text = "EXPORT REPORT";
+            this.dgvFSParts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFSParts.Location = new System.Drawing.Point(3, 36);
+            this.dgvFSParts.Name = "dgvFSParts";
+            this.dgvFSParts.RowHeadersVisible = false;
+            this.dgvFSParts.RowHeadersWidth = 51;
+            this.dgvFSParts.RowTemplate.Height = 24;
+            this.dgvFSParts.Size = new System.Drawing.Size(1153, 422);
+            this.dgvFSParts.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -790,35 +560,168 @@
             this.MovementStatus.MinimumWidth = 6;
             this.MovementStatus.Name = "MovementStatus";
             // 
-            // panel6
+            // panel12
             // 
-            this.panel6.Controls.Add(this.guna2GradientButton2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(3, 676);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(20);
-            this.panel6.Size = new System.Drawing.Size(1199, 76);
-            this.panel6.TabIndex = 4;
+            this.panel12.Controls.Add(this.btnFastSlowExport);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(3, 693);
+            this.panel12.Name = "panel12";
+            this.panel12.Padding = new System.Windows.Forms.Padding(20);
+            this.panel12.Size = new System.Drawing.Size(1199, 59);
+            this.panel12.TabIndex = 3;
             // 
-            // guna2GradientButton2
+            // btnFastSlowExport
             // 
-            this.guna2GradientButton2.Animated = true;
-            this.guna2GradientButton2.BorderRadius = 9;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.IndicateFocus = true;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton2.TabIndex = 35;
-            this.guna2GradientButton2.Text = "EXPORT REPORT";
+            this.btnFastSlowExport.Animated = true;
+            this.btnFastSlowExport.BorderRadius = 9;
+            this.btnFastSlowExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFastSlowExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFastSlowExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFastSlowExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFastSlowExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFastSlowExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnFastSlowExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnFastSlowExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFastSlowExport.ForeColor = System.Drawing.Color.White;
+            this.btnFastSlowExport.IndicateFocus = true;
+            this.btnFastSlowExport.Location = new System.Drawing.Point(51, 23);
+            this.btnFastSlowExport.Name = "btnFastSlowExport";
+            this.btnFastSlowExport.Size = new System.Drawing.Size(267, 37);
+            this.btnFastSlowExport.TabIndex = 35;
+            this.btnFastSlowExport.Text = "EXPORT REPORT";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.groupBox1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(20);
+            this.panel10.Size = new System.Drawing.Size(1199, 189);
+            this.panel10.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dtpFrom2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnApply2);
+            this.groupBox1.Controls.Add(this.dtpFrom1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(20, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1159, 149);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filters";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label1.Location = new System.Drawing.Point(382, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 22);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "To:";
+            // 
+            // dtpFrom2
+            // 
+            this.dtpFrom2.Location = new System.Drawing.Point(415, 44);
+            this.dtpFrom2.Name = "dtpFrom2";
+            this.dtpFrom2.Size = new System.Drawing.Size(267, 23);
+            this.dtpFrom2.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label3.Location = new System.Drawing.Point(27, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 22);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "From:";
+            // 
+            // btnApply2
+            // 
+            this.btnApply2.Animated = true;
+            this.btnApply2.BorderRadius = 9;
+            this.btnApply2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply2.FillColor = System.Drawing.Color.CadetBlue;
+            this.btnApply2.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnApply2.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply2.ForeColor = System.Drawing.Color.White;
+            this.btnApply2.IndicateFocus = true;
+            this.btnApply2.Location = new System.Drawing.Point(31, 88);
+            this.btnApply2.Name = "btnApply2";
+            this.btnApply2.Size = new System.Drawing.Size(267, 37);
+            this.btnApply2.TabIndex = 34;
+            this.btnApply2.Text = "APPLY";
+            // 
+            // dtpFrom1
+            // 
+            this.dtpFrom1.Location = new System.Drawing.Point(85, 45);
+            this.dtpFrom1.Name = "dtpFrom1";
+            this.dtpFrom1.Size = new System.Drawing.Size(267, 23);
+            this.dtpFrom1.TabIndex = 33;
+            // 
+            // tabStockReports
+            // 
+            this.tabStockReports.Controls.Add(this.panel7);
+            this.tabStockReports.Controls.Add(this.panel6);
+            this.tabStockReports.Location = new System.Drawing.Point(4, 46);
+            this.tabStockReports.Name = "tabStockReports";
+            this.tabStockReports.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStockReports.Size = new System.Drawing.Size(1205, 755);
+            this.tabStockReports.TabIndex = 2;
+            this.tabStockReports.Text = "Low Stock Reports";
+            this.tabStockReports.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.groupBox4);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(20);
+            this.panel7.Size = new System.Drawing.Size(1199, 673);
+            this.panel7.TabIndex = 3;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgvLowStockReport);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(20, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.groupBox4.Size = new System.Drawing.Size(1159, 633);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Low Stock Report";
+            // 
+            // dgvLowStockReport
+            // 
+            this.dgvLowStockReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLowStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLowStockReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn8,
+            this.Type});
+            this.dgvLowStockReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLowStockReport.Location = new System.Drawing.Point(3, 36);
+            this.dgvLowStockReport.Name = "dgvLowStockReport";
+            this.dgvLowStockReport.RowHeadersVisible = false;
+            this.dgvLowStockReport.RowHeadersWidth = 51;
+            this.dgvLowStockReport.RowTemplate.Height = 24;
+            this.dgvLowStockReport.Size = new System.Drawing.Size(1153, 594);
+            this.dgvLowStockReport.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -844,116 +747,48 @@
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             // 
-            // panel8
+            // panel6
             // 
-            this.panel8.Controls.Add(this.groupBox3);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(20);
-            this.panel8.Size = new System.Drawing.Size(1199, 206);
-            this.panel8.TabIndex = 1;
+            this.panel6.Controls.Add(this.btnLowStockExport);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(3, 676);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(20);
+            this.panel6.Size = new System.Drawing.Size(1199, 76);
+            this.panel6.TabIndex = 4;
             // 
-            // groupBox3
+            // btnLowStockExport
             // 
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.dateTimePicker3);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.guna2GradientButton6);
-            this.groupBox3.Controls.Add(this.dateTimePicker6);
-            this.groupBox3.Controls.Add(this.guna2ComboBox1);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(20, 20);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1159, 166);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Filters";
+            this.btnLowStockExport.Animated = true;
+            this.btnLowStockExport.BorderRadius = 9;
+            this.btnLowStockExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLowStockExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLowStockExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLowStockExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLowStockExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLowStockExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnLowStockExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnLowStockExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLowStockExport.ForeColor = System.Drawing.Color.White;
+            this.btnLowStockExport.IndicateFocus = true;
+            this.btnLowStockExport.Location = new System.Drawing.Point(51, 23);
+            this.btnLowStockExport.Name = "btnLowStockExport";
+            this.btnLowStockExport.Size = new System.Drawing.Size(267, 37);
+            this.btnLowStockExport.TabIndex = 35;
+            this.btnLowStockExport.Text = "EXPORT REPORT";
             // 
-            // label6
+            // tabSupplierReports
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label6.Location = new System.Drawing.Point(762, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 22);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "To:";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(795, 48);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker3.TabIndex = 36;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label7.Location = new System.Drawing.Point(407, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 22);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "From:";
-            // 
-            // guna2GradientButton6
-            // 
-            this.guna2GradientButton6.Animated = true;
-            this.guna2GradientButton6.BorderRadius = 9;
-            this.guna2GradientButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton6.FillColor = System.Drawing.Color.CadetBlue;
-            this.guna2GradientButton6.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.guna2GradientButton6.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton6.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton6.IndicateFocus = true;
-            this.guna2GradientButton6.Location = new System.Drawing.Point(31, 104);
-            this.guna2GradientButton6.Name = "guna2GradientButton6";
-            this.guna2GradientButton6.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton6.TabIndex = 34;
-            this.guna2GradientButton6.Text = "APPLY";
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(465, 49);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker6.TabIndex = 33;
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 9;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Daily",
-            "Monthly"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(131, 44);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox1.TabIndex = 28;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label8.Location = new System.Drawing.Point(27, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 22);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Supplier:";
+            this.tabSupplierReports.Controls.Add(this.panel13);
+            this.tabSupplierReports.Controls.Add(this.panel14);
+            this.tabSupplierReports.Controls.Add(this.panel8);
+            this.tabSupplierReports.Location = new System.Drawing.Point(4, 46);
+            this.tabSupplierReports.Name = "tabSupplierReports";
+            this.tabSupplierReports.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSupplierReports.Size = new System.Drawing.Size(1205, 755);
+            this.tabSupplierReports.TabIndex = 3;
+            this.tabSupplierReports.Text = "Delivery & Supplier Report";
+            this.tabSupplierReports.UseVisualStyleBackColor = true;
             // 
             // panel13
             // 
@@ -967,7 +802,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.dataGridView4);
+            this.groupBox6.Controls.Add(this.dgvDSReport);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(20, 20);
@@ -978,54 +813,24 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Stock Transactions Report";
             // 
-            // dataGridView4
+            // dgvDSReport
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDSReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13,
             this.ReceiptNo});
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1153, 388);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.guna2GradientButton7);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(3, 676);
-            this.panel14.Name = "panel14";
-            this.panel14.Padding = new System.Windows.Forms.Padding(20);
-            this.panel14.Size = new System.Drawing.Size(1199, 76);
-            this.panel14.TabIndex = 4;
-            // 
-            // guna2GradientButton7
-            // 
-            this.guna2GradientButton7.Animated = true;
-            this.guna2GradientButton7.BorderRadius = 9;
-            this.guna2GradientButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton7.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton7.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton7.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton7.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton7.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton7.IndicateFocus = true;
-            this.guna2GradientButton7.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton7.Name = "guna2GradientButton7";
-            this.guna2GradientButton7.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton7.TabIndex = 35;
-            this.guna2GradientButton7.Text = "EXPORT REPORT";
+            this.dgvDSReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSReport.Location = new System.Drawing.Point(3, 36);
+            this.dgvDSReport.Name = "dgvDSReport";
+            this.dgvDSReport.RowHeadersVisible = false;
+            this.dgvDSReport.RowHeadersWidth = 51;
+            this.dgvDSReport.RowTemplate.Height = 24;
+            this.dgvDSReport.Size = new System.Drawing.Size(1153, 388);
+            this.dgvDSReport.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1057,146 +862,159 @@
             this.ReceiptNo.MinimumWidth = 6;
             this.ReceiptNo.Name = "ReceiptNo";
             // 
-            // panel15
+            // panel14
             // 
-            this.panel15.Controls.Add(this.groupBox7);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(3, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Padding = new System.Windows.Forms.Padding(20);
-            this.panel15.Size = new System.Drawing.Size(1199, 206);
-            this.panel15.TabIndex = 2;
+            this.panel14.Controls.Add(this.btnDelSuppExport);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(3, 676);
+            this.panel14.Name = "panel14";
+            this.panel14.Padding = new System.Windows.Forms.Padding(20);
+            this.panel14.Size = new System.Drawing.Size(1199, 76);
+            this.panel14.TabIndex = 4;
             // 
-            // groupBox7
+            // btnDelSuppExport
             // 
-            this.groupBox7.Controls.Add(this.label9);
-            this.groupBox7.Controls.Add(this.dateTimePicker7);
-            this.groupBox7.Controls.Add(this.label10);
-            this.groupBox7.Controls.Add(this.guna2GradientButton8);
-            this.groupBox7.Controls.Add(this.dateTimePicker8);
-            this.groupBox7.Controls.Add(this.guna2ComboBox2);
-            this.groupBox7.Controls.Add(this.label11);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(20, 20);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1159, 166);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Filters";
+            this.btnDelSuppExport.Animated = true;
+            this.btnDelSuppExport.BorderRadius = 9;
+            this.btnDelSuppExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelSuppExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelSuppExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelSuppExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelSuppExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelSuppExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnDelSuppExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnDelSuppExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelSuppExport.ForeColor = System.Drawing.Color.White;
+            this.btnDelSuppExport.IndicateFocus = true;
+            this.btnDelSuppExport.Location = new System.Drawing.Point(51, 23);
+            this.btnDelSuppExport.Name = "btnDelSuppExport";
+            this.btnDelSuppExport.Size = new System.Drawing.Size(267, 37);
+            this.btnDelSuppExport.TabIndex = 35;
+            this.btnDelSuppExport.Text = "EXPORT REPORT";
             // 
-            // label9
+            // panel8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label9.Location = new System.Drawing.Point(712, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 22);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "To:";
+            this.panel8.Controls.Add(this.groupBox3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(20);
+            this.panel8.Size = new System.Drawing.Size(1199, 206);
+            this.panel8.TabIndex = 1;
             // 
-            // dateTimePicker7
+            // groupBox3
             // 
-            this.dateTimePicker7.Location = new System.Drawing.Point(745, 48);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker7.TabIndex = 36;
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.dtpTo3);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.btnApply3);
+            this.groupBox3.Controls.Add(this.dtpFrom3);
+            this.groupBox3.Controls.Add(this.cmbSupplier);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(20, 20);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1159, 166);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Filters";
             // 
-            // label10
+            // label6
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label10.Location = new System.Drawing.Point(357, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 22);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "From:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label6.Location = new System.Drawing.Point(762, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 22);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "To:";
             // 
-            // guna2GradientButton8
+            // dtpTo3
             // 
-            this.guna2GradientButton8.Animated = true;
-            this.guna2GradientButton8.BorderRadius = 9;
-            this.guna2GradientButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton8.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton8.FillColor = System.Drawing.Color.CadetBlue;
-            this.guna2GradientButton8.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.guna2GradientButton8.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton8.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton8.IndicateFocus = true;
-            this.guna2GradientButton8.Location = new System.Drawing.Point(31, 104);
-            this.guna2GradientButton8.Name = "guna2GradientButton8";
-            this.guna2GradientButton8.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton8.TabIndex = 34;
-            this.guna2GradientButton8.Text = "APPLY";
+            this.dtpTo3.Location = new System.Drawing.Point(795, 48);
+            this.dtpTo3.Name = "dtpTo3";
+            this.dtpTo3.Size = new System.Drawing.Size(267, 23);
+            this.dtpTo3.TabIndex = 36;
             // 
-            // dateTimePicker8
+            // label7
             // 
-            this.dateTimePicker8.Location = new System.Drawing.Point(415, 49);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(267, 23);
-            this.dateTimePicker8.TabIndex = 33;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label7.Location = new System.Drawing.Point(407, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 22);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "From:";
             // 
-            // guna2ComboBox2
+            // btnApply3
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 9;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.btnApply3.Animated = true;
+            this.btnApply3.BorderRadius = 9;
+            this.btnApply3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply3.FillColor = System.Drawing.Color.CadetBlue;
+            this.btnApply3.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnApply3.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply3.ForeColor = System.Drawing.Color.White;
+            this.btnApply3.IndicateFocus = true;
+            this.btnApply3.Location = new System.Drawing.Point(31, 104);
+            this.btnApply3.Name = "btnApply3";
+            this.btnApply3.Size = new System.Drawing.Size(267, 37);
+            this.btnApply3.TabIndex = 34;
+            this.btnApply3.Text = "APPLY";
+            // 
+            // dtpFrom3
+            // 
+            this.dtpFrom3.Location = new System.Drawing.Point(465, 49);
+            this.dtpFrom3.Name = "dtpFrom3";
+            this.dtpFrom3.Size = new System.Drawing.Size(267, 23);
+            this.dtpFrom3.TabIndex = 33;
+            // 
+            // cmbSupplier
+            // 
+            this.cmbSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSupplier.BorderRadius = 9;
+            this.cmbSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSupplier.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSupplier.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSupplier.ItemHeight = 30;
+            this.cmbSupplier.Items.AddRange(new object[] {
             "Daily",
             "Monthly"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(81, 44);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(218, 36);
-            this.guna2ComboBox2.TabIndex = 28;
+            this.cmbSupplier.Location = new System.Drawing.Point(131, 44);
+            this.cmbSupplier.Name = "cmbSupplier";
+            this.cmbSupplier.Size = new System.Drawing.Size(218, 36);
+            this.cmbSupplier.TabIndex = 28;
             // 
-            // label11
+            // label8
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label11.Location = new System.Drawing.Point(27, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 22);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Type:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label8.Location = new System.Drawing.Point(27, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 22);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Supplier:";
             // 
-            // panel16
+            // tabItemReport
             // 
-            this.panel16.Controls.Add(this.guna2GradientButton9);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(3, 676);
-            this.panel16.Name = "panel16";
-            this.panel16.Padding = new System.Windows.Forms.Padding(20);
-            this.panel16.Size = new System.Drawing.Size(1199, 76);
-            this.panel16.TabIndex = 5;
-            // 
-            // guna2GradientButton9
-            // 
-            this.guna2GradientButton9.Animated = true;
-            this.guna2GradientButton9.BorderRadius = 9;
-            this.guna2GradientButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton9.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton9.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2GradientButton9.FillColor2 = System.Drawing.Color.MidnightBlue;
-            this.guna2GradientButton9.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton9.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton9.IndicateFocus = true;
-            this.guna2GradientButton9.Location = new System.Drawing.Point(51, 23);
-            this.guna2GradientButton9.Name = "guna2GradientButton9";
-            this.guna2GradientButton9.Size = new System.Drawing.Size(267, 37);
-            this.guna2GradientButton9.TabIndex = 35;
-            this.guna2GradientButton9.Text = "EXPORT REPORT";
+            this.tabItemReport.Controls.Add(this.panel17);
+            this.tabItemReport.Controls.Add(this.panel16);
+            this.tabItemReport.Controls.Add(this.panel15);
+            this.tabItemReport.Location = new System.Drawing.Point(4, 46);
+            this.tabItemReport.Name = "tabItemReport";
+            this.tabItemReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabItemReport.Size = new System.Drawing.Size(1205, 755);
+            this.tabItemReport.TabIndex = 5;
+            this.tabItemReport.Text = "Damaged & Lost Items Report";
+            this.tabItemReport.UseVisualStyleBackColor = true;
             // 
             // panel17
             // 
@@ -1210,7 +1028,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.dataGridView6);
+            this.groupBox8.Controls.Add(this.dgvDLIReport);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(20, 20);
@@ -1221,24 +1039,24 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Stock Transactions Report";
             // 
-            // dataGridView6
+            // dgvDLIReport
             // 
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDLIReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDLIReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDLIReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 36);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowHeadersVisible = false;
-            this.dataGridView6.RowHeadersWidth = 51;
-            this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(1153, 388);
-            this.dataGridView6.TabIndex = 0;
+            this.dgvDLIReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDLIReport.Location = new System.Drawing.Point(3, 36);
+            this.dgvDLIReport.Name = "dgvDLIReport";
+            this.dgvDLIReport.RowHeadersVisible = false;
+            this.dgvDLIReport.RowHeadersWidth = 51;
+            this.dgvDLIReport.RowTemplate.Height = 24;
+            this.dgvDLIReport.Size = new System.Drawing.Size(1153, 388);
+            this.dgvDLIReport.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn15
             // 
@@ -1270,6 +1088,147 @@
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.btnDamLostExport);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(3, 676);
+            this.panel16.Name = "panel16";
+            this.panel16.Padding = new System.Windows.Forms.Padding(20);
+            this.panel16.Size = new System.Drawing.Size(1199, 76);
+            this.panel16.TabIndex = 5;
+            // 
+            // btnDamLostExport
+            // 
+            this.btnDamLostExport.Animated = true;
+            this.btnDamLostExport.BorderRadius = 9;
+            this.btnDamLostExport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDamLostExport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDamLostExport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDamLostExport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDamLostExport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDamLostExport.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnDamLostExport.FillColor2 = System.Drawing.Color.MidnightBlue;
+            this.btnDamLostExport.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDamLostExport.ForeColor = System.Drawing.Color.White;
+            this.btnDamLostExport.IndicateFocus = true;
+            this.btnDamLostExport.Location = new System.Drawing.Point(51, 23);
+            this.btnDamLostExport.Name = "btnDamLostExport";
+            this.btnDamLostExport.Size = new System.Drawing.Size(267, 37);
+            this.btnDamLostExport.TabIndex = 35;
+            this.btnDamLostExport.Text = "EXPORT REPORT";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.groupBox7);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Padding = new System.Windows.Forms.Padding(20);
+            this.panel15.Size = new System.Drawing.Size(1199, 206);
+            this.panel15.TabIndex = 2;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.dtpTo4);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.btnApply4);
+            this.groupBox7.Controls.Add(this.dtpFrom4);
+            this.groupBox7.Controls.Add(this.cmbType);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(20, 20);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1159, 166);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Filters";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label9.Location = new System.Drawing.Point(712, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 22);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "To:";
+            // 
+            // dtpTo4
+            // 
+            this.dtpTo4.Location = new System.Drawing.Point(745, 48);
+            this.dtpTo4.Name = "dtpTo4";
+            this.dtpTo4.Size = new System.Drawing.Size(267, 23);
+            this.dtpTo4.TabIndex = 36;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label10.Location = new System.Drawing.Point(357, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 22);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "From:";
+            // 
+            // btnApply4
+            // 
+            this.btnApply4.Animated = true;
+            this.btnApply4.BorderRadius = 9;
+            this.btnApply4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnApply4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnApply4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnApply4.FillColor = System.Drawing.Color.CadetBlue;
+            this.btnApply4.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnApply4.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApply4.ForeColor = System.Drawing.Color.White;
+            this.btnApply4.IndicateFocus = true;
+            this.btnApply4.Location = new System.Drawing.Point(31, 104);
+            this.btnApply4.Name = "btnApply4";
+            this.btnApply4.Size = new System.Drawing.Size(267, 37);
+            this.btnApply4.TabIndex = 34;
+            this.btnApply4.Text = "APPLY";
+            // 
+            // dtpFrom4
+            // 
+            this.dtpFrom4.Location = new System.Drawing.Point(415, 49);
+            this.dtpFrom4.Name = "dtpFrom4";
+            this.dtpFrom4.Size = new System.Drawing.Size(267, 23);
+            this.dtpFrom4.TabIndex = 33;
+            // 
+            // cmbType
+            // 
+            this.cmbType.BackColor = System.Drawing.Color.Transparent;
+            this.cmbType.BorderRadius = 9;
+            this.cmbType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbType.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.cmbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbType.ItemHeight = 30;
+            this.cmbType.Items.AddRange(new object[] {
+            "Daily",
+            "Monthly"});
+            this.cmbType.Location = new System.Drawing.Point(81, 44);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(218, 36);
+            this.cmbType.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Montserrat", 8.25F);
+            this.label11.Location = new System.Drawing.Point(27, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 22);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Type:";
+            // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1282,45 +1241,45 @@
             this.tabSalesReports.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.gbStockInHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalesReports)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.gbStockInEntry.ResumeLayout(false);
             this.gbStockInEntry.PerformLayout();
             this.tabInventoryReports.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabStockReports.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabSupplierReports.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventoryReports)).EndInit();
             this.panel9.ResumeLayout(false);
             this.tabMovingParts.ResumeLayout(false);
-            this.tabItemReport.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFSParts)).EndInit();
+            this.panel12.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            this.panel12.ResumeLayout(false);
+            this.tabStockReports.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLowStockReport)).EndInit();
             this.panel6.ResumeLayout(false);
+            this.tabSupplierReports.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSReport)).EndInit();
+            this.panel14.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.panel14.ResumeLayout(false);
+            this.tabItemReport.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDLIReport)).EndInit();
+            this.panel16.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1332,44 +1291,39 @@
         private System.Windows.Forms.TabPage tabSalesReports;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox gbStockInHistory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSalesReports;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gbStockInEntry;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbPart;
+        private Guna.UI2.WinForms.Guna2GradientButton btnApply;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbReportType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabInventoryReports;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvInventoryReports;
         private System.Windows.Forms.TabPage tabStockReports;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvLowStockReport;
         private System.Windows.Forms.TabPage tabSupplierReports;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn PartName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Supplier;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSalesExport;
         private System.Windows.Forms.Panel panel9;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton btnInventoryExport;
         private System.Windows.Forms.TabPage tabMovingParts;
         private System.Windows.Forms.TabPage tabItemReport;
         private System.Windows.Forms.Panel panel12;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnFastSlowExport;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvFSParts;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
@@ -1377,53 +1331,53 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFrom2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnApply2;
+        private System.Windows.Forms.DateTimePicker dtpFrom1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLowStockExport;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpTo3;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnApply3;
+        private System.Windows.Forms.DateTimePicker dtpFrom3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSupplier;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvDSReport;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiptNo;
         private System.Windows.Forms.Panel panel14;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDelSuppExport;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dgvDLIReport;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel16;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton9;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDamLostExport;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
+        private System.Windows.Forms.DateTimePicker dtpTo4;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnApply4;
+        private System.Windows.Forms.DateTimePicker dtpFrom4;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbType;
         private System.Windows.Forms.Label label11;
     }
 }

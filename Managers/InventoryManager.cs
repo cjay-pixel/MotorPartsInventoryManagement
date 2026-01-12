@@ -324,6 +324,71 @@ namespace MotorPartsInventoryManagement.Managers
             return list;
         }
 
+        // for Report Form
+        public static DataTable GetInventorySummaryReport()
+        {
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetInventorySummaryReport");
+        }
+
+        public static DataTable GetLowStockReport()
+        {
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetLowStockReport");
+        }
+
+        public static DataTable GetMovingPartsReport(DateTime startDate, DateTime endDate)
+        {
+            MySql.Data.MySqlClient.MySqlParameter[] parameters =
+            {
+                new MySql.Data.MySqlClient.MySqlParameter("@p_StartDate", startDate.Date),
+                new MySql.Data.MySqlClient.MySqlParameter("@p_EndDate", endDate.Date)
+            };
+
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetMovingPartsReport", parameters);
+        }
+
+        public static DataTable GetDamagedLostItemsReport(DateTime startDate, DateTime endDate, string reasonType)
+        {
+            MySql.Data.MySqlClient.MySqlParameter[] parameters =
+            {
+                new MySql.Data.MySqlClient.MySqlParameter("@p_StartDate", startDate.Date),
+                new MySql.Data.MySqlClient.MySqlParameter("@p_EndDate", endDate.Date),
+                new MySql.Data.MySqlClient.MySqlParameter("@p_ReasonType", reasonType)
+            };
+
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetDamagedLostItemsReport", parameters);
+        }
+
+        public static DataTable GetSalesReportByDateRange(DateTime startDate, DateTime endDate, string reportType)
+        {
+            MySqlParameter[] parameters =
+            {
+                new MySqlParameter("@p_StartDate", startDate.Date),
+                new MySqlParameter("@p_EndDate", endDate.Date),
+                new MySqlParameter("@p_ReportType", reportType ?? "Daily")
+            };
+
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetSalesReportByDateRange", parameters);
+        }
+
+        public static DataTable GetActiveSuppliersForFilter()
+        {
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetActiveSuppliersForFilter");
+        }
+
+        public static DataTable GetDeliverySupplierReport(DateTime startDate, DateTime endDate, int supplierId)
+        {
+            MySqlParameter[] parameters =
+            {
+                new MySqlParameter("@p_StartDate", startDate.Date),
+                new MySqlParameter("@p_EndDate", endDate.Date),
+                new MySqlParameter("@p_SupplierID", supplierId)
+            };
+
+            return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetDeliverySupplierReport", parameters);
+        }
+
+        // GetLowStockCount
+
         public static int GetLowStockCount()
         {
             DataTable dt = DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetLowStockCount");
