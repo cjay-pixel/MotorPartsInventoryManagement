@@ -397,30 +397,32 @@ namespace MotorPartsInventoryManagement.Forms
         {
             if (!ValidateFields()) return;
 
-            // Check if user is logged in
             if (SessionManager.CurrentUser == null)
             {
                 MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-
             try
             {
-                int partID = Convert.ToInt32(cmbPart.SelectedValue);
+                string productName = cmbPart.Text;  // Get product name from combo box text
+                int supplierID = Convert.ToInt32(cmbSupplier.SelectedValue);
                 int quantity = Convert.ToInt32(txtQuantityToAdd.Text.Trim());
                 string deliveryReceipt = txtDeliveryreceipt.Text.Trim();
                 string remarks = $"Supplier: {cmbSupplier.Text}";
 
+                // Get the correct PartID for this product and supplier
+                int partID = InventoryManager.GetPartIDByNameAndSupplier(productName, supplierID);
+
                 // Perform Stock In
                 InventoryManager.StockIn(
                     partID,
-                    SessionManager.CurrentUser.UserID,  // Now pulls from session
+                    SessionManager.CurrentUser.UserID,
+                    supplierID,
                     quantity,
                     deliveryReceipt,
                     remarks
                 );
-
 
                 MessageBox.Show("Stock In successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearFields();
@@ -445,10 +447,14 @@ namespace MotorPartsInventoryManagement.Forms
 
             try
             {
-                int partID = Convert.ToInt32(cmbPartN.SelectedValue);
+              //  int partID = Convert.ToInt32(cmbPartN.SelectedValue);
                 int quantity = Convert.ToInt32(txtQuanDed.Text.Trim());
                 string supplier = cmbSuppli.Text;
                 string reason = txtReas.Text.Trim();
+
+                string productName = cmbPartN.Text;
+                int supplierID = Convert.ToInt32(cmbSuppli.SelectedValue);
+                int partID = InventoryManager.GetPartIDByNameAndSupplier(productName, supplierID);
 
                 // Generate reference number automatically
                 string referenceNumber = "SO-" + DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -489,6 +495,8 @@ namespace MotorPartsInventoryManagement.Forms
             {
                 int partID = Convert.ToInt32(cmbPartNa.SelectedValue);
                 int quantity = Convert.ToInt32(txtQuantity.Text.Trim());
+                int supplierID = Convert.ToInt32(cmbSupplier.SelectedValue);
+
                 string supplier = cmbSupp.Text;
                 string reason = txtReason.Text.Trim();
 
@@ -504,6 +512,7 @@ namespace MotorPartsInventoryManagement.Forms
                     // Positive adjustment - add stock
                     InventoryManager.StockIn(
                         partID,
+                        supplierID,
                         SessionManager.CurrentUser.UserID,
                         quantity,
                         referenceNumber,

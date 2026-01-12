@@ -55,34 +55,37 @@ namespace MotorPartsInventoryManagement.Forms
         {
             if (!ValidateFields()) return;
 
-            // Check if user is logged in
             if (SessionManager.CurrentUser == null)
             {
                 MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-
             try
             {
-                int partID = Convert.ToInt32(cmbPart.SelectedValue);
+                string productName = cmbPart.Text;  // Get product name from combo box text
+                int supplierID = Convert.ToInt32(cmbSupplier.SelectedValue);
                 int quantity = Convert.ToInt32(txtQuantityToAdd.Text.Trim());
-                string deliveryReceipt = txtDRN.Text.Trim();
+                string deliveryReceipt = txtDeliveryreceipt.Text.Trim();
                 string remarks = $"Supplier: {cmbSupplier.Text}";
+
+                // Get the correct PartID for this product and supplier
+                int partID = InventoryManager.GetPartIDByNameAndSupplier(productName, supplierID);
 
                 // Perform Stock In
                 InventoryManager.StockIn(
                     partID,
-                    SessionManager.CurrentUser.UserID,  // Now pulls from session
+                    SessionManager.CurrentUser.UserID,
+                    supplierID,
                     quantity,
                     deliveryReceipt,
                     remarks
                 );
 
-
                 MessageBox.Show("Stock In successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clearFields();
                 displayTransactions();
+               // displayLowStock();
             }
             catch (Exception ex)
             {
@@ -104,7 +107,7 @@ namespace MotorPartsInventoryManagement.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtDRN.Text))
+            if (string.IsNullOrWhiteSpace(txtDeliveryreceipt.Text))
             {
                 MessageBox.Show("Please enter delivery receipt number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -213,7 +216,7 @@ namespace MotorPartsInventoryManagement.Forms
         {
             cmbPart.SelectedIndex = -1;
             cmbSupplier.SelectedIndex = -1;
-            txtDRN.Clear();
+            txtDeliveryreceipt.Clear();
             txtQuantityToAdd.Clear();
         }
     }

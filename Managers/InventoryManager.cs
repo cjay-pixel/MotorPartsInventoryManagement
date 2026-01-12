@@ -13,6 +13,7 @@ namespace MotorPartsInventoryManagement.Managers
         public int PartID { get; set; }
         public string PartNumber { get; set; }
         public string PartName { get; set; }
+        public string SupplierID { get; set; }
         public int UserID { get; set; }
         public string Username { get; set; }
         public int Quantity { get; set; }
@@ -32,12 +33,13 @@ namespace MotorPartsInventoryManagement.Managers
 
 
         // 🔹 Stock In
-        public static void StockIn(int partID, int userID, int quantity, string referenceNumber, string remarks)
+        public static void StockIn(int partID, int userID, int supplierID, int quantity, string referenceNumber, string remarks)
         {
             MySqlParameter[] parameters =
             {
                 new MySqlParameter("@p_PartID", partID),
                 new MySqlParameter("@p_UserID", userID),
+                new MySqlParameter("@p_SupplierID", supplierID),
                 new MySqlParameter("@p_Quantity", quantity),
                 new MySqlParameter("@p_ReferenceNumber", referenceNumber),
                 new MySqlParameter("@p_Remarks", remarks)
@@ -59,6 +61,32 @@ namespace MotorPartsInventoryManagement.Managers
             };
 
             DatabaseHelper.ExecuteStoredProcedure("sp_StockOut", parameters);
+        }
+
+        // 🔹 Get PartID by ProductName and SupplierID
+        public static int GetPartIDByNameAndSupplier(string productName, int supplierID)
+        {
+            try
+            {
+                string query = "SELECT PartID FROM MotorParts WHERE PartName = @ProductName AND SupplierID = @SupplierID";
+                MySqlParameter[] parameters =
+                {
+            new MySqlParameter("@ProductName", productName),
+            new MySqlParameter("@SupplierID", supplierID)
+        };
+                DataTable dt = DatabaseHelper.ExecuteQuery(query, parameters);  // Assuming ExecuteQuery supports parameters
+
+                if (dt.Rows.Count > 0)
+                {
+                    return Convert.ToInt32(dt.Rows[0]["PartID"]);
+                }
+
+                throw new Exception("Part not found for the selected product and supplier.");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving PartID: " + ex.Message);
+            }
         }
 
         public static void RecordDamage(int partID, int userID, int quantity, string reason)
