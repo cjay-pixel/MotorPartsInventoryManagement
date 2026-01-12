@@ -29,24 +29,13 @@ namespace MotorPartsInventoryManagement.Forms
 
                 lblLowStock.Text = stats.LowStockCount.ToString();
                 lblTotalProducts.Text = stats.TotalProducts.ToString();
-                // lblTotalRev.Text = "₱" + stats.TotalRevenue.ToString("N2");
+                lblTotalRev.Text = "₱" + stats.TotalRevenue.ToString("N2");
                 lblTransactions.Text = stats.TotalTransactions.ToString();
-
-                // Option 2: Get stats individually (separate queries)
-                // int lowStockCount = InventoryManager.GetLowStockCount();
-                // int totalProducts = InventoryManager.GetTotalProductsCount();
-                // decimal totalRevenue = InventoryManager.GetTotalRevenue();
-                // int totalTransactions = InventoryManager.GetTotalTransactionsCount();
-
-                // lblLowStockCount.Text = lowStockCount.ToString();
-                // lblTotalProducts.Text = totalProducts.ToString();
-                // lblTotalRevenue.Text = "₱" + totalRevenue.ToString("N2");
-                // lblTotalTransactions.Text = totalTransactions.ToString();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading dashboard statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("Error loading dashboard statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+        }
     }

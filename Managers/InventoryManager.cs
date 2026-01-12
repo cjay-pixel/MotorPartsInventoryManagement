@@ -281,6 +281,7 @@ namespace MotorPartsInventoryManagement.Managers
 
             return list;
         }
+
         public static int GetLowStockCount()
         {
             DataTable dt = DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetLowStockCount");
@@ -307,17 +308,17 @@ namespace MotorPartsInventoryManagement.Managers
         }
 
         // 🔹 Get total revenue (last 30 days by default)
-        //public static decimal GetTotalRevenue()
-        //{
-        //    DataTable dt = DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetTotalRevenue");
+        public static decimal GetTotalRevenue()
+        {
+            DataTable dt = DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetTotalRevenue");
 
-        //    if (dt.Rows.Count > 0)
-        //    {
-        //        return Convert.ToDecimal(dt.Rows[0]["TotalRevenue"]);
-        //    }
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToDecimal(dt.Rows[0]["TotalRevenue"]);
+            }
 
-        //    return 0;
-        //}
+            return 0;
+        }
 
         // 🔹 Get total transactions count (last 30 days by default)
         public static int GetTotalTransactionsCount()
@@ -337,17 +338,19 @@ namespace MotorPartsInventoryManagement.Managers
             {
                 LowStockCount = GetLowStockCount(),
                 TotalProducts = GetTotalProductsCount(),
-                //  TotalRevenue = GetTotalRevenue(),
+                TotalRevenue = GetTotalRevenue(),
                 TotalTransactions = GetTotalTransactionsCount()
             };
 
             return stats;
         }
+
+
         public class DashboardStats
         {
             public int LowStockCount { get; set; }
             public int TotalProducts { get; set; }
-            //public decimal TotalRevenue { get; set; }
+            public decimal TotalRevenue { get; set; }
             public int TotalTransactions { get; set; }
         }
     }

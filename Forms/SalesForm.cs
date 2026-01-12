@@ -472,7 +472,8 @@ namespace MotorPartsInventoryManagement.Forms
             MessageBox.Show("Discount applied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        }
+    
+
 
         private void btnPay_Click(object sender, EventArgs e)
         {
