@@ -551,22 +551,21 @@ namespace MotorPartsInventoryManagement.Forms
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Date", typeof(DateTime));
                 dt.Columns.Add("Part Name", typeof(string));
-                dt.Columns.Add("Remarks", typeof(string));
+                dt.Columns.Add("Supplier", typeof(string));  // Add Supplier column
                 dt.Columns.Add("Quantity Removed", typeof(int));
-                dt.Columns.Add("Reason", typeof(string));
+                dt.Columns.Add("Reason", typeof(string));  // Keep Reason column
 
                 foreach (var transaction in allTransactions)
                 {
-                    // Extract supplier and reason from remarks
-                    string supplier = ExtractSupplierFromRemarks(transaction.Remarks);
+                    // Extract reason from remarks (for sales, this will be "Sale Transaction")
                     string reason = ExtractReasonFromRemarks(transaction.Remarks);
 
                     dt.Rows.Add(
                         transaction.TransactionDate,
                         transaction.PartName,
-                        supplier,
+                        transaction.SupplierName,  // Add supplier name
                         transaction.Quantity,
-                        reason
+                        reason  // Put "Sale Transaction" here
                     );
                 }
 
@@ -575,6 +574,7 @@ namespace MotorPartsInventoryManagement.Forms
                 dgvStockOut.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvStockOut.AllowUserToAddRows = false;
 
+                // Format columns
                 if (dgvStockOut.Columns.Contains("Date"))
                 {
                     dgvStockOut.Columns["Date"].DefaultCellStyle.Format = "MM/dd/yyyy hh:mm tt";
@@ -587,6 +587,7 @@ namespace MotorPartsInventoryManagement.Forms
                 if (dgvStockOut.Columns.Contains("Quantity Removed"))
                     dgvStockOut.Columns["Quantity Removed"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
+                // Highlight recent transactions
                 foreach (DataGridViewRow row in dgvStockOut.Rows)
                 {
                     DateTime transDate = Convert.ToDateTime(row.Cells["Date"].Value);
@@ -602,6 +603,25 @@ namespace MotorPartsInventoryManagement.Forms
             }
         }
 
+        private string ExtractReasonFromRemarks(string remarks)
+        {
+            if (string.IsNullOrEmpty(remarks)) return "";
+
+            // For sales, remarks is "Sale Transaction" - return as is
+            if (remarks == "Sale Transaction")
+            {
+                return remarks;
+            }
+
+            // For other cases, extract after "Reason: "
+            int reasonIndex = remarks.IndexOf("Reason: ");
+            if (reasonIndex >= 0)
+            {
+                return remarks.Substring(reasonIndex + 8).Trim();
+            }
+
+            return remarks; // Fallback to return the whole remarks if no pattern matches
+        }
         private void displayAdjustments()
         {
             try
@@ -702,20 +722,6 @@ namespace MotorPartsInventoryManagement.Forms
             {
                 MessageBox.Show("Error loading adjustments: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private string ExtractReasonFromRemarks(string remarks)
-        {
-            if (string.IsNullOrEmpty(remarks)) return "";
-
-            // Extract reason after "Reason: "
-            int reasonIndex = remarks.IndexOf("Reason: ");
-            if (reasonIndex >= 0)
-            {
-                return remarks.Substring(reasonIndex + 8).Trim();
-            }
-
-            return "";
         }
 
         private string ExtractAdjustmentReasonFromRemarks(string remarks)
