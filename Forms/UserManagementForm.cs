@@ -51,12 +51,6 @@ namespace MotorPartsInventoryManagement.Forms
                 return;
             }
 
-            //if (txtPassword.Text != txtConfirmPassword.Text)
-            //{
-            //    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
             // Check if username already exists
             if (UserManager.UsernameExists(txtUsername.Text.Trim()))
             {
@@ -116,12 +110,6 @@ namespace MotorPartsInventoryManagement.Forms
                 // Update password if provided
                 if (!string.IsNullOrWhiteSpace(txtPassword.Text))
                 {
-                    //if (txtPassword.Text != txtConfirmPassword.Text)
-                    //{
-                    //    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //    return;
-                    //}
-
                     UserManager.UpdatePassword(selectedUserID, txtPassword.Text);
                 }
 
@@ -170,24 +158,7 @@ namespace MotorPartsInventoryManagement.Forms
             clearFields();
         }
 
-        private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
 
-                selectedUserID = Convert.ToInt32(row.Cells["UserID"].Value);
-                txtUsername.Text = row.Cells["Username"].Value.ToString();
-                txtFName.Text = row.Cells["FirstName"].Value.ToString();
-                txtLName.Text = row.Cells["LastName"].Value.ToString();
-                cmbRole.Text = row.Cells["Role"].Value.ToString();
-                cmbStatus.Text = row.Cells["Status"].Value.ToString();
-
-                // Clear password fields when selecting a user
-                txtPassword.Clear();
-                // txtConfirmPassword.Clear();
-            }
-        }
 
         private void displayUsers()
         {
@@ -197,6 +168,13 @@ namespace MotorPartsInventoryManagement.Forms
 
                 if (dgvUsers.Columns.Contains("UserID"))
                     dgvUsers.Columns["UserID"].Visible = false;
+
+                // Hide FirstName and LastName columns if they exist
+                if (dgvUsers.Columns.Contains("FirstName"))
+                    dgvUsers.Columns["FirstName"].Visible = false;
+
+                if (dgvUsers.Columns.Contains("LastName"))
+                    dgvUsers.Columns["LastName"].Visible = false;
 
                 dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvUsers.AllowUserToAddRows = false;
@@ -223,7 +201,6 @@ namespace MotorPartsInventoryManagement.Forms
             txtFName.Clear();
             txtLName.Clear();
             txtPassword.Clear();
-            //txtConfirmPassword.Clear();
             cmbRole.SelectedIndex = -1;
             cmbStatus.SelectedIndex = -1;
             selectedUserID = -1;
@@ -254,6 +231,28 @@ namespace MotorPartsInventoryManagement.Forms
 
         }
 
+        private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
 
+                selectedUserID = Convert.ToInt32(row.Cells["UserID"].Value);
+                txtUsername.Text = row.Cells["Username"].Value.ToString();
+
+                // Split FullName back into FirstName and LastName
+                string fullName = row.Cells["FullName"].Value.ToString();
+                string[] nameParts = fullName.Split(new[] { ' ' }, 2); // Split into max 2 parts
+
+                txtFName.Text = nameParts.Length > 0 ? nameParts[0] : "";
+                txtLName.Text = nameParts.Length > 1 ? nameParts[1] : "";
+
+                cmbRole.Text = row.Cells["Role"].Value.ToString();
+                cmbStatus.Text = row.Cells["Status"].Value.ToString();
+
+                // Clear password fields when selecting a user
+                txtPassword.Clear();
+            }
+        }
     }
 }

@@ -18,6 +18,13 @@ namespace MotorPartsInventoryManagement.Forms
         {
             InitializeComponent();
             displayProducts();
+
+            this.VisibleChanged += InventoryStaffForm_VisibleChanged;
+        }
+
+        private void IN(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public void displayProducts()
@@ -144,6 +151,14 @@ namespace MotorPartsInventoryManagement.Forms
         private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void InventoryStaffForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+                {
+                displayProducts();
+            }
         }
     }
     }
