@@ -343,5 +343,28 @@ namespace MotorPartsInventoryManagement.Forms
                 displayProducts(); // refresh every time you return
             }
         }
+
+        private void btnImportImg_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Select Product Image";
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    selectedImagePath = ofd.FileName;
+
+                    if (pbProduct.Image != null)
+                    {
+                        pbProduct.Image.Dispose();
+                        pbProduct.Image = null;
+                    }
+
+                    pbProduct.Image = Image.FromFile(selectedImagePath);
+                    pbProduct.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+            }
+        }
     }
 }

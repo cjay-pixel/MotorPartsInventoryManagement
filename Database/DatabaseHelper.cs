@@ -1,48 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Data;
-//using MySql.Data.MySqlClient;
-//using System.Configuration;
-
-//namespace MotorPartsInventoryManagement.Database
-//{
-//    internal class DatabaseHelper
-//    {
-//        private static string GetConnectionString()
-//        {
-//            return ConfigurationManager.ConnectionStrings["MotorPartsIMS"].ConnectionString;
-//        }
-
-//        // Get connection
-//        public static MySqlConnection GetConnection()
-//        {
-//            return new MySqlConnection(GetConnectionString());
-//        }
-
-//        // Test connection
-//        public static bool TestConnection()
-//        {
-//            try
-//            {
-//                using (MySqlConnection conn = GetConnection())
-//                {
-//                    conn.Open();
-//                    return true;
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("Database connection failed: " + ex.Message);
-//            }
-//        }
-//    }
-//}
-
-
-using System;
+﻿using System;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
