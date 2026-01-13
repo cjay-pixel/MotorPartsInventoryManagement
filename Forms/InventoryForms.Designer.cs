@@ -231,6 +231,7 @@
             this.btnImportImg.Size = new System.Drawing.Size(180, 45);
             this.btnImportImg.TabIndex = 43;
             this.btnImportImg.Text = "IMPORT";
+            this.btnImportImg.Click += new System.EventHandler(this.btnImportImg_Click_1);
             // 
             // btnDelete
             // 

@@ -343,5 +343,10 @@ namespace MotorPartsInventoryManagement.Forms
                 displayProducts(); // refresh every time you return
             }
         }
+
+        private void btnImportImg_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

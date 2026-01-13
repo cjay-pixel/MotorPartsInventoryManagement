@@ -19,6 +19,8 @@ namespace MotorPartsInventoryManagement.Forms
             InitializeComponent();
             LoadDashboardStats();
             LoadTodaysSales();
+
+            this.VisibleChanged += AdminDashboardForm_VisibleChanged;
         }
 
         private void LoadTodaysSales()
@@ -72,5 +74,15 @@ namespace MotorPartsInventoryManagement.Forms
                 MessageBox.Show("Error loading dashboard statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AdminDashboardForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                LoadTodaysSales(); // refresh every time you return
+            }
         }
+
+       
+    }
     }
