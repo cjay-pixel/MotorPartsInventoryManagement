@@ -31,25 +31,25 @@
             this.pnlShadowLeft = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlC = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logoBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
-            this.logoBox = new System.Windows.Forms.PictureBox();
             this.inventoryStaffForm1 = new MotorPartsInventoryManagement.Forms.InventoryStaffForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlShadowLeft
@@ -90,74 +90,6 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.panel3.Size = new System.Drawing.Size(388, 474);
             this.panel3.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.logoBox);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 316);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.guna2Button1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 252);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(388, 64);
-            this.panel2.TabIndex = 1;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.BorderRadius = 9;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(246, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(105, 39);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Logout";
-            this.guna2Button1.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(36, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Stock Staff";
-            // 
-            // pnlFillR
-            // 
-            this.pnlFillR.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFillR.Location = new System.Drawing.Point(388, 0);
-            this.pnlFillR.Name = "pnlFillR";
-            this.pnlFillR.Size = new System.Drawing.Size(10, 790);
-            this.pnlFillR.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.inventoryStaffForm1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(398, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(929, 790);
-            this.panel4.TabIndex = 2;
             // 
             // btnReport
             // 
@@ -216,6 +148,87 @@
             this.btnStock.UseVisualStyleBackColor = true;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.logoBox);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(388, 316);
+            this.panel1.TabIndex = 0;
+            // 
+            // logoBox
+            // 
+            this.logoBox.BackColor = System.Drawing.Color.Transparent;
+            this.logoBox.BackgroundImage = global::MotorPartsInventoryManagement.Properties.Resources.logo_trans_white;
+            this.logoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoBox.InitialImage = null;
+            this.logoBox.Location = new System.Drawing.Point(0, 0);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(388, 252);
+            this.logoBox.TabIndex = 1;
+            this.logoBox.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 252);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(388, 64);
+            this.panel2.TabIndex = 1;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Button1.BorderRadius = 9;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.LightGray;
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(246, 12);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(105, 39);
+            this.guna2Button1.TabIndex = 1;
+            this.guna2Button1.Text = "Logout";
+            this.guna2Button1.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(36, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Stock Staff";
+            // 
+            // pnlFillR
+            // 
+            this.pnlFillR.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlFillR.Location = new System.Drawing.Point(388, 0);
+            this.pnlFillR.Name = "pnlFillR";
+            this.pnlFillR.Size = new System.Drawing.Size(10, 790);
+            this.pnlFillR.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.inventoryStaffForm1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(398, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(929, 790);
+            this.panel4.TabIndex = 2;
+            // 
             // btnInventory
             // 
             this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
@@ -235,19 +248,6 @@
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // logoBox
-            // 
-            this.logoBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoBox.BackgroundImage = global::MotorPartsInventoryManagement.Properties.Resources.logo_trans_white;
-            this.logoBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logoBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoBox.InitialImage = null;
-            this.logoBox.Location = new System.Drawing.Point(0, 0);
-            this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(388, 252);
-            this.logoBox.TabIndex = 1;
-            this.logoBox.TabStop = false;
-            // 
             // inventoryStaffForm1
             // 
             this.inventoryStaffForm1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -263,6 +263,7 @@
             this.ClientSize = new System.Drawing.Size(1327, 790);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlShadowLeft);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StockStaffForm";
             this.Text = "stockstaffForm";
@@ -271,10 +272,10 @@
             this.pnlC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,7 +288,6 @@
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox logoBox;
         private System.Windows.Forms.Panel panel2;
@@ -295,6 +295,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlFillR;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnInventory;
         private InventoryStaffForm inventoryStaffForm1;
     }
 }
