@@ -268,7 +268,6 @@
             this.dgvDamages.RowTemplate.Height = 24;
             this.dgvDamages.Size = new System.Drawing.Size(1206, 414);
             this.dgvDamages.TabIndex = 0;
-            
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -308,6 +307,8 @@
             this.Controls.Add(this.panel6);
             this.Name = "DamageStaffForm";
             this.Size = new System.Drawing.Size(1252, 790);
+            this.Load += new System.EventHandler(this.DamageStaffForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.DamageStaffForm_VisibleChanged);
             this.panel6.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

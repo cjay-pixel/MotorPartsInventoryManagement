@@ -26,9 +26,20 @@ namespace MotorPartsInventoryManagement.Forms
             displayStockOutTransactions();
             displayLowStock();
             displayAdjustments();
+            this.VisibleChanged += StockOperationForm_VisibleChanged;
         }
 
-     
+        private void StockOperationForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayTransactions();
+                displayStockOutTransactions();
+                displayLowStock();
+                displayAdjustments();
+            }
+        }
+
         private void LoadParts()
         {
             List<MotorPartsManager> allParts = MotorPartsManager.GetAll();
@@ -759,5 +770,14 @@ namespace MotorPartsInventoryManagement.Forms
         {
 
         }
+
+        private void StockOperationForm_Load_1(object sender, EventArgs e)
+        {
+            displayTransactions();
+            displayStockOutTransactions();
+            displayAdjustments();
+        }
+
+      
     }
 }

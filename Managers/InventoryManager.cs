@@ -90,15 +90,16 @@ namespace MotorPartsInventoryManagement.Managers
             }
         }
 
-        public static void RecordDamage(int partID, int userID, int quantity, string reason)
+        public static void RecordDamage(int partID, int supplierID, int userID, int quantity, string reason)
         {
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@p_PartID", partID),
-                new MySqlParameter("@p_UserID", userID),
-                new MySqlParameter("@p_Quantity", quantity),
-                new MySqlParameter("@p_Reason", reason)
-            };
+        new MySqlParameter("@p_PartID", partID),
+        new MySqlParameter("@p_SupplierID", supplierID),
+        new MySqlParameter("@p_UserID", userID),
+        new MySqlParameter("@p_Quantity", quantity),
+        new MySqlParameter("@p_Reason", reason)
+    };
             DatabaseHelper.ExecuteStoredProcedure("sp_RecordDamage", parameters);
         }
 

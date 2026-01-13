@@ -20,6 +20,7 @@ namespace MotorPartsInventoryManagement.Forms
             LoadParts();
             LoadSuppliers();
             displayDamageRecords();
+            this.VisibleChanged += DamageStaffForm_VisibleChanged;
 
         }
 
@@ -78,7 +79,6 @@ namespace MotorPartsInventoryManagement.Forms
 
             return true;
         }
-
         private void btnRecord_Click(object sender, EventArgs e)
         {
             if (!ValidateFields()) return;
@@ -90,25 +90,27 @@ namespace MotorPartsInventoryManagement.Forms
                 return;
             }
 
-
             try
             {
-                int partID = Convert.ToInt32(cmbPart.SelectedValue);
+                string productName = cmbPart.Text;  // Get product name
+                int supplierID = Convert.ToInt32(cmbSupplier.SelectedValue);  // Get selected supplier
                 int quantity = Convert.ToInt32(txtQuan.Text.Trim());
                 string reason = cmbReason.Text.Trim();
 
+                // Get the correct PartID for this product and supplier
+                int partID = InventoryManager.GetPartIDByNameAndSupplier(productName, supplierID);
 
-                // Perform Stock In
+                // Record damage with the correct supplier
                 InventoryManager.RecordDamage(
                     partID,
-                    SessionManager.CurrentUser.UserID,  // Now pulls from session
+                    supplierID,  // Now includes supplier
+                    SessionManager.CurrentUser.UserID,
                     quantity,
                     reason
                 );
 
-
-                MessageBox.Show("Recorded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //  clearFields();
+                MessageBox.Show("Damage recorded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // clearFields();
                 displayDamageRecords();
             }
             catch (Exception ex)
@@ -116,6 +118,43 @@ namespace MotorPartsInventoryManagement.Forms
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //private void btnRecord_Click(object sender, EventArgs e)
+        //{
+        //    if (!ValidateFields()) return;
+
+        //    // Check if user is logged in
+        //    if (SessionManager.CurrentUser == null)
+        //    {
+        //        MessageBox.Show("User not logged in. Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+
+        //    try
+        //    {
+        //        int partID = Convert.ToInt32(cmbPart.SelectedValue);
+        //        int quantity = Convert.ToInt32(txtQuan.Text.Trim());
+        //        string reason = cmbReason.Text.Trim();
+
+
+
+        //        InventoryManager.RecordDamage(
+        //            partID,
+        //            SessionManager.CurrentUser.UserID,  // Now pulls from session
+        //            quantity,
+        //            reason
+        //        );
+
+
+        //        MessageBox.Show("Recorded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        //  clearFields();
+        //        displayDamageRecords();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         private void displayDamageRecords()
         {
             try
@@ -175,6 +214,19 @@ namespace MotorPartsInventoryManagement.Forms
             {
                 MessageBox.Show("Error loading damage records: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DamageStaffForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayDamageRecords();
+            }
+        }
+
+        private void DamageStaffForm_Load(object sender, EventArgs e)
+        {
+            displayDamageRecords();
         }
     }
 }
