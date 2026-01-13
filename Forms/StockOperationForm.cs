@@ -238,18 +238,24 @@ namespace MotorPartsInventoryManagement.Forms
         private string ExtractSupplierFromRemarks(string remarks)
         {
             // Extract supplier name from remarks (format: "Supplier: SupplierName")
-            if (string.IsNullOrEmpty(remarks)) return "";
+            if (string.IsNullOrEmpty(remarks))
+                return "";
 
+            // If remarks starts with "Supplier: "
             if (remarks.StartsWith("Supplier: "))
             {
-                return remarks.Replace("Supplier: ", "").Trim();
-            }
-
-            // Handle format: "Supplier: X | Reason: Y" or "Supplier: X | Adjustment: Y"
-            int pipeIndex = remarks.IndexOf("|");
-            if (pipeIndex > 0 && remarks.StartsWith("Supplier: "))
-            {
-                return remarks.Substring(10, pipeIndex - 10).Trim();
+                // Handle format: "Supplier: X | Reason: Y" or "Supplier: X | Adjustment: Y"
+                int pipeIndex = remarks.IndexOf("|");
+                if (pipeIndex > 0)
+                {
+                    // Extract only the supplier name between "Supplier: " and "|"
+                    return remarks.Substring(10, pipeIndex - 10).Trim();
+                }
+                else
+                {
+                    // No pipe, extract everything after "Supplier: "
+                    return remarks.Substring(10).Trim();
+                }
             }
 
             return remarks;
@@ -551,7 +557,7 @@ namespace MotorPartsInventoryManagement.Forms
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Date", typeof(DateTime));
                 dt.Columns.Add("Part Name", typeof(string));
-                dt.Columns.Add("Remarks", typeof(string));
+                dt.Columns.Add("Supplier", typeof(string));
                 dt.Columns.Add("Quantity Removed", typeof(int));
                 dt.Columns.Add("Reason", typeof(string));
 
