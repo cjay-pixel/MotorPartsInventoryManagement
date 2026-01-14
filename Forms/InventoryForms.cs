@@ -261,6 +261,12 @@ namespace MotorPartsInventoryManagement.Forms
 
                 if (dgvProducts.Columns.Contains("Image"))
                     dgvProducts.Columns["Image"].Visible = false;
+                if (dgvProducts.Columns.Contains("SupplierID"))
+                    dgvProducts.Columns["SupplierID"].Visible = false;
+                if (dgvProducts.Columns.Contains("CategoryID"))
+                    dgvProducts.Columns["CategoryID"].Visible = false;
+                if (dgvProducts.Columns.Contains("PartID"))
+                    dgvProducts.Columns["PartID"].Visible = false;
 
                 dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgvProducts.AllowUserToAddRows = false;
