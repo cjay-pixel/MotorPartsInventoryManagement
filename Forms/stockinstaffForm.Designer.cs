@@ -310,6 +310,8 @@
             this.Controls.Add(this.panel2);
             this.Name = "StockInStaffForm";
             this.Size = new System.Drawing.Size(1252, 790);
+            this.Load += new System.EventHandler(this.StockInStaffForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.StockInStaffForm_VisibleChanged);
             this.panel2.ResumeLayout(false);
             this.gbStockInEntry.ResumeLayout(false);
             this.gbStockInEntry.PerformLayout();

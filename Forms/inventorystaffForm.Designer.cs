@@ -104,6 +104,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "InventoryStaffForm";
             this.Size = new System.Drawing.Size(929, 790);
+            this.VisibleChanged += new System.EventHandler(this.InventoryStaffForm_VisibleChanged);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

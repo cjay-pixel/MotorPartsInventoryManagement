@@ -20,6 +20,7 @@ namespace MotorPartsInventoryManagement.Forms
             LoadParts();
             LoadSuppliers();
             displayTransactions();
+            this.VisibleChanged += StockInStaffForm_VisibleChanged;
         }
 
         private void LoadParts()
@@ -218,6 +219,19 @@ namespace MotorPartsInventoryManagement.Forms
             cmbSupplier.SelectedIndex = -1;
             txtDeliveryreceipt.Clear();
             txtQuantityToAdd.Clear();
+        }
+
+        private void StockInStaffForm_Load(object sender, EventArgs e)
+        {
+            displayTransactions();
+        }
+
+        private void StockInStaffForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                displayTransactions();
+            }
         }
     }
 }

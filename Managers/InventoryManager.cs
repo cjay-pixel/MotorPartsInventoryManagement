@@ -14,6 +14,7 @@ namespace MotorPartsInventoryManagement.Managers
         public string PartNumber { get; set; }
         public string PartName { get; set; }
         public string SupplierID { get; set; }
+        public string SupplierName { get; set; }
         public int UserID { get; set; }
         public string Username { get; set; }
         public int Quantity { get; set; }
@@ -24,7 +25,7 @@ namespace MotorPartsInventoryManagement.Managers
         public string Model { get; set; }
         public string Brand { get; set; }
         public string CategoryName { get; set; }
-        public string SupplierName { get; set; }
+       
         public int QuantityOnHand { get; set; }
         public int ReorderLevel { get; set; }
         public int QuantityNeeded { get; set; }
@@ -89,15 +90,16 @@ namespace MotorPartsInventoryManagement.Managers
             }
         }
 
-        public static void RecordDamage(int partID, int userID, int quantity, string reason)
+        public static void RecordDamage(int partID, int supplierID, int userID, int quantity, string reason)
         {
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@p_PartID", partID),
-                new MySqlParameter("@p_UserID", userID),
-                new MySqlParameter("@p_Quantity", quantity),
-                new MySqlParameter("@p_Reason", reason)
-            };
+        new MySqlParameter("@p_PartID", partID),
+        new MySqlParameter("@p_SupplierID", supplierID),
+        new MySqlParameter("@p_UserID", userID),
+        new MySqlParameter("@p_Quantity", quantity),
+        new MySqlParameter("@p_Reason", reason)
+    };
             DatabaseHelper.ExecuteStoredProcedure("sp_RecordDamage", parameters);
         }
 
@@ -252,6 +254,7 @@ namespace MotorPartsInventoryManagement.Managers
                     PartID = Convert.ToInt32(row["PartID"]),
                     PartNumber = row["PartNumber"].ToString(),
                     PartName = row["PartName"].ToString(),
+                    SupplierName = row["SupplierName"].ToString(),
                     UserID = Convert.ToInt32(row["UserID"]),
                     Username = row["Username"].ToString(),
                     Quantity = Convert.ToInt32(row["Quantity"]),

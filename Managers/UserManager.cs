@@ -14,6 +14,7 @@ namespace MotorPartsInventoryManagement.Managers
         public string Username { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string FullName { get; set; }
         public string Role { get; set; }
         public string Status { get; set; }
         public DateTime DateCreated { get; set; }
@@ -83,8 +84,9 @@ namespace MotorPartsInventoryManagement.Managers
                 {
                     UserID = Convert.ToInt32(row["UserID"]),
                     Username = row["Username"].ToString(),
-                    FirstName = row["FirstName"].ToString(),
-                    LastName = row["LastName"].ToString(),
+                    FullName = row["FullName"].ToString(),
+                    //FirstName = row["FirstName"].ToString(),
+                    //LastName = row["LastName"].ToString(),
                     Role = row["ROLE"].ToString(),
                     Status = row["STATUS"].ToString(),
                     DateCreated = Convert.ToDateTime(row["DateCreated"])

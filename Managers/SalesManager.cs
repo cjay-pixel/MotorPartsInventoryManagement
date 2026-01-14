@@ -128,6 +128,7 @@ namespace MotorPartsInventoryManagement.Managers
             return allProducts.Where(p =>
                 p.PartName.ToLower().Contains(keyword) ||
                 p.PartNumber.ToLower().Contains(keyword) ||
+                p.MotorCompatibility.ToLower().Contains(keyword) ||
                 p.Brand.ToLower().Contains(keyword) ||
                 p.CategoryName.ToLower().Contains(keyword)
             ).ToList();

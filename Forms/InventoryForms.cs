@@ -16,7 +16,7 @@ namespace MotorPartsInventoryManagement.Forms
 {
     public partial class InventoryForms : UserControl
     {
-        private Button activeSidebarButton = null;
+       
         private int selectedPartID = -1;
         private string selectedImagePath = "";
 
