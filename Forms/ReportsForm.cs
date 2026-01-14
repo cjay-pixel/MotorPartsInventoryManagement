@@ -1,6 +1,7 @@
 ﻿using ClosedXML.Excel;
 using MotorPartsInventoryManagement.Managers;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -32,7 +33,7 @@ namespace MotorPartsInventoryManagement.Forms
             dtpTo4.Value = today;
 
             // Set default combo box selections
-            if (cmbReportType.Items.Count > 0) cmbReportType.SelectedIndex = 0; // Daily
+            //if (cmbReportType.Items.Count > 0) cmbReportType.SelectedIndex = 0; // Daily
             if (cmbType.Items.Count > 0) cmbType.SelectedIndex = 0; // Damaged / Type
 
             // Load suppliers for filter
@@ -72,11 +73,11 @@ namespace MotorPartsInventoryManagement.Forms
         {
             try
             {
-                string reportType = cmbReportType.SelectedItem?.ToString() ?? "Daily";
+                //string reportType = cmbReportType.SelectedItem?.ToString() ?? "Daily";
                 DateTime start = useSelectedRange ? dtpFrom.Value.Date : WideRangeStart;
                 DateTime end = useSelectedRange ? dtpTo.Value.Date : WideRangeEnd;
 
-                DataTable dt = InventoryManager.GetSalesReportByDateRange(start, end, reportType);
+                DataTable dt = InventoryManager.GetSalesReportByDateRange(start, end);
 
                 dgvSalesReports.Columns.Clear();
                 dgvSalesReports.DataSource = dt;
@@ -374,39 +375,86 @@ namespace MotorPartsInventoryManagement.Forms
         {
             try
             {
-                string reasonType = cmbType.SelectedItem?.ToString() ?? "All";
                 DateTime start = useSelectedRange ? dtpFrom4.Value.Date : WideRangeStart;
                 DateTime end = useSelectedRange ? dtpTo4.Value.Date : WideRangeEnd;
 
-                DataTable dt = InventoryManager.GetDamagedLostItemsReport(start, end, reasonType);
+                string reasonType = cmbType.SelectedItem?.ToString() ?? "All";
+
+                var damageRecords = InventoryManager.GetDamagedItemsByDateRange(start, end, reasonType);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Date", typeof(DateTime));
+                dt.Columns.Add("Part Name", typeof(string));
+                dt.Columns.Add("Supplier", typeof(string));
+                dt.Columns.Add("Quantity Affected", typeof(int));
+                dt.Columns.Add("Reason", typeof(string));
+
+                foreach (var record in damageRecords)
+                {
+                    dt.Rows.Add(
+                        record.TransactionDate,
+                        record.PartName,
+                        record.SupplierName,
+                        record.Quantity,
+                        record.Remarks
+                    );
+                }
+
                 dgvDLIReport.Columns.Clear();
                 dgvDLIReport.DataSource = dt;
                 dgvDLIReport.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvDLIReport.AllowUserToAddRows = false;
+                dgvDLIReport.ReadOnly = true;
 
+                // ---- PLACE FORMAT CODE HERE ----
                 if (dgvDLIReport.Columns.Contains("Date"))
                 {
-                    dgvDLIReport.Columns["Date"].DefaultCellStyle.Format = "yyyy-MM-dd";
-                    dgvDLIReport.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dgvDLIReport.Columns["Date"].DefaultCellStyle.Format = "MM/dd/yyyy hh:mm tt";
+                    dgvDLIReport.Columns["Date"].AutoSizeMode =
+                        DataGridViewAutoSizeColumnMode.AllCells;
+                }
+
+                if (dgvDLIReport.Columns.Contains("Quantity Affected"))
+                {
+                    dgvDLIReport.Columns["Quantity Affected"].AutoSizeMode =
+                        DataGridViewAutoSizeColumnMode.AllCells;
+                }
+
+
+                // Highlight last 24 hours
+                foreach (DataGridViewRow row in dgvDLIReport.Rows)
+                {
+                    if (row.Cells["Date"].Value is DateTime recordDate &&
+                        recordDate >= DateTime.Now.AddHours(-24))
+                    {
+                        row.DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
                 }
 
                 FormatDamagedItemsReportGrid();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading damaged items report: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading damaged items report: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void FormatDamagedItemsReportGrid()
         {
             if (dgvDLIReport.Columns.Count > 0)
             {
-                if (dgvDLIReport.Columns.Contains("Date")) dgvDLIReport.Columns["Date"].HeaderText = "Date";
-                if (dgvDLIReport.Columns.Contains("PartName")) dgvDLIReport.Columns["PartName"].HeaderText = "Part Name";
-                if (dgvDLIReport.Columns.Contains("Type")) dgvDLIReport.Columns["Type"].HeaderText = "Type";
-                if (dgvDLIReport.Columns.Contains("Quantity")) dgvDLIReport.Columns["Quantity"].HeaderText = "Quantity";
-                if (dgvDLIReport.Columns.Contains("RecordedBy")) dgvDLIReport.Columns["RecordedBy"].HeaderText = "Recorded By";
+                if (dgvDLIReport.Columns.Contains("Date"))
+                    dgvDLIReport.Columns["Date"].HeaderText = "Date";
+                if (dgvDLIReport.Columns.Contains("Part Name"))
+                    dgvDLIReport.Columns["Part Name"].HeaderText = "Part Name";
+                if (dgvDLIReport.Columns.Contains("Supplier"))
+                    dgvDLIReport.Columns["Supplier"].HeaderText = "Supplier";
+                if (dgvDLIReport.Columns.Contains("Quantity Affected"))
+                    dgvDLIReport.Columns["Quantity Affected"].HeaderText = "Quantity Affected";
+                if (dgvDLIReport.Columns.Contains("Reason"))
+                    dgvDLIReport.Columns["Reason"].HeaderText = "Reason";
             }
         }
 

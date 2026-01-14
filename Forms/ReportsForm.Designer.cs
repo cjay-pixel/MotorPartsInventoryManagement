@@ -46,8 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnApply = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.cmbReportType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabInventoryReports = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -310,8 +308,6 @@
             this.gbStockInEntry.Controls.Add(this.label4);
             this.gbStockInEntry.Controls.Add(this.btnApply);
             this.gbStockInEntry.Controls.Add(this.dtpFrom);
-            this.gbStockInEntry.Controls.Add(this.cmbReportType);
-            this.gbStockInEntry.Controls.Add(this.label2);
             this.gbStockInEntry.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbStockInEntry.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbStockInEntry.Location = new System.Drawing.Point(20, 20);
@@ -325,7 +321,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label5.Location = new System.Drawing.Point(762, 48);
+            this.label5.Location = new System.Drawing.Point(387, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 22);
             this.label5.TabIndex = 37;
@@ -333,7 +329,7 @@
             // 
             // dtpTo
             // 
-            this.dtpTo.Location = new System.Drawing.Point(795, 48);
+            this.dtpTo.Location = new System.Drawing.Point(420, 48);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(267, 23);
             this.dtpTo.TabIndex = 36;
@@ -342,7 +338,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label4.Location = new System.Drawing.Point(407, 49);
+            this.label4.Location = new System.Drawing.Point(32, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 22);
             this.label4.TabIndex = 35;
@@ -370,39 +366,10 @@
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Location = new System.Drawing.Point(465, 49);
+            this.dtpFrom.Location = new System.Drawing.Point(90, 49);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(267, 23);
             this.dtpFrom.TabIndex = 33;
-            // 
-            // cmbReportType
-            // 
-            this.cmbReportType.BackColor = System.Drawing.Color.Transparent;
-            this.cmbReportType.BorderRadius = 9;
-            this.cmbReportType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbReportType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbReportType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbReportType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbReportType.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.cmbReportType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbReportType.ItemHeight = 30;
-            this.cmbReportType.Items.AddRange(new object[] {
-            "Daily",
-            "Monthly"});
-            this.cmbReportType.Location = new System.Drawing.Point(131, 44);
-            this.cmbReportType.Name = "cmbReportType";
-            this.cmbReportType.Size = new System.Drawing.Size(218, 36);
-            this.cmbReportType.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 8.25F);
-            this.label2.Location = new System.Drawing.Point(27, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Report Type:";
             // 
             // tabInventoryReports
             // 
@@ -1072,19 +1039,19 @@
             // 
             // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Supplier";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // dataGridViewTextBoxColumn19
             // 
-            this.dataGridViewTextBoxColumn19.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Quantity Affected";
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn20.HeaderText = "Remarks";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Reason";
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
@@ -1192,6 +1159,7 @@
             this.btnApply4.Size = new System.Drawing.Size(267, 37);
             this.btnApply4.TabIndex = 34;
             this.btnApply4.Text = "APPLY";
+            this.btnApply4.Click += new System.EventHandler(this.BtnApplyDamagedItemsFilter_Click);
             // 
             // dtpFrom4
             // 
@@ -1212,8 +1180,8 @@
             this.cmbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbType.ItemHeight = 30;
             this.cmbType.Items.AddRange(new object[] {
-            "Daily",
-            "Monthly"});
+            "Damaged",
+            "Missing"});
             this.cmbType.Location = new System.Drawing.Point(81, 44);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(218, 36);
@@ -1296,8 +1264,6 @@
         private System.Windows.Forms.GroupBox gbStockInEntry;
         private Guna.UI2.WinForms.Guna2GradientButton btnApply;
         private System.Windows.Forms.DateTimePicker dtpFrom;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbReportType;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabInventoryReports;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1363,11 +1329,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DataGridView dgvDLIReport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.Panel panel16;
         private Guna.UI2.WinForms.Guna2GradientButton btnDamLostExport;
         private System.Windows.Forms.Panel panel15;
@@ -1379,5 +1340,10 @@
         private System.Windows.Forms.DateTimePicker dtpFrom4;
         private Guna.UI2.WinForms.Guna2ComboBox cmbType;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
     }
 }

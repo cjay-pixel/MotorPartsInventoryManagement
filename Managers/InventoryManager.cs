@@ -358,17 +358,53 @@ namespace MotorPartsInventoryManagement.Managers
             return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetDamagedLostItemsReport", parameters);
         }
 
-        public static DataTable GetSalesReportByDateRange(DateTime startDate, DateTime endDate, string reportType)
+        public static DataTable GetSalesReportByDateRange(DateTime startDate, DateTime endDate)
         {
             MySqlParameter[] parameters =
             {
                 new MySqlParameter("@p_StartDate", startDate.Date),
                 new MySqlParameter("@p_EndDate", endDate.Date),
-                new MySqlParameter("@p_ReportType", reportType ?? "Daily")
             };
 
             return DatabaseHelper.ExecuteStoredProcedureQuery("sp_GetSalesReportByDateRange", parameters);
         }
+
+        public static List<InventoryManager> GetDamagedItemsByDateRange(
+            DateTime startDate,
+            DateTime endDate,
+            string reasonType)
+        {
+            var list = new List<InventoryManager>();
+
+            MySqlParameter[] parameters =
+            {
+                new MySqlParameter("@p_StartDate", startDate.Date),
+                new MySqlParameter("@p_EndDate", endDate.Date),
+                new MySqlParameter("@p_ReasonType", reasonType ?? "All")
+            };
+
+            DataTable dt = DatabaseHelper.ExecuteStoredProcedureQuery(
+                "sp_GetDamagedItemsByDateRange", parameters);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(new InventoryManager
+                {
+                    TransactionID = Convert.ToInt32(row["DamageID"]),
+                    PartID = Convert.ToInt32(row["PartID"]),
+                    PartName = row["PartName"].ToString(),
+                    SupplierName = row["Supplier"].ToString(),
+                    Quantity = Convert.ToInt32(row["QuantityAffected"]),
+                    Remarks = row["Reason"].ToString(),
+                    UserID = Convert.ToInt32(row["UserID"]),
+                    Username = row["Username"].ToString(),
+                    TransactionDate = Convert.ToDateTime(row["Date"])
+                });
+            }
+
+            return list;
+        }
+
 
         public static DataTable GetActiveSuppliersForFilter()
         {
