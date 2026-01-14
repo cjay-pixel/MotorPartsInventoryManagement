@@ -366,5 +366,58 @@ namespace MotorPartsInventoryManagement.Forms
                 }
             }
         }
+
+        public void displayProducts(List<MotorPartsManager> listData)
+        {
+            try
+            {
+                foreach (var product in listData)
+                {
+                    product.Status = product.Quantity > 0 ? "Available" : "Unavailable";
+                }
+
+                dgvProducts.DataSource = null;
+                dgvProducts.Columns.Clear();
+                dgvProducts.AutoGenerateColumns = true;
+                dgvProducts.DataSource = listData;
+
+                if (dgvProducts.Columns.Contains("Image"))
+                    dgvProducts.Columns["Image"].Visible = false;
+
+                dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgvProducts.AllowUserToAddRows = false;
+
+                dgvProducts.CellFormatting -= dgvProducts_CellFormatting;
+                dgvProducts.CellFormatting += dgvProducts_CellFormatting;
+
+                dgvProducts.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading products: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim().ToLower();
+
+            List<MotorPartsManager> listData = MotorPartsManager.GetAll();
+
+            if (!string.IsNullOrWhiteSpace(searchText))
+            {
+                listData = listData.Where(p =>
+                    (!string.IsNullOrEmpty(p.ProductName) && p.ProductName.ToLower().Contains(searchText)) ||
+                    (!string.IsNullOrEmpty(p.PartNumber) && p.PartNumber.ToLower().Contains(searchText)) ||
+                    (!string.IsNullOrEmpty(p.ModelCompatibility) && p.ModelCompatibility.ToLower().Contains(searchText)) ||
+                    (!string.IsNullOrEmpty(p.Brand) && p.Brand.ToLower().Contains(searchText)) ||
+                    (!string.IsNullOrEmpty(p.CategoryName) && p.CategoryName.ToLower().Contains(searchText))
+                ).ToList();
+            }
+
+            displayProducts(listData);
+        }
+
     }
 }

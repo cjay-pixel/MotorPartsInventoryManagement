@@ -234,7 +234,7 @@ namespace MotorPartsInventoryManagement.Managers
                     StockType = row["StockType"].ToString(),
                     ReferenceNumber = row["ReferenceNumber"].ToString(),
                     Remarks = row["Remarks"].ToString(),
-                    TransactionDate = Convert.ToDateTime(row["TransactionDate"])  // ✅ FIXED: Use "TransactionDate" (the alias from the stored procedure)
+                    TransactionDate = Convert.ToDateTime(row["TransactionDate"])
                 });
             }
 

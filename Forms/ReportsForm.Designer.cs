@@ -1180,6 +1180,7 @@
             this.cmbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbType.ItemHeight = 30;
             this.cmbType.Items.AddRange(new object[] {
+            "All",
             "Damaged",
             "Missing"});
             this.cmbType.Location = new System.Drawing.Point(81, 44);
@@ -1204,6 +1205,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "ReportsForm";
             this.Size = new System.Drawing.Size(1253, 845);
+            this.Load += new System.EventHandler(this.ReportsForm_Load);
+            this.VisibleChanged += new System.EventHandler(this.ReportsForm_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabSalesReports.ResumeLayout(false);

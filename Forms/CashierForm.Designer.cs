@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.pnlItems = new System.Windows.Forms.Panel();
             this.pnlItemsInventory = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,10 +57,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dgvCart = new System.Windows.Forms.DataGridView();
             this.pnlOrderTop = new System.Windows.Forms.Panel();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlShadowLeft = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlC = new System.Windows.Forms.Panel();
+            this.pnlCategoryButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
@@ -76,8 +78,6 @@
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.pnlCategoryButtons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnRemoveItem = new System.Windows.Forms.Button();
             this.pnlItems.SuspendLayout();
             this.PnlItemsSearch.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -370,14 +370,14 @@
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCart.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.EnableHeadersVisualStyles = false;
             this.dgvCart.Location = new System.Drawing.Point(0, 65);
@@ -399,6 +399,22 @@
             this.pnlOrderTop.Name = "pnlOrderTop";
             this.pnlOrderTop.Size = new System.Drawing.Size(508, 65);
             this.pnlOrderTop.TabIndex = 0;
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveItem.BackColor = System.Drawing.Color.LightCoral;
+            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
+            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveItem.Location = new System.Drawing.Point(304, 16);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(103, 34);
+            this.btnRemoveItem.TabIndex = 3;
+            this.btnRemoveItem.Text = "Remove Item";
+            this.btnRemoveItem.UseVisualStyleBackColor = false;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // btnClear
             // 
@@ -452,6 +468,16 @@
             this.pnlC.Name = "pnlC";
             this.pnlC.Size = new System.Drawing.Size(353, 765);
             this.pnlC.TabIndex = 1;
+            // 
+            // pnlCategoryButtons
+            // 
+            this.pnlCategoryButtons.AutoScroll = true;
+            this.pnlCategoryButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCategoryButtons.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.pnlCategoryButtons.Location = new System.Drawing.Point(0, 316);
+            this.pnlCategoryButtons.Name = "pnlCategoryButtons";
+            this.pnlCategoryButtons.Size = new System.Drawing.Size(353, 449);
+            this.pnlCategoryButtons.TabIndex = 9;
             // 
             // panel3
             // 
@@ -658,32 +684,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // pnlCategoryButtons
-            // 
-            this.pnlCategoryButtons.AutoScroll = true;
-            this.pnlCategoryButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCategoryButtons.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlCategoryButtons.Location = new System.Drawing.Point(0, 316);
-            this.pnlCategoryButtons.Name = "pnlCategoryButtons";
-            this.pnlCategoryButtons.Size = new System.Drawing.Size(353, 449);
-            this.pnlCategoryButtons.TabIndex = 9;
-            // 
-            // btnRemoveItem
-            // 
-            this.btnRemoveItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveItem.BackColor = System.Drawing.Color.LightCoral;
-            this.btnRemoveItem.FlatAppearance.BorderSize = 0;
-            this.btnRemoveItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveItem.ForeColor = System.Drawing.Color.White;
-            this.btnRemoveItem.Location = new System.Drawing.Point(304, 16);
-            this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(103, 34);
-            this.btnRemoveItem.TabIndex = 3;
-            this.btnRemoveItem.Text = "Remove Item";
-            this.btnRemoveItem.UseVisualStyleBackColor = false;
-            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
-            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -693,7 +693,7 @@
             this.Controls.Add(this.pnlOrder);
             this.Controls.Add(this.pnlShadowLeft);
             this.Name = "CashierForm";
-            this.Text = "CashierForm";
+            this.Text = "Cashier";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlItems.ResumeLayout(false);
             this.PnlItemsSearch.ResumeLayout(false);

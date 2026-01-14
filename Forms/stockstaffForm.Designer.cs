@@ -34,6 +34,7 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlFillR = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnInventory = new System.Windows.Forms.Button();
             this.inventoryStaffForm1 = new MotorPartsInventoryManagement.Forms.InventoryStaffForm();
             this.pnlShadowLeft.SuspendLayout();
             this.pnlC.SuspendLayout();
@@ -148,6 +148,25 @@
             this.btnStock.UseVisualStyleBackColor = true;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
+            // btnInventory
+            // 
+            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
+            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.Location = new System.Drawing.Point(0, 50);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnInventory.Size = new System.Drawing.Size(388, 68);
+            this.btnInventory.TabIndex = 1;
+            this.btnInventory.Text = "Inventory Management";
+            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
@@ -229,25 +248,6 @@
             this.panel4.Size = new System.Drawing.Size(929, 790);
             this.panel4.TabIndex = 2;
             // 
-            // btnInventory
-            // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.Image = global::MotorPartsInventoryManagement.Properties.Resources.inventory_24;
-            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 50);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnInventory.Size = new System.Drawing.Size(388, 68);
-            this.btnInventory.TabIndex = 1;
-            this.btnInventory.Text = "Inventory Management";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInventory.UseVisualStyleBackColor = true;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
             // inventoryStaffForm1
             // 
             this.inventoryStaffForm1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -266,7 +266,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StockStaffForm";
-            this.Text = "stockstaffForm";
+            this.Text = "Stock Staff";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlShadowLeft.ResumeLayout(false);
             this.pnlC.ResumeLayout(false);

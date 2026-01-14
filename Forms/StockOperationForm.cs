@@ -529,8 +529,8 @@ namespace MotorPartsInventoryManagement.Forms
                     // Positive adjustment - add stock
                     InventoryManager.StockIn(
                         partID,
-                        supplierID,
                         SessionManager.CurrentUser.UserID,
+                        supplierID,
                         quantity,
                         referenceNumber,
                         remarks
@@ -538,7 +538,7 @@ namespace MotorPartsInventoryManagement.Forms
                 }
                 else
                 {
-                    // Negative adjustment - remove stock
+                    // Negative adjustment - remove stock 
                     InventoryManager.StockOut(
                         partID,
                         SessionManager.CurrentUser.UserID,

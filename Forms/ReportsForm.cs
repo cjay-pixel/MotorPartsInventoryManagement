@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MotorPartsInventoryManagement.Forms
@@ -17,6 +18,20 @@ namespace MotorPartsInventoryManagement.Forms
         {
             InitializeComponent();
             InitializeForm();
+            LoadDamagedItemsReport();
+            this.VisibleChanged += ReportsForm_VisibleChanged;
+        }
+        private void ReportsForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                LoadDamagedItemsReport();
+            }
+        }
+
+        private void ReportsForm_Load(object sender, EventArgs e)
+        {
+            LoadDamagedItemsReport();
         }
 
         private void InitializeForm()
@@ -406,7 +421,6 @@ namespace MotorPartsInventoryManagement.Forms
                 dgvDLIReport.AllowUserToAddRows = false;
                 dgvDLIReport.ReadOnly = true;
 
-                // ---- PLACE FORMAT CODE HERE ----
                 if (dgvDLIReport.Columns.Contains("Date"))
                 {
                     dgvDLIReport.Columns["Date"].DefaultCellStyle.Format = "MM/dd/yyyy hh:mm tt";
@@ -421,17 +435,22 @@ namespace MotorPartsInventoryManagement.Forms
                 }
 
 
+                FormatDamagedItemsReportGrid();
+
                 // Highlight last 24 hours
-                foreach (DataGridViewRow row in dgvDLIReport.Rows)
+                var allRows = dgvDLIReport.Rows.Cast<DataGridViewRow>();
+                DateTime threshold = DateTime.Now.AddHours(-24);
+
+                foreach (var row in allRows)
                 {
-                    if (row.Cells["Date"].Value is DateTime recordDate &&
-                        recordDate >= DateTime.Now.AddHours(-24))
+                    if (row.Cells["Date"].Value != null &&
+                        DateTime.TryParse(row.Cells["Date"].Value.ToString(), out DateTime recordDate))
                     {
-                        row.DefaultCellStyle.BackColor = Color.LightYellow;
+                        if (recordDate >= threshold)
+                            row.DefaultCellStyle.BackColor = Color.LightYellow;
                     }
                 }
 
-                FormatDamagedItemsReportGrid();
             }
             catch (Exception ex)
             {
@@ -561,5 +580,7 @@ namespace MotorPartsInventoryManagement.Forms
         }
 
         #endregion
+
+
     }
 }
